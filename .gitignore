@@ -1,0 +1,49 @@
+[Bb]in
+[Oo]bj
+[Cc]sx
+[Tt]est[Rr]esults
+*.suo
+*.user
+*.[Cc]ache
+*[Rr]esharper*
+packages
+*.nupkg
+*.dot[Cc]over
+*.vsp
+*.vspx
+*.psess
+*.orig
+*.log
+*.docstates
+.DS_Store
+[Tt]humbs.db
+*~
+node_modules/
+bower_components/
+
+src/Walmart.FeaturePlanning.Web/Scripts/dist/*.js
+src/Walmart.FeaturePlanning.Web/Scripts/dist/*.map
+src/Walmart.FeaturePlanning.Web/Content/css/*.css
+
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
+# TODO: Comment the next line if you want to checkin your web deploy settings 
+# but database connection strings (with potential passwords) will be unencrypted
+*.pubxml
+*.publishproj
+
+
+# Windows Azure Build Output
+csx/
+*.build.csdef
+
+.vs/
+.vscode/
+
+/src/Walmart.FeaturePlanning.Web/Resources/BuildDate.txt
+/src/Walmart.FeaturePlanning.Web/Scripts/libs/libs.min.js
+src/Walmart.FeaturePlanning.Web/Content/css/main.css.map
+src/Walmart.FeaturePlanning.Web/Content/css/pre.css.map
+dest/

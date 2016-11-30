@@ -1,0 +1,1 @@
+Copy-Item  -Path .\dest\* -Destination ..\MyForks\front-end-development-course-info\presentations -Recurse -force

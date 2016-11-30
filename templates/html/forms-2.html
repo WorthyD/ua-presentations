@@ -1,0 +1,181 @@
+﻿<html>
+
+<head>
+    <title>Basics</title>
+
+    <!-- @@include('../header.html') -->
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Today's Topics</h1>
+                <ul>
+                    <li class="fragment">New Input Types</li>
+                    <li class="fragment">New Attributes</li>
+                </ul>
+            </section>
+            <section>
+                <h1>Number Input</h1>
+                <p>
+                    The number input allows only numbers.  On a mobile device, it will bring up a numeric keyboard.
+                </p>
+                <h2>
+                    <pre>
+<code class="xml"><input type="number" name="myNumber" /></code>
+</pre>
+                </h2>
+
+            </section>
+            <section>
+                <h1>Email Input</h1>
+                <p>
+                    The email input provides in browser validation for the user.
+                </p>
+                <h2>
+                    <pre>
+<code class="xml"><input type="email" name="myEmail" /></code>
+</pre>
+                </h2>
+
+            </section>
+            <section>
+                <h1>Hidden Input</h1>
+                <p>
+                    Hidden inputs act as they are named. They are hidden on the page, but are submitted by the form
+                </p>
+                <h2>
+                    <pre>
+<code class="xml"><input type="hidden" name="myHiddenField" /></code>
+</pre>
+                </h2>
+            </section>
+            <section>
+                <h1>File Upload</h1>
+                <p>
+                    Allows the user to select a file off their computer for upload
+                </p>
+                <h2>
+                    <pre>
+<code class="xml"><input type="file" name="myFileUpload" /></code>
+</pre>
+                </h2>
+            </section>
+            <section>
+                <h1>Search Input</h1>
+                <p>
+                    Behaves similar to a text field. Different browsers handle it in different ways.
+                </p>
+                <h2>
+                    <pre>
+<code class="xml"><input type="search" name="mySearch" /></code>
+</pre>
+                </h2>
+            </section>
+            <section>
+                <h1>Telephone Input</h1>
+                <p>
+                    Behaves similar to a text field. Different browsers handle it in different ways.
+                </p>
+                <h2>
+                    <pre>
+<code class="xml"><input type="tel" name="myTelephone" /></code>
+</pre>
+                </h2>
+            </section>
+
+
+            <section>
+                <h1>Telephone Input</h1>
+                <p>
+                    An input for telephones. Requires a pattern for proper implementation.
+                </p>
+                <h2>
+                    <pre>
+<code class="xml"><input type="tel" name="myTelephone" /></code>
+</pre>
+                </h2>
+            </section>
+
+            <section>
+                <h1>URL Input</h1>
+                <p>
+                    Behaves similar to a text field. Phones add a '.com'
+                </p>
+                <h2>
+                    <pre>
+<code class="xml"><input type="url" name="myTelephone" /></code>
+</pre>
+                </h2>
+            </section>
+
+            <section>
+                <h1>New HTML Attributes</h1>
+                <p>Some of these were introduced in HTML5 and help enforce rules without JavaScript</p>
+            </section>
+            <section>
+                <h1><code>autocomplete</code></h1>
+                <p>Enables or disables autocomplete on an input box. It accepts the value of "on" or "off"</p>
+                <h2>
+                    <pre class="fragment">
+<code class="xml"><input type="text" name="myText" autocomplete="off" /></code>
+</pre>
+                </h2>
+            </section>
+            <section>
+                <h1><code>autofocus</code></h1>
+                <p>Tells the browser what input should have focus when the page is loaded. It does not require a value</p>
+                <h2>
+                    <pre class="fragment">
+<code class="xml"><input type="text" name="myText" autofocus /></code>
+</pre>
+                </h2>
+            </section>
+
+            <section>
+                <h1><code>min</code> and <code>max</code></h1>
+                <p>Sets the min and maximum values a numeric input can have</p>
+                <h2>
+                    <pre class="fragment">
+<code class="xml"><input type="number" name="myNumber" min="10" max="100" /></code>
+</pre>
+                </h2>
+            </section>
+
+            <section>
+                <h1><code>maxlength</code></h1>
+                <p>Sets the maximum number of characters for an  input</p>
+                <h2>
+                    <pre class="fragment">
+<code class="xml"><input type="text" name="myText" maxlength="10" /></code>
+</pre>
+                </h2>
+            </section>
+
+            <section>
+                <h1><code>maxlength</code></h1>
+                <p>Sets the maximum number of characters for an  input</p>
+                <h2>
+                    <pre class="fragment">
+<code class="xml"><input type="text" name="myText" maxlength="10" /></code>
+</pre>
+                </h2>
+            </section>
+
+            <section>
+                <h1><code>required</code></h1>
+                <p>Tells the browser that this element must be filled out before we submit the form. It does not require a value.</p>
+                <h2>
+                    <pre class="fragment">
+<code class="xml"><input type="text" name="myText" required /></code>
+</pre>
+                </h2>
+            </section>
+        </div>
+
+    </div>
+
+
+    <!-- @@include('../footer.html' ) -->
+</body>
+</html>

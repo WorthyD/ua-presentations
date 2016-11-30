@@ -1,0 +1,20 @@
+﻿{
+  "css": {
+    "src": "testfiles/content/sass/main.scss",
+    "dist": "testfiles/dist/",
+    "distfilename": "main",
+    "workingdirectory": [
+      "libs/content/**/*.css"
+    ]
+  },
+  "html":{
+    "workingdirectory":[
+      "templates/**/*.html" 
+    ]
+  },
+  "js": {
+   "workingdirectory": [
+      "libs/scripts/**/*.js"
+    ]
+  }
+}
