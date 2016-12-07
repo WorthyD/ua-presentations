@@ -1,0 +1,29 @@
+<section>
+    <h1>jQuery Data Attributes</h1>
+    <p>
+        Data attributes allow you to store arbitrary information in your HTML elements for later use.
+    </p>
+</section>
+<section>
+    <h1>Basic Data Attribute Usage</h1>    
+    <h2>Setting an attribute in HTML </h2>
+    <h2 class="fragment">&lt;div data-[name]></h2>
+    <pre class="fragment"><code class="xml">
+    <div data-type="My Data Type"></div>        
+        </code></pre>
+    <pre class="fragment"><code class="xml">
+    <div data-color="#000"></div>        
+        </code></pre>
+</section>
+<section>
+    <h1>Getting a data attribute in JavaScript</h1>
+
+    <pre><code class="js">
+        var div = $('div')
+
+        var color = div.data('color'); //Finds and converts data-color
+        console.log(color); // logs '#000';
+
+        
+    </code></pre>
+</section>
