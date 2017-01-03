@@ -238,7 +238,7 @@
 
         var december = {
             name: 'December',
-            isActive: true,
+            isActive: false,
             sessions: []
         };
 
@@ -303,12 +303,28 @@
             ]
         })
 
+        var jan = {
+            name: 'December',
+            isActive: false,
+            sessions: [{
+                num: 27,
+                date: '1/3/2017',
+                links: [
+                    ['Review', 'sessions/25.html'],
+                    ['Assignment 21', assignmentBase + 'Assignment21']
+                ]
+
+            }]
+
+        }
+
 
 
         var sessions = [
             october,
             november,
-            december
+            december,
+            jan
         ];
         /* beautify ignore:end */
 
