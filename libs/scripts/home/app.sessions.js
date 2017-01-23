@@ -354,6 +354,14 @@
                         ['Assignment 25', assignmentBase + 'Assignment25']
                     ]
                 },
+                {
+                    num: 33,
+                    date: '1/19/2017',
+                    links: [
+                        ['Rotators', 'sessions/31.html'],
+                    ]
+                },
+
 
 
             ]
