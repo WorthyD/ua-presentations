@@ -16,7 +16,7 @@
 <section>
     <h1><code>Static</code> Position</h1>
     <p>
-        Static CSS positioning is the default value of the <code>position</code> property.  
+        Static CSS positioning is the default value of the <code>position</code> property.
     </p>
     <pre><code class="css">
 
@@ -30,7 +30,8 @@
 <section>
     <h1><code>Relative</code> Position</h1>
     <p>
-        Positions element relative to the content around it. It respects top, left, right and bottom. Content will not shift to take up the space.
+        Positions element relative to the content around it. It respects top, left, right and bottom. Content will not shift to take
+        up the space.
     </p>
     <pre><code class="css">
 
@@ -40,7 +41,6 @@
         right:100px; 
     }
         </code></pre>
-
 </section>
 <section>
     <h1>Example</h1>
@@ -50,7 +50,8 @@
 <section>
     <h1><code>Fixed</code> Position</h1>
     <p>
-        Fixed position elements are positioned based on the screen. Content will shift to take up the space the element would take up.
+        Fixed position elements are positioned based on the screen. Content will shift to take up the space the element would take
+        up.
     </p>
     <pre><code class="css">
 
@@ -68,10 +69,10 @@
 </section>
 <section>
     <h1><code>Absolute</code> Position</h1>
-<p>
-    Absolute positioned elements are positioned based of the closest parent element that has a position that is not static. If no parent is found, it is positioned off the the document.
-</p>
-
+    <p>
+        Absolute positioned elements are positioned based of the closest parent element that has a position that is not static. If
+        no parent is found, it is positioned off the the document.
+    </p>
     <pre><code class="css">
 
     .class{
@@ -82,6 +83,37 @@
         </code></pre>
 </section>
 <section>
-
+    <h1>Example</h1>
     <script async src="//jsfiddle.net/WorthyD/uxx7w99q/embed/html,css,result/"></script>
+    <a href="http://jsfiddle.net/WorthyD/uxx7w99q/">Link</a>
+</section>
+<section>
+    <h1> Positioning tricks</h1>
+    <div class="fragment">
+        <h2>Horizontally Align Absolute positioned element</h2>
+        <pre><code class="css">
+.horizantal{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+            </code></pre>
+    </div>
+    <div class="fragment">
+        <h2>Vertially Align Absolute positioned element</h2>
+        <pre><code class="css">
+.vertical{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+            </code></pre>
+    </div>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/5977run7/embed/html,css,result/"></script>
+    <a href="http://jsfiddle.net/WorthyD/5977run7/">Link</a>
 </section>
