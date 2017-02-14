@@ -1,0 +1,43 @@
+<section>
+    <h1>SASS</h1>
+    <h2>How CSS should behave.</h2>
+</section>
+<section>
+    <h1>SASS Benefits</h1>
+    <ul>
+        <li class="fragment">Variables</li>
+        <li class="fragment">Nesting</li>
+        <li class="fragment">Partials</li>
+        <li class="fragment">Imports</li>
+        <li class="fragment">Mixins</li>
+    </ul>
+</section>
+<section>
+    <h1>SASS Variables</h1>
+    <p>
+        Allow you to set a value in one spot and use it throughout all of your files. Variables are auto detected and must start with $.
+    </p>
+    <h3 class="fragment">Source:</h3>
+    <pre class="fragment"><code class="scss">
+        $theme: #f00;
+
+        a{
+            color:$theme;
+            border:1px solid $theme;
+        }
+        
+        </code></pre>
+    <h3 class="fragment">Output:</h3>
+    <pre class="fragment"><code class="scss">
+        a{
+            color:#f00;
+            border:1px solid #f00;
+        }
+        </code></pre>
+</section>
+<section>
+    <h1>Nesting</h1>
+    <p>
+        Nest allows you to group your CSS and create a more specific CSS selector.
+    </p>
+</section>
