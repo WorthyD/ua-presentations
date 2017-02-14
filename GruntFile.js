@@ -31,7 +31,7 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     //Default tasks and builds
-    grunt.registerTask('default', ['build','connect',  'watch']);
+    grunt.registerTask('default', ['build','connect' ]);
     grunt.registerTask('build', ['includereplace', 'newer:copy']);
 
     //JS Specific Tasks

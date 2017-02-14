@@ -154,7 +154,6 @@ h1,h2,h3, p{
     <p>
         SASS's import functionality allows you to combine multiple SCSS files into one.
     </p>
-
     <pre class="fragment"><code class="scss">
     @import 'reset';
     @import 'theme';
@@ -176,23 +175,33 @@ h1,h2,h3, p{
     gem -v
         </code></pre>
 </section>
-
 <section>
     <h1>Installation Continued</h1>
     <h2>SASS/SCSS installation</h2>
     <h3><a href="http://sass-lang.com/install">http://sass-lang.com/install</a></h3>
     <pre><code>
     gem install sass
-        </code></pre>
-    or 
+        </code></pre> or
     <pre><code>
     sudo gem install sass
-        </code></pre>
-    Then run to verify
+        </code></pre> Then run to verify
     <pre><code>
     sass -v
         </code></pre>
 </section>
 <section>
-    <h1>Gulp Ussage</h1>
+    <h1>Gulp SCSS Usage</h1>
+    <pre><code>
+        npm install gulp-sass --save-dev
+    </code></pre>
+</section>
+<section>
+    <h1>Gulp SASS Code</h1>
+    <pre><code class="js">
+    gulp.task('sass', function () {
+        return gulp.src('./sass/**/*.scss')
+            .pipe(sass())
+            .pipe(gulp.dest('./css'));
+    });
+</code></pre>
 </section>
