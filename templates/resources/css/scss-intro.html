@@ -15,7 +15,8 @@
 <section>
     <h1>SASS Variables</h1>
     <p>
-        Allow you to set a value in one spot and use it throughout all of your files. Variables are auto detected and must start with $.
+        Allow you to set a value in one spot and use it throughout all of your files. Variables are auto detected and must start
+        with $.
     </p>
     <h3 class="fragment">Source:</h3>
     <pre class="fragment"><code class="scss">
@@ -36,8 +37,132 @@
         </code></pre>
 </section>
 <section>
-    <h1>Nesting</h1>
+    <h2>Nesting</h2>
     <p>
         Nest allows you to group your CSS and create a more specific CSS selector.
     </p>
+    <div class="two-col">
+        <div>
+            <h3 class="fragment">Source:</h3>
+            <pre class="fragment"><code class="scss">
+$theme: #f00;
+.container {
+    a{
+        color:$theme;
+        border:1px solid $theme;
+    }
+    p{
+        color:black;
+    }
+}
+        </code></pre>
+        </div>
+        <div>
+            <h3 class="fragment">Output:</h3>
+            <pre class="fragment"><code class="scss">
+    .container a{
+        color:#f00;
+        border:1px solid #f00;
+    }
+    .container p{
+        color:black;
+    }
+        </code></pre>
+        </div>
+    </div>
+    <aside class="notes">
+        This is probably my favorite feature.
+    </aside>
+</section>
+<section>
+    <h1>Use nesting with caution</h1>
+    <div class="two-col">
+        <div>
+            <h3 class="fragment">Source:</h3>
+            <pre class="fragment"><code class="scss">
+.container {
+    .element{
+        a {
+            .icon{
+                color:blue;
+            }
+            .text{
+                color: black;
+            }
+        }
+    }
+}
+        </code></pre>
+        </div>
+        <div>
+            <h3 class="fragment">Output:</h3>
+            <pre class="fragment"><code class="scss">
+.container .element a .icon { 
+    color:blue;
+}
+.container .element a .text { 
+    color:black;
+}
+        </code></pre>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Partials </h1>
+    <p>
+        Partials contain small blocks of SCSS that can be used to manage specific components of your website. Partials typically
+        start with an underscore.
+    </p>
+    <h2 class="fragment">Examples</h2>
+    <h2 class="fragment">_reset.scss</h2>
+    <pre class="fragment"><code class="scss">
+* {
+    box-sizing: border-box;
+}
+h1,h2,h3, p{
+    margin:0;
+    padding:0;
+}
+   
+        </code></pre>
+</section>
+<section>
+    <h2>Examples</h2>
+    <h2 class="fragment">_theme.scss</h2>
+    <pre class="fragment"><code class="scss">
+    $brandcolor: #f00;
+    $brandsecondary: #a00;
+    $spacing: 15px;
+    </code></pre>
+</section>
+<section>
+    <h2>Examples</h2>
+    <h2 class="fragment">_navigation.scss</h2>
+    <pre class="fragment"><code class="scss">
+   .navigation {
+       display:flex;
+
+        nav a{
+            color:$brandcolor;
+            margin:$spacing;
+        }
+   }
+   </code></pre>
+</section>
+<section>
+    <h1>Import</h1>
+    <p>
+        SASS's import functionality allows you to combine multiple SCSS files into one.
+    </p>
+
+    <pre class="fragment"><code class="scss">
+    @import 'reset';
+    @import 'theme';
+    @import 'navigation';
+    @import 'footer';
+    @import 'page1';
+        </code></pre>
+    <aside class="notes">
+        CSS has a native import for using multiple CSS files, but
+    </aside>
 </section>
