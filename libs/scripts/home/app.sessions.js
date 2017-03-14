@@ -305,7 +305,7 @@
 
         var jan = {
             name: 'January',
-            isActive: true,
+            isActive: false,
             sessions: [{
                     num: 27,
                     date: '1/3/2017',
@@ -403,7 +403,7 @@
             name: 'February',
             isActive: true,
             sessions: [{
-                num: 28,
+                num: 38,
                 date: '2/2/2017',
                 links: [
                     ['Intro to task runners', 'sessions/36.html']
@@ -411,7 +411,7 @@
 
             }, 
             {
-                num: 29,
+                num: 39,
                 date: '2/14/2017',
                 links: [
                     ['SCSS', 'sessions/37.html']
@@ -419,7 +419,7 @@
 
             }, 
             {
-                num: 30,
+                num: 40,
                 date: '2/16/2017',
                 links: [
                     ['More SCSS', 'sessions/38.html']
@@ -427,19 +427,52 @@
 
             }, 
 
+             {
+                num: 41,
+                date: '2/22/2017',
+                links: [
+                    ['Advanced SCSS', 'sessions/39.html']
+                ]
+
+            }, 
+
+             {
+                num: 42,
+                date: '2/28/2017',
+                links: [
+                    ['AJAX Review and JS Templates', 'sessions/40.html']
+                ]
+
+            }, 
+
+
  
             
             
             ]
         }
+        var march = {
+            name: 'March',
+            isActive: true,
+            sessions: [{
+                num: 43,
+                date: '3/9/2017',
+                links: [
+                    ['jQuery plugins', 'sessions/41.html']
+                ]
 
+            }, 
+ 
+            ]
+        }
 
         var sessions = [
             october,
             november,
             december,
             jan,
-            feb
+            feb,
+            march
 
         ];
         /* beautify ignore:end */
