@@ -462,6 +462,46 @@
                 ]
 
             }, 
+ {
+                num: 44,
+                date: '3/14/2017',
+                links: [
+                    ['Slides', 'sessions/42.html']
+                ]
+
+            }, 
+  {
+                num: 45,
+                date: '3/15/2017',
+                links: [
+                    ['Slides', 'sessions/43.html']
+                ]
+
+            }, 
+  {
+                num: 46,
+                date: '3/21/2017',
+                links: [
+                    ['Slides', 'sessions/44.html']
+                ]
+
+            }, 
+ {
+                num: 47,
+                date: '3/23/2017',
+                links: [
+                    ['Slides', 'sessions/45.html']
+                ]
+
+            }, 
+  {
+                num: 48,
+                date: '3/28/2017',
+                links: [
+                    ['ES6', 'sessions/46.html']
+                ]
+
+            }, 
  
             ]
         }
