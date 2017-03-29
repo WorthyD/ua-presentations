@@ -1,0 +1,68 @@
+<section>
+    <h1>Arrow Functions</h1>
+    <p>
+        Arrow functions are yet another feature introduced into ES6 that other languages leverage. Arrow functions help remove some
+        confusion of the `this` keyword. It is very helpful, but it isn't always the best fit.
+    </p>
+</section>
+<section>
+    <h1>Arrow Function Syntax</h1>
+    <h2>Function Expression</h2>
+    <pre><code class="js">
+    .on('click', function(){
+    });
+    </code></pre>
+    <h2>Arrow Function</h2>
+    <pre><code class="js">
+    .on('click', () => {
+    });
+    </code></pre>
+</section>
+<section>
+    <h1>Variations</h1>
+    <div class="fragment two-col">
+        <h2>Shorthand Functions</h2>
+        <div>
+            <pre><code class="js">
+    function(y){
+        var x = 3;
+        return x * y; 
+    }
+   </code></pre>
+        </div>
+
+        <div>
+            <pre><code class="js">
+    (y) => {
+        var x = 3;
+        return x * y; 
+    }
+   </code></pre>
+        </div>
+
+
+
+
+    </div>
+    <div class="fragment two-col">
+        <h2>Single Line</h2>
+        <div>
+            <pre><code class="js">
+var rn = function(y){
+        return Math.random() * y; 
+    }
+   </code></pre>
+        </div>
+
+        <div>
+            <pre><code class="js">
+var rn =  (y) => Math.random() * y; 
+  rn(4); 
+   </code></pre>
+        </div>
+
+
+
+
+    </div>
+</section>
