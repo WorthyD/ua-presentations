@@ -95,9 +95,11 @@ var sq = new Square();
     </p>
     <pre class="fragment"><code class="js">
  class Log{
-    log:[]
+    constructor(){
+    this.log = [];
+    }
     get logHistory(){
-        return log; 
+        return this.log; 
     }
     set currentLog(value){
         this.log.push(value);
