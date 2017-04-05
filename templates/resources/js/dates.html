@@ -1,0 +1,61 @@
+<section>
+    <pre>    [Creates a JavaScript Date instance that represents a single moment in time. Date objects are based on a time value that
+    is the number of milliseconds since 1 January, 1970 UTC.]
+
+    http://stackoverflow.com/questions/1090869/why-is-1-1-1970-the-epoch-time
+</pre>
+</section>
+<section>
+    <pre>
+    new Date();
+new Date(value); // Integer value representing the number of milliseconds since 1 January 1970 00:00:00 UTC,
+new Date(dateString); //String value representing a date. The string should be in a format recognized by the Date.parse() 
+new Date(year, month[, date[, hours[, minutes[, seconds[, milliseconds]]]]]);
+</pre>
+</section>
+<section>
+    <pre>
+    examples
+    var today = new Date();
+var birthday = new Date('December 17, 1995 03:24:00');
+var birthday = new Date('1995-12-17T03:24:00');
+var birthday = new Date(1995, 11, 17);
+var birthday = new Date(1995, 11, 17, 3, 24, 0);
+</pre>
+</section>
+<section>
+    <pre>    //getting
+        var Xmas95 = new Date('December 25, 1995 23:15:30');
+var day = Xmas95.getDate();
+
+console.log(day); // 25
+var today = new Date();
+var year = today.getFullYear();
+var Xmas95 = new Date('December 25, 1995 23:15:30');
+var hours = Xmas95.getHours();
+
+console.log(hours); // 23
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth
+
+</pre>
+</section>
+<section>
+    <pre>
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setDate
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setMonth
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setMinutes
+
+
+    </pre>
+</section>
+<section>
+    <pre>
+        getting
+console.log(d.toString());     // logs Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
+console.log(d.toDateString()); // logs Wed Jul 28 1993
+//
+console.log(d.toString());     // logs Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
+console.log(d.toTimeString()); // logs 14:39:07 GMT-0600 (PDT)
+
+    </pre>
+</section>
