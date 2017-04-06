@@ -35,6 +35,8 @@ Number.square(2); //return 4
 </section>
 <section>
     <h1>Sub Class Example</h1>
+    <div class="two-col">
+        <div>
     <pre><code class="js">
 class Rectangle {
     constructor(height, width){
@@ -42,9 +44,9 @@ class Rectangle {
         this.height = height;
         this.width = width;
     }
-    get area(){
-        return this.height * this.width;
-    }
+  get area(){
+    return this.height * this.width;
+  }
 }
 
 </code></pre>
@@ -57,15 +59,20 @@ class Square extends Rectangle{
 }
 </code></pre>
 
-    <pre class="fragment"><code class="js">
+
+</div>
+<div>    <pre class="fragment"><code class="js">
 var rect = new Rectangle(10, 5);
-console.log(rect.name);
-console.log(rect.area);
+console.log(rect.name); //Rectangle
+console.log(rect.area); //50
 
 var sq = new Square(5);
-console.log(sq.name);
-console.log(sq.area);
+console.log(sq.name); //Square
+console.log(sq.area); //25
         </code></pre>
+</div>
+
+</div>
 </section>
 <!--
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class
