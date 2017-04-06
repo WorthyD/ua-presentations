@@ -12,8 +12,8 @@
                     <h1>Topics</h1>
                     <ul>
                         <li class="fragment">Review</li>
-                       <li class="fragment">More Classes</li>
-                       <li class="fragment">Dates</li>
+                        <li class="fragment">More Classes</li>
+                        <li class="fragment">Dates</li>
                         <li class="fragment">Code Thing</li>
                     </ul>
                 </section>
@@ -27,23 +27,47 @@
                 <section>
                     <h2>Before you leave - http://codepen.io/</h2>
                     <ul>
-                        <li class="fragment">Create a class called <code>Person</code></li>
-                        <li class="fragment">Its constructor needs to accept and assign the following values
+                        <li class="fragment">Declare an empty array using <code>let dates = [];</code></li>
+                        <li class="fragment">Write a loop that will loop 10 times and performs the following items.
                             <ul>
-                                <li class="fragment">First Name</li>
-                                <li class="fragment">Last Name</li>
-                                <li class="fragment">Email Address</li>
+                                <li class="fragment"><code>let month</code> => a random number between 0 and 11.</li>
+                                <li class="fragment"><code>let day</code> => a random number between 0 and 25.</li>
+                                <li class="fragment"><code>let date</code> => a new Date variable using <code>month</code>, <code>day</code>,
+                                    and 2000 for the year.</li>
+                                <li class="fragment">Add <code>date</code> to your <code>dates</code> array</li>
                             </ul>
                         </li>
-                        <li class="fragment">Add a <code>get</code> method that returns the user's full name.</li>
-                        <li class="fragment">Instantiate 3 users with different first and last names.</li>
-                        <li class="fragment">Additional Challenge </li>
-                        <li class="fragment">Additional Challenge: Place all of your users into an array called <code>users</code></li>
-                        <li class="fragment">Write a function that will accept an array of users and a <code>search phrase</code> </li>
-                        <li class="fragment">In the function, <code>filter</code> and return any users that match the search phrase.</li>
+                        <li class="fragment">
+                            <code>.filter</code> your <code>dates</code> array. Any months that are divisble by 3  should return true. <em>Remember that months are 0 based.</em>
+                        </li>
+                        <li class="fragment">
+                            March, June, September, December
+                        </li>
+                        <li class="fragment">
+                            Console log your arrays to verify.
+                        </li>
+                        <li class="fragment">
+                            Challenge - Sort both of your arrays.
+                        </li>
                     </ul>
-               </section>
-               <!--<section>
+                </section>
+                <section>
+                    <h1>Example Output</h1>
+                    <pre><code class="js">
+let formattedDates = dates.map(x => x.toLocaleString());                            
+["8/8/2010, 12:00:00 AM", "7/15/2010, 12:00:00 AM", "4/14/2010, 12:00:00 AM", 
+"8/7/2010, 12:00:00 AM", "5/25/2010, 12:00:00 AM", "9/16/2010, 12:00:00 AM", 
+"9/8/2010, 12:00:00 AM", "3/17/2010, 12:00:00 AM", "7/5/2010, 12:00:00 AM", 
+"9/22/2010, 12:00:00 AM"]                        
+                        </code></pre>
+
+                    <pre><code class="js">
+let formattedDates = dates.map(x => x.toLocaleString());
+["9/16/2010, 12:00:00 AM", "9/8/2010, 12:00:00 AM", 
+"3/17/2010, 12:00:00 AM", "9/22/2010, 12:00:00 AM"]
+                        </code></pre>
+                </section>
+                <!--<section>
                     <p data-height="265" data-theme-id="0" data-slug-hash="JWmPRw" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
                         data-pen-title="JWmPRw" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/JWmPRw/">JWmPRw</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
                         on <a href="http://codepen.io">CodePen</a>.</p>
