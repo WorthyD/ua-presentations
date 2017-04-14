@@ -20,17 +20,46 @@ test('true'); // Error.
 </section>
 <section>
     <h1>Number</h1>
-    //do return tiypes too
-    https://www.typescriptlang.org/docs/handbook/basic-types.html
+    <pre><code class="ts">
+const pi: number = 3.14;
+
+function area(radius: number) : number{
+    return pi * (Math.pow(radius, 2));
+}
+
+let a: number = area(2); 
+let b: string = area(2); //Error
+        </code></pre>
 </section>
 <section>
     <h1>String</h1>
+
+    <pre><code class="ts">
+const firstName: string = 'Daniel';
+const lastName: string = 'Worthy';
+
+function fullName(fName, lName) : string{
+    return `${fName} ${lName}`;
+}
+        </code></pre>
 </section>
 <section>
     <h1>Array</h1>
+    <pre><code class="ts">
+    let list: number[] = [1, 2, 3];
+    let list: Array<number> = [1, 2, 3];
+        </code></pre>
 </section>
 
 <section>
     <h1>Any</h1>
+    <p>
+        Best used when interacting with other libraries and frameworks.
+    </p>
+    <pre><code class="ts">
+let e: any = 30;
+e = true;
+e = "Hello World";
+        </code></pre>
 </section>
 
