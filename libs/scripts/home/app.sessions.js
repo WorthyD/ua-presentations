@@ -513,8 +513,8 @@
 
             ]
         }
-        var may = {
-            name: 'May',
+        var april = {
+            name: 'April',
             isActive: true,
             sessions: [{
 
@@ -535,6 +535,16 @@
                     ]
 
                 },
+                {
+
+                    num: 52,
+                    date: '4/18/2017',
+                    links: [
+                        ['TypeScript', 'sessions/50.html']
+                    ]
+
+                },
+
             ]
         }
 
@@ -546,7 +556,7 @@
             jan,
             feb,
             march,
-            may
+           april 
 
         ];
         /* beautify ignore:end */
