@@ -544,6 +544,16 @@
                     ]
 
                 },
+                {
+
+                    num: 53,
+                    date: '4/20/2017',
+                    links: [
+                        ['Angular Intro', 'sessions/51.html']
+                    ]
+
+                },
+
 
             ]
         }
