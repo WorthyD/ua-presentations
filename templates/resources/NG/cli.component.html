@@ -1,0 +1,50 @@
+<section>
+    <h1>Component in depth</h1>
+</section>
+<section>
+    <h1>Creating a New Component</h1>
+    <pre><code class="bash">
+ng g component  my-new-component-name
+       </code></pre>
+       <h2 class="fragment">Creates</h2>
+<pre><code class="ts">
+    
+    </code></pre>
+</section>
+<section>
+    <h1>Using your component</h1>
+    <h2>app.component.html</h2>
+    <pre><code class="xml">
+<h1>
+  {{title}}
+</h1>
+<app-my-new-comp></app-my-new-comp>
+        </code></pre>
+</section>
+<section>
+    <h1>Leverage components to shrink large blocks of code.</h1>
+    <pre><code class="xml">
+<div class="container">
+    <div *ngFor="let p of people">
+        <app-my-new-comp></app-my-new-comp>
+    </div>
+</div>
+</code></pre>
+</section>
+<section>
+    <h1>Passing info into a component.</h1>
+<pre><code class="ts">
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template: `<my-new-component title="name" body="desc"></my-new-component>`
+})
+export class AppComponent { 
+    name = 'Angular'; 
+    desc = "Lorem ipsum dolor sit amet.";
+}
+</code></pre>
+
+
+</section>
