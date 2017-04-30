@@ -571,6 +571,16 @@
                     ]
 
                 },
+    {
+
+                    num: 56,
+                    date: '4/27/2017',
+                    links: [
+                        ['Angular CLI', 'sessions/54.html']
+                    ]
+
+                },
+
 
 
 
