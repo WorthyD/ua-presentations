@@ -401,7 +401,7 @@
 
         var feb = {
             name: 'February',
-            isActive: true,
+            isActive: false,
             sessions: [{
                     num: 38,
                     date: '2/2/2017',
@@ -453,7 +453,7 @@
         }
         var march = {
             name: 'March',
-            isActive: true,
+            isActive: false,
             sessions: [{
                     num: 43,
                     date: '3/9/2017',
@@ -587,7 +587,26 @@
 
             ]
         }
+    var may = {
+            name: 'May',
+            isActive: true,
+            sessions: [{
 
+                    num: 57,
+                    date: '5/2/2017',
+                    links: [
+                        ['More CLI', 'sessions/55.html']
+                    ]
+
+                },
+
+               
+
+
+
+
+            ]
+        }
 
         var sessions = [
             october,
@@ -596,7 +615,8 @@
             jan,
             feb,
             march,
-           april 
+           april,
+           may
 
         ];
         /* beautify ignore:end */

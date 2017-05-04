@@ -14,15 +14,11 @@
         <li class="fragment"><code>clock</code></li>
         <li class="fragment"><code>keyup</code></li>
         <li class="fragment"><code>blur</code></li>
-        <li class="fragment"><code></code></li>
-        <li class="fragment"><code></code></li>
-        <li class="fragment"><code></code></li>
     </ul>
 </section>
-
-
 <section>
-<pre><code class="ts">
+    <h1>Click Event Wireup</h1>
+    <pre><code class="ts">
 @Component({
   selector: 'click-element',
   template: `
@@ -37,4 +33,35 @@ export class ClickElementComponent {
   }
 }
 </code></pre>
+</section>
+<section>
+    <h1>Template Reference Variables</h1>
+    <p>
+        DOM objects can be used and referenced with Template Reference Variables
+    </p>
+    <pre><code class="xml">
+<input #userName placeholder="UserName">
+
+<button (click)="addUser(userName.value)">Add User</button>
+</code></pre>
+
+</section>
+<section>
+    <h1>KeyUp Event Wireup</h1>
+    <pre><code class="ts">
+@Component({
+  selector: 'keyup-element',
+  template: `
+    <input #myInput
+      (keyup.enter)="addItem(myInput.value)" />`
+})
+export class ClickElementComponent {
+  message = '';
+
+  addItem(text) {
+    this.message = text;
+  }
+}
+</code></pre>
+
 </section>
