@@ -1,0 +1,188 @@
+<html>
+
+<head>
+    <title>Basics</title>
+
+    
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>More CSS</h1>
+                <h2>Display, list-style, float and clear.</h2>
+            </section>
+
+            <section>
+                <section>
+                    <h1>Review</h1>
+                    <h2><a href="part2.html" target="_blank">CSS Part 2</a></h2>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Display</h1>
+                    <p>
+                        The CSS display property is used to change the default rendering style of an element.
+                    </p>
+                    <ul>
+                        <li class="fragment"><strong>inline</strong> - span, em, strong</li>
+                        <li class="fragment"><strong>block</strong> - div, p, h1-h6</li>
+                        <li class="fragment"><strong>none</strong> - hides the element</li>
+                        <li class="fragment"><strong>inline-block</strong> - Renders block, but stays in a single line.</li>
+                        <li class="fragment"></li>
+                    </ul>
+                    <p class="fragment">
+                        You can change any element to display any type.
+                    </p>
+                    <aside class="notes">
+                        Set inline to block, but not block to inline.
+                    </aside>
+                </section>
+                <section>
+                    <h1>Example</h1>
+                    <script async src="//jsfiddle.net/WorthyD/bpywwf62/1/embed/html,css,result/"></script>
+                    <div>
+                        <a href="https://css-tricks.com/almanac/properties/d/display/" target="_blank">CSS Display overview</a>
+                    </div>
+
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>List Style</h1>
+                    <p>
+                        Changes the default styling of <code>UL</code> and <code>OL</code> lists
+                    </p>
+                    <ul>
+                        <li class="fragment"><code>list-style-type</code> - changes the icon/value used in the list</li>
+                        <li class="fragment"><code>list-style-position</code> - changes the position of the list. Accepts <strong>inside</strong> and <strong>outside</strong></li>
+                        <li class="fragment"><code>list-style-img</code> - changes bullets to image. Accepts <strong>none</strong> or a valid URL</li>
+                        <li class="fragment"> Short hand<code>list-style: type position img</code></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Example</h1>
+                    <script async src="//jsfiddle.net/WorthyD/abzq13yb/embed/html,css,result/"></script>
+                    <div>
+                        <a href="https://css-tricks.com/almanac/properties/l/list-style/" target="_blank">CSS List Type Overview</a>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Float</h1>
+                    <p>
+                        Float changes the position of an element and provides advanced layout to websites.
+                    </p>
+                    <ul>
+                        <li class="fragment"><strong>left</strong></li>
+                        <li class="fragment"><strong>right</strong></li>
+                        <li class="fragment"><strong>none</strong></li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Example</h1>
+                    <script async src="//jsfiddle.net/WorthyD/47a23h3v/embed/html,css,result/"></script>
+                    <div>
+                        <a href="https://css-tricks.com/almanac/properties/f/float/" target="_blank">Basic Float Guide</a>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h1>Clear</h1>
+                    <p>
+                        Clear resets floats and allows content to continue down the page.
+                    </p>
+                </section>
+                <section>
+                    <h1>Example</h1>
+                    <script async src="//jsfiddle.net/WorthyD/uk6shL9k/embed/html,css,result/"></script>
+                    <div>
+                        <a href="https://css-tricks.com/almanac/properties/c/clear/" target="_blank">Clear Guide</a>
+                    </div>
+                </section>
+
+            </section>
+            <section>
+                <h1><a href="https://css-tricks.com/all-about-floats/" target="_blank">All About Floats</a></h1>
+
+            </section>
+        </div>
+
+    </div>
+
+
+    <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        //hljs.initHighlightingOnLoad(); 
+                }
+            },
+            {
+                src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                async: false,
+                callback: function () {}
+            },
+            {
+                src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+                async: true,
+                callback: function () {
+                    RevealCodeFocus();
+                }
+            }, {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+
+    (function () {
+        //hljs.initHighlightingOnLoad(); 
+    })();
+</script>>
+</body>
+</html>
