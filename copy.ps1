@@ -1,1 +1,1 @@
-Copy-Item  -Path .\docs\* -Destination ..\MyForks\front-end-development-course-info\presentations -Recurse -force
+Copy-Item  -Path .\docs\* -Destination ..\MyForks\front-end-development-course-info\docs -Recurse -force
