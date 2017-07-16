@@ -401,3 +401,15 @@ a[target="_blank"]:after {
         display: none;
     }
 }
+.reveal .about-me-slide {
+    .about-me-image {
+        float: left;
+        max-width: 30%;
+    }
+    .info {
+        >ul {
+            max-width: 60%;
+            float: right;
+        }
+    }
+}

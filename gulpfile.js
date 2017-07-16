@@ -12,7 +12,7 @@ var sass = require('gulp-sass');
 var banner = '/* This is a generated file on ' + new Date() + '  */\n';
 
 gulp.task('fileinclude', function () {
-    gulp.src(['src/templates/**/*.html', '!src/templates/resources/**/*.html', '!src/templates/base.html', '!src/templates/footer.html', '!src/templates/header.html', '!src/templates/resources'])
+    gulp.src(['src/templates/**/*.html', '!src/templates/resources/**/*.html', '!src/templates/base.html', '!src/templates/footer.html', '!src/templates/header.html'])
         .pipe(fileinclude({
             prefix: '<!-- @@',
             suffix: '-->'
