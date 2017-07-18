@@ -1,0 +1,112 @@
+<section>
+    <h1>Attributes</h1>
+    <p>Come after the initial tag declaration.</p>
+    <p>Typically a name value pair.</p>
+    <p>Changes how elements look or act.</p>
+    <p>Some tags have unique attributes.</p>
+</section>
+<section>
+    <h1>Hyperlink</h1>
+    <p>Hyperlinks are primarily used to link to different webpages.</p>
+    <p>The tag wraps text or images and allows them to be clicked</p>
+    <ul>
+        <li class="fragment">Base Tag: <span class="highlight">&lt;a&gt;&lt;/a&gt;</span> </li>
+        <li class="fragment">
+            Primary Attributes
+            <ul>
+                <li class="fragment">
+                    <span class="highlight">Href</span> : The page address you wish to link to
+                </li>
+                <li class="fragment">
+                    <span class="highlight">Title</span>: Used to describe what you are linking to.
+                </li>
+            </ul>
+        </li>
+        <li class="fragment">
+            Additional Attributes
+            <ul>
+                <li class="fragment"><span class="highlight">Target</span>: Tells the browser where to open the link</li>
+                <li class="fragment"><span class="highlight">Rel</span>: Describes the relationship between to the link. </li>
+            </ul>
+        </li>
+    </ul>
+    <aside class="notes">
+        rel values = nofollow, external, bookmark, author etc. Mainly for SEO purposes.
+    </aside>
+</section>
+<section>
+    <h1>Hyperlink Continued</h1>
+    <p>
+        We can use the hyperlink tag for a couple more things.
+    </p>
+    <ul>
+        <li class="fragment">
+            Open applications via protocols.
+            <ul>
+                <li class="fragment">
+                    <a href="mailto:daniel@rockfishinteractive.com">Email me!</a>
+                    <pre><code class="xml">&lt;a href="mailto:daniel@rockfishinteractive.com"&gt;Email me!&lt;/a&gt;
+                                </li></code></pre>
+
+                    <li class="fragment">
+                        <a href="steam://run/400">Play Portal!</a>
+                        <pre><code class="xml">&lt;a href="steam://run/400"&gt;Play Portal!&lt;/a&gt;</code></pre>
+                    </li>
+            </ul>
+            </li>
+    </ul>
+
+</section>
+<section>
+    <h1>Image</h1>
+    <p>Used to inject an image into the page</p>
+    <ul>
+        <li class="fragment">Base Tag:<span class="highlight">&lt;img /&gt;</span> </li>
+        <li class="fragment">
+            Primary Attributes
+            <ul>
+                <li class="fragment">
+                    <span class="highlight">src</span>: The specific URL of an image
+                </li>
+                <li class="fragment">
+                    <span class="highlight">alt</span>: The alternate text of the image
+                </li>
+            </ul>
+        </li>
+        <li class="fragment">
+            Image Best Practices
+            <ul>
+                <li class="fragment">Use CSS to resize you image if you need to. </li>
+                <li class="fragment">
+                    Don't reference images from other websites without permission
+                    <pre><code class="xml">
+    &lt;!-- MyPersonalWebsite.com --&gt;
+    &lt;img src="http://www.uark.edu/_resources/images/future-students.jpg"/&gt;
+                                        </code></pre>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <aside class="notes"></aside>
+</section>
+<section>
+    <h1>File Paths</h1>
+    <h2 class="fragment">Relative Paths</h2>
+    <ul>
+        <li class="fragment"><strong>"index.html"</strong> Looks for index.html in the current folder</li>
+        <li class="fragment">
+            <strong>"pages/index.html"</strong> Starts in the current folder and looks inside the 'pages' folder
+        </li>
+        <li class="fragment">
+            <strong>"../pages/index.html"</strong> The '..' signifies is going to go back a director before looking for the
+            pages folder
+        </li>
+        <li class="fragment">
+            <strong>"/pages/index.html"</strong> The '/' signifies that is going to start at the root of your URL.
+        </li>
+    </ul>
+    <h2 class="fragment">Absolute Paths</h2>
+    <ul>
+        <li class="fragment"><strong>http://mysite.com/pages/index.html</strong></li>
+    </ul>
+</section>
