@@ -15,32 +15,36 @@
         transition: 'slide',
         backgroundTransition: 'zoom',
         dependencies: [{
-                src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
                 async: false,
                 callback: function () {
 
-        //hljs.initHighlightingOnLoad(); 
+        hljs.initHighlightingOnLoad(); 
                 }
             },
-            {
-                src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
-                async: false,
-                callback: function () {}
-            },
-            {
-                src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
-                async: true,
-                callback: function () {
-                    RevealCodeFocus();
-                }
-            }, {
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
                 src: '../vendor/reveal/plugin/notes/notes.js',
                 async: false
             }
         ]
     });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
 
-    (function () {
-        //hljs.initHighlightingOnLoad(); 
-    })();
+  
 </script>>
