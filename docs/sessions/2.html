@@ -14,6 +14,7 @@
 <link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
 
 <link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
 
 <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
@@ -34,8 +35,13 @@
     <body>
         <div class="reveal">
             <div class="slides">
-
-
+                <section class="review">
+                    <h1>7/20/2017</h1>
+                    <ul>
+                        <li>Review Web Intro</li>
+                        <li>Intro HTML</li>
+                   </ul>
+                </section>
                <!-- include('../resources/intro/web-intro.html' ) -->
                <section>
     <!-- INtro SLide-->
@@ -156,6 +162,136 @@
                             </code></pre>
 </section>
 
+               <section>
+    <h1>Content Tags</h1>
+    <p>
+        Elements inside the body tag are nested. The newest element must be closed before it's parent. Similar to nesting dolls.
+    </p>
+    <img src="../images/misc/nesting.jpg" />
+</section>
+<section>
+    <h1>Paragraph Tags</h1>
+    <p>Paragraph tags are used for general blocks of text.</p>
+    <div class="two-col">
+        <div>
+            <pre class="fragment"><code class="xml">
+&lt;p&gt;This is my first paragraph&lt;/p&gt;
+&lt;p&gt;This is my second paragraph&lt;/p&gt;
+    </code></pre>
+            <pre class="fragment"><code class="xml">
+&lt;p&gt;This is my first paragraph&lt;/p&gt;&lt;p&gt;This is my second paragraph&lt;/p&gt;
+    </code></pre>
+
+        </div>
+        <div class="fragment">
+            <p>This is my first paragraph</p>
+            <p>This is my second paragraph</p>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Paragraph Tag comparison</h1>
+
+    <div class="two-col small-text align-left">
+        <div class="fragment">
+            <h3>Paragraph Tags</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo velit erat, quis sodales ligula commodo a. Praesent
+                id massa maximus, rhoncus tellus varius, posuere lectus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo velit erat, quis sodales ligula commodo a. Praesent
+                id massa maximus, rhoncus tellus varius, posuere lectus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo velit erat, quis sodales ligula commodo a. Praesent
+                id massa maximus, rhoncus tellus varius, posuere lectus.
+            </p>
+        </div>
+        <div class="fragment">
+            <h3>Div tags</h3>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo velit erat, quis sodales ligula commodo a. Praesent
+                id massa maximus, rhoncus tellus varius, posuere lectus.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo velit erat, quis sodales ligula commodo a. Praesent
+                id massa maximus, rhoncus tellus varius, posuere lectus.
+            </div>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin commodo velit erat, quis sodales ligula commodo a. Praesent
+                id massa maximus, rhoncus tellus varius, posuere lectus.
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Heading Tags</h1>
+    <p>The heading tag is used to label important blocks of content. </p>
+    <div class="two-col">
+        <div class="fragment">
+            <pre><code class="xml">
+&lt;h1&gt;This is heading 1&lt;/h1&gt;
+&lt;h2&gt;This is heading 2&lt;/h2&gt;
+&lt;h3&gt;This is heading 3&lt;/h3&gt;
+&lt;h4&gt;This is heading 4&lt;/h4&gt;
+&lt;h5&gt;This is heading 5&lt;/h5&gt;
+&lt;h6&gt;This is heading 6&lt;/h6&gt;
+                                </code></pre>
+        </div>
+        <div class="fragment">
+            <h1>This is heading 1</h1>
+            <h2>This is heading 2</h2>
+            <h3>This is heading 3</h3>
+            <h4>This is heading 4</h4>
+            <h5>This is heading 5</h5>
+            <h6>This is heading 6</h6>
+
+        </div>
+    </div>
+    <aside class="notes">
+        These help the user as they skim over your document <br> search engines use them to index the structure of your content
+    </aside>
+</section>
+<section>
+    <h1>Formatting</h1>
+    <p>There are tags available for adding <em>emphasis</em> and <strong>important</strong></p>
+    <pre><code class="xml">    &lt;p&gt;
+        There are tags available
+        for adding &lt;em&gt;emphasis&lt;/em&gt;
+        and &lt;strong&gt;important&lt;/strong&gt;
+    &lt;/p&gt;
+                    </code></pre>
+</section>
+<section>
+    <h1>The Old Way</h1>
+    <p>
+        There were tags dedicated to <i>italics</i>, <b>bold</b> and
+        <u>underline</u>
+    </p>
+    <pre><code class="xml">&lt;p&gt;
+     There were tags dedicated to
+     &lt;i&gt;italics&lt;/i&gt;,
+     &lt;b&gt;bold&lt;/b&gt;
+     and &lt;u&gt;underline&lt;/u&gt;
+&lt;/p&gt;
+</code></pre>
+    <p>These tags are deprecated and you should use CSS to replace these</p>
+</section>
+<section>
+    <h1>Special Characters</h1>
+    <p>
+        Special characters such as &nbsp; &copy;, &gt;, &#182;, and &#8212;
+    </p>
+    <ul>
+        <li class="fragment">& nbsp;</li>
+        <li class="fragment">& copy;</li>
+        <li class="fragment">& gt;</li>
+        <li class="fragment">& #8212;</li>
+        <li class="fragment"><a href="http://www.ascii.cl/htmlcodes.htm">HTML Special Character Codes</a></li>
+    </ul>
+
+</section>
                <section>
     <h1>Attributes</h1>
     <p>Come after the initial tag declaration.</p>
@@ -490,14 +626,14 @@
         <div class="fragment">
             <pre>
 <code class="xml">
-                            <div class="row">
-                            <div class="column title">Title 1</div>
-                            <div class="column description">Desc 1</div>
-    </div>
-                            <div class="row">
-                            <div class="column title">Title 2</div>
-                            <div class="column description">Desc 2</div>
-    </div>
+<div class="row">
+    <div class="column title">Title 1</div>
+    <div class="column description">Desc 1</div>
+</div>
+<div class="row">
+    <div class="column title">Title 2</div>
+    <div class="column description">Desc 2</div>
+</div>
 </code>
 </pre>
         </div>
