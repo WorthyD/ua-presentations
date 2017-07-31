@@ -25,6 +25,19 @@
 
 </section>
 <section>
+    <h1>Adding CSS</h1>
+    <pre><code class="xml">
+    <div style="color:red"></div>
+
+    <style>
+        /* CSS rules*/
+    </style>
+
+    <link href="../styles/main.min.css" rel="stylesheet" />
+        
+    </code></pre>
+</section>
+<section>
     <h1>Syntax</h1>
     <h2><span class="fragment">property</span><span class="fragment">:</span><span class="fragment">value</span><span class="fragment">;</span></h2>
     <h2><span class="fragment">color</span><span class="fragment">:</span><span class="fragment">#000000</span><span class="fragment">;</span></h2>
@@ -130,7 +143,7 @@
     </div>
 </section>
 <section>
-    <h1>Class Selector</h1>
+    <h1>ID Selector</h1>
     <p>
         This is one of the most specific selectors.
     </p>
@@ -177,6 +190,22 @@
     <h3 class="fragment" style="color:green;">Green</h3>
 </section>
 <section>
+    <h1>Example of specificity.</h1>
+    <pre><code class="xml">
+<h1 class="site-header" id="my-header">Text goes here</h1>
+
+</code></pre>
+    <pre><code class="css">
+    h1 {color: blue;}
+    h1 {color: red !important}
+    .site-header {color: red;}
+    #my-header {color: green;}
+
+</code></pre>
+    <h3>What color will the h1 be?</h3>
+</section>
+
+<section>
     <h1>We'll cover CSS specificity in greater detail later.</h1>
 </section>
 
@@ -188,7 +217,7 @@
     <p>
         There are a number of different types of values for CSS. These are some of the more common ones.
     </p>
-    <ul class="fragment">
+    <ul>
         <li class="fragment">
             <strong>Colors</strong> can be applied in several different ways
             <ul>

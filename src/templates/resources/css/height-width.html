@@ -1,0 +1,72 @@
+<section>
+    <h1>Height & Width</h1>
+    <p>Sets the specific height and width of a <em>block</em> element</p>
+    <ul>
+        <li class="fragment">
+            <strong>height</strong>
+            <ul>
+                <li class="fragment"><strong>min-height</strong></li>
+                <li class="fragment"><strong>max-height</strong></li>
+            </ul>
+        </li>
+        <li class="fragment">
+            <strong>width</strong>
+            <ul>
+                <li class="fragment"><strong>min-width</strong></li>
+                <li class="fragment"><strong>max-width</strong></li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Examples</h1>
+    <div class="two-col">
+        <div>
+            <pre>
+<code class="css">
+.fig15{
+    height:100px;
+    width:250px;
+}
+/*Applying this to a span tag*/
+.fig16{
+    height:100px;
+    width:100px;
+}
+.fig17{
+    max-width:100px;
+}
+</code>
+</pre>
+        </div>
+        <div style="background-color:grey">
+            <style>
+                .reveal .fig15 {
+                    background-color: blue;
+                    color: #fff;
+                    height: 100px;
+                    width: 250px;
+                }
+
+                .reveal .fig16 {
+                    background-color: red;
+                    color: #fff;
+                    height: 100px;
+                    width: 100px;
+                }
+
+                .reveal .fig17 {
+                    background-color: green;
+                    color: #fff;
+                    max-width: 100px;
+                }
+            </style>
+
+            <div class="fig15">Figure 15</div>
+            <span class="fig16">Figure 16</span>
+
+            <div class="fig17">Figure 17 with a maximum width value</div>
+        </div>
+    </div>
+
+</section>

@@ -36,93 +36,11 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>7/27/2017</h1>
+                    <h1>8/1/2017</h1>
                     <ul>
-                        <li>Intro CSS</li>
+                        <li>More CSS</li>
                     </ul>
                 </section>
-                 <section>
-                    <h1>What's wrong with this?</h1>
-                        <pre class="xml">
-                    <code>
-    <h1 class="-title">Page Title</h1>
-                    </code>
-                        </pre>
-                </section>
-                <section>
-                    <h1>What's wrong with this?</h1>
-                        <pre class="xml">
-                    <code>
-    <h3 id="title-1"></h3>
-    <p>Lorem ipsum dolor sit amet.</p>
-    <h2 id="title-1"></h2>
-                    </code>
-                       </pre>
-                </section>
-
-
-                <section>
-    <h1>The <strong>Class</strong> attribute</h1>
-    <p>
-        The <strong>Class</strong> attribute is used to reference a class in a Style Sheet. You can also target an element
-        by in JavaScript by its class.
-    </p>
-    <div class="two-col">
-        <div class="fragment">
-            <ul>
-                <li><strong>Rules</strong></li>
-                <li>Must start with a letter</li>
-                <li>Can be followed by other letters, numbers, hyphens and underscores</li>
-                <li>Elements can contain multiple classes</li>
-            </ul>
-
-        </div>
-        <div class="fragment">
-            <pre>
-<code class="xml">
-<div class="row">
-    <div class="column title">Title 1</div>
-    <div class="column description">Desc 1</div>
-</div>
-<div class="row">
-    <div class="column title">Title 2</div>
-    <div class="column description">Desc 2</div>
-</div>
-</code>
-</pre>
-        </div>
-
-    </div>
-
-</section>
-<section>
-    <h1>The <strong>ID</strong> attribute</h1>
-    <p>
-        Use the <strong>ID</strong> attribute to be able to specifically target an element. <strong>IDs</strong> must be
-        unique. You will get inconsistent results if there are multiple elements with the same <strong>ID</strong>.
-    </p>
-    <div class="two-col">
-        <div class="fragment">
-            <ul>
-                <li><strong>Rules</strong></li>
-                <li>Must be unique</li>
-                <li>Cannot contain spaces</li>
-                <li>Casing matters when being target by CSS or JS</li>
-            </ul>
-
-        </div>
-        <div class="fragment">
-            <pre>
-<code class="xml">
-    &lt;div id="site-header"&gt;
-        &lt;h1 id="myTitle"&gt;My Title&lt;/h1&gt;
-    &lt;/div&gt;
-</code>
-</pre>
-        </div>
-
-    </div>
-</section>
                 ﻿<section>
     <h1>What is CSS?</h1>
     <p>
@@ -466,7 +384,549 @@
 
 
 </section>
+                <section>
+    <h1>Backgrounds</h1>
+    <p>
+        Changes the background appearance of the element.
+    </p>
+    <ul>
+        <li class="fragment"><strong>background-color</strong></li>
+        <li class="fragment"><strong>background-image</strong></li>
+        <li class="fragment">
+            <strong>background-repeat</strong> repeats the background image.
+            <ul>
+                <li class="fragment"><code>repeat-x</code> repeats the image across the x axis</li>
+                <li class="fragment"><code>repeat-y</code> repeats the image across the y axis</li>
+                <li class="fragment"><code>no-repeat</code> makes the image only appear once</li>
+            </ul>
+        </li>
+</section>
+<section>
+    <h1>Backgrounds Continued</h1>
+    <ul>
+        <li class="fragment">
+            <strong>background-position</strong> Accepts two values. First the x and then the y. You specify these by using
+            these values.
+            <ul>
+                <li class="fragment">left|right|center&nbsp;&nbsp;top|center|bottom</li>
+                <li class="fragment">1px 1px; - This would be 1px off the top and 1px off the left</li>
+                <li class="fragment">x% y%</li>
+            </ul>
+        </li>
+    </ul>
+    <div class="fragment"><a href="https://css-tricks.com/almanac/properties/b/background/" target="_blank">Background Guide</a></div>
+</section>
+<section>
+    <h1>Examples</h1>
+            <pre><code class="css" data-noescape>
+.item{
+    background-color: #ff0000;
+    background-color: blue;
+    <span class="fragment">
+    background-image: url(http://via.placeholder.com/350x150);
+    background-image: url(../images/me.jpg);</span>
+    <span class="fragment">
+    background-repeat: repeat-x;
+    background-repeat: no-repeat;    </span>
+    <span class="fragment">
+    background-position: center center;
+    background-position: 10px 10px;
+    </span>
+}
+        </code></pre>
+</section>
+    <section>
+        <h1>Todo: Code pen</h1>
+    </section>
+<section>
+    <h1>Borders</h1>
+    <p>
+        This CSS property defines the borders around an element.
+    </p>
+    <ul>
+        <li class="fragment"><strong>border-width</strong> accepts pixel value </li>
+        <li class="fragment">
+            <strong>border-style</strong>
+            <ul>
+                <li class="fragment"><code>solid</code> the most common</li>
+                <li class="fragment"><code>dashed</code></li>
+                <li class="fragment"><code>dotted</code></li>
+                <li class="fragment"><a href="http://www.w3schools.com/cssref/pr_border-style.asp" target="_blank">Many others</a></li>
+            </ul>
+        </li>
+        <li class="fragment">
+            <strong>color</strong> accepts any valid color
+        </li>
+    </ul>
+    <aside class="notes">
+        border width also accepts thin medium and thick, but px is the most desired
+    </aside>
+</section>
+<section>
+    <h2>Examples</h2>
+    <div class="two-col">
+        <div>
+            <pre>
+<code class="css">
+    .fig1{
+        border-color: red;
+        border-style: solid;
+        border-width:5px;
+    }
+    .fig2{
+        border-color: navy;
+        border-style: dotted;
+        border-width:10px;
+    }
+</code>
+</pre>
+        </div>
+        <style>
+            .reveal .fig1 {
+                border-color: red;
+                border-style: solid;
+                border-width: 5px;
+                margin: 20px 0;
+            }
 
+            .reveal .fig2 {
+                border-color: navy;
+                border-style: dotted;
+                border-width: 10px;
+                margin: 20px 0;
+            }
+        </style>
+        <div>
+
+            <div class="fig1">
+                Red border that is 5px thick.
+            </div>
+            <div class="fig2">
+                Fig2. Dotted border
+            </div>
+
+        </div>
+    </div>
+</section>
+<section>
+    <h2>That's a lot of code. Can we shorten it?</h2>
+    <div class="two-col">
+        <div>
+            <pre>
+<code class="css">
+    .fig3 {
+        border: 5px solid red;
+    }
+    .fig4 {
+        border:10px dotted navy;
+    }
+</code>
+</pre>
+        </div>
+        <style>
+            .reveal .fig3 {
+                border: 5px solid red;
+                margin: 20px 0;
+            }
+
+            .reveal .fig4 {
+                border: 10px dotted navy;
+                margin: 20px 0;
+            }
+        </style>
+        <div>
+
+            <div class="fig3">
+                Red border that is 5px thick.
+            </div>
+            <div class="fig4">
+                Fig4. Dotted border
+            </div>
+
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Modify a specific border</h1>
+    <div class="two-col">
+        <div>
+            <pre>
+<code class="css">
+    .fig6 {
+        border-left: 5px solid red;
+    }
+    .fig7 {
+        border: 10px dotted navy;
+        border-right-style:solid;
+        border-right-width:5px;
+    }
+</code>
+</pre>
+        </div>
+        <style>
+            .reveal .fig6 {
+                border-left: 5px solid red;
+                margin: 20px 0;
+            }
+
+            .reveal .fig7 {
+                border: 10px dotted navy;
+                border-right-style: solid;
+                border-right-width: 5px;
+                margin: 20px 0;
+            }
+        </style>
+        <div>
+
+            <div class="fig6">
+                Fig 6 - I only have a left border.
+            </div>
+            <div class="fig7">
+                Fig 7 - My right is different
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<section>
+    <h1>More specificity</h1>
+    <div class="two-col">
+        <div>
+            <pre>
+<code class="css">
+    .fig8 {
+        border: 5px solid red;
+        border-bottom:none;
+    }
+    .fig9 {
+        border-bottom:none;
+        border: 10px dotted navy;
+    }
+</code>
+</pre>
+        </div>
+        <style>
+            .reveal .fig8 {
+                border: 5px solid red;
+                border-bottom: none;
+                margin: 20px 0;
+            }
+
+            .reveal .fig9 {
+                border-bottom: none;
+                border: 10px dotted navy;
+                margin: 20px 0;
+            }
+        </style>
+        <div>
+
+            <div class="fig8">
+                Fig 8 - I have no bottom border
+            </div>
+            <div class="fig9">
+                Fig 9 - Order Matters
+            </div>
+
+        </div>
+    </div>
+
+</section>
+<section>
+    <h1>TODO: Code pen</h1>
+</section>
+<section>
+    <h1>More Info</h1>
+    <div>
+        <a href="https://css-tricks.com/almanac/properties/b/border/" target="_blank">Border Guide</a>
+    </div>
+</section>
+                    <section>
+        <h1>Margins</h1>
+        <p>
+            CSS Margins add spacing <em>around</em> an element.
+        </p>
+        <ul>
+            <li class="fragment"><strong>margin-left</strong></li>
+            <li class="fragment"><strong>margin-top</strong></li>
+            <li class="fragment"><strong>margin-right</strong></li>
+            <li class="fragment"><strong>margin-bottom</strong></li>
+        </ul>
+    </section>
+    <section>
+        <h1>Margin Shorthand</h1>
+        <div class="two-col">
+            <div>
+                <pre>
+<code class="css">
+.fig10 {
+    /* Applies 5px to all 4 sides */
+    margin: 5px;
+}
+.fig11 {
+    /* Applies 5px to all 4 sides */
+    margin: 5px 5px 5px 5px;
+}
+.fig12{
+    /*Applies 10px to top and bottom
+      and 30px left and right*/
+    margin:10px 30px;
+}
+</code>
+</pre>
+            </div>
+            <div>
+                <div style="background-color:lightcoral; overflow:hidden">
+
+                    <style>
+                        .reveal .fig11 {
+                            border: 1px solid black;
+                            margin: 5px;
+                            background-color: #fff;
+                        }
+                    </style>
+                    <div class="fig11">
+                        Figure 10 / Figure 11
+                    </div>
+                </div>
+                <div style="background-color:lightcoral; overflow:hidden; margin-top:30px;">
+
+                    <style>
+                        .reveal .fig12 {
+                            border: 1px solid black;
+                            margin: 10px 30px;
+                            background-color: #fff;
+                        }
+                    </style>
+                    <div class="fig12">
+                        Figure 12
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>Padding</h1>
+        <p>
+            CSS Padding add spacing <em>inside</em> an element.
+        </p>
+        <ul>
+            <li class="fragment"><strong>padding-left</strong></li>
+            <li class="fragment"><strong>padding-top</strong></li>
+            <li class="fragment"><strong>padding-right</strong></li>
+            <li class="fragment"><strong>padding-bottom</strong></li>
+        </ul>
+    </section>
+    <section>
+        <h1>Padding Shorthand</h1>
+        <div class="two-col">
+            <div>
+                <pre>
+<code class="css">
+.fig13 {
+    margin: 5px;
+    padding:15px;
+}
+.fig14 {
+   margin:10px 30px;
+   padding:30px 10px;
+}
+</code>
+</pre>
+            </div>
+            <div>
+                <div style="background-color:brown; overflow:hidden">
+
+                    <style>
+                        .reveal .fig13 {
+                            border: 1px solid black;
+                            margin: 5px;
+                            padding: 15px;
+                            background-color: #fff;
+                        }
+                    </style>
+                    <div class="fig13">
+                        Figure 13
+                    </div>
+                </div>
+                <div style="background-color:brown; overflow:hidden; margin-top:30px;">
+
+                    <style>
+                        .reveal .fig14 {
+                            border: 1px solid black;
+                            margin: 10px 30px;
+                            padding: 30px 10px;
+                            background-color: #fff;
+                        }
+                    </style>
+                    <div class="fig14">
+                        Figure 14
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+                <section>
+    <h1>Height & Width</h1>
+    <p>Sets the specific height and width of a <em>block</em> element</p>
+    <ul>
+        <li class="fragment">
+            <strong>height</strong>
+            <ul>
+                <li class="fragment"><strong>min-height</strong></li>
+                <li class="fragment"><strong>max-height</strong></li>
+            </ul>
+        </li>
+        <li class="fragment">
+            <strong>width</strong>
+            <ul>
+                <li class="fragment"><strong>min-width</strong></li>
+                <li class="fragment"><strong>max-width</strong></li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Examples</h1>
+    <div class="two-col">
+        <div>
+            <pre>
+<code class="css">
+.fig15{
+    height:100px;
+    width:250px;
+}
+/*Applying this to a span tag*/
+.fig16{
+    height:100px;
+    width:100px;
+}
+.fig17{
+    max-width:100px;
+}
+</code>
+</pre>
+        </div>
+        <div style="background-color:grey">
+            <style>
+                .reveal .fig15 {
+                    background-color: blue;
+                    color: #fff;
+                    height: 100px;
+                    width: 250px;
+                }
+
+                .reveal .fig16 {
+                    background-color: red;
+                    color: #fff;
+                    height: 100px;
+                    width: 100px;
+                }
+
+                .reveal .fig17 {
+                    background-color: green;
+                    color: #fff;
+                    max-width: 100px;
+                }
+            </style>
+
+            <div class="fig15">Figure 15</div>
+            <span class="fig16">Figure 16</span>
+
+            <div class="fig17">Figure 17 with a maximum width value</div>
+        </div>
+    </div>
+
+</section>
+                <section>
+    <h1>Display</h1>
+    <p>
+        The CSS display property is used to change the default rendering style of an element.
+    </p>
+    <ul>
+        <li class="fragment"><strong>inline</strong> - span, em, strong</li>
+        <li class="fragment"><strong>block</strong> - div, p, h1-h6</li>
+        <li class="fragment"><strong>none</strong> - hides the element</li>
+        <li class="fragment"><strong>inline-block</strong> - Renders block, but stays in a single line.</li>
+        <li class="fragment"></li>
+    </ul>
+    <p class="fragment">
+        You can change any element to display any type.
+    </p>
+    <aside class="notes">
+        Set inline to block, but not block to inline.
+    </aside>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/bpywwf62/1/embed/html,css,result/"></script>
+    <div>
+        <a href="https://css-tricks.com/almanac/properties/d/display/" target="_blank">CSS Display overview</a>
+    </div>
+
+</section>
+                <section>
+    <h1>Float</h1>
+    <p>
+        Float changes the position of an element and provides advanced layout to websites.
+    </p>
+    <ul>
+        <li class="fragment"><strong>left</strong></li>
+        <li class="fragment"><strong>right</strong></li>
+        <li class="fragment"><strong>none</strong></li>
+    </ul>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/47a23h3v/embed/html,css,result/"></script>
+    <div>
+        <a href="https://css-tricks.com/almanac/properties/f/float/" target="_blank">Basic Float Guide</a>
+    </div>
+</section>
+<section>
+    <h1>Clear</h1>
+    <p>
+        Clear resets floats and allows content to continue down the page.
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/uk6shL9k/embed/html,css,result/"></script>
+    <div>
+        <a href="https://css-tricks.com/almanac/properties/c/clear/" target="_blank">Clear Guide</a>
+    </div>
+</section>
+<section>
+    <h1><a href="https://css-tricks.com/all-about-floats/" target="_blank">All About Floats</a></h1>
+
+</section>
+
+                <section>
+                    <h1>Exercise</h1>
+                    <h2><a href="" target="_blank">Fork this Pen</a> and make it look like this.</h2>
+                    <img src="../images/exercises/exercise4.png"/>
+                </section>
+                <section>
+                    <h1>Part 1</h1>
+                    <img src="../images/exercises/exercise4.1.png"/>
+                </section>
+                <section>
+                    <h1>Part 2</h1>
+                    <h6><span style="color:#0045ad">Blue:#0045ad</span>&nbsp;&nbsp;&nbsp;<span style="color:#a00">Red: #a00 </span><span style="color:#00821e;">Green: #00821e </span></h6>
+                    <img src="../images/exercises/exercise4.2.png"/>
+                </section>
+                <section>
+                    <h1>Part 3</h1>
+                    <img src="../images/exercises/exercise4.3.png"/>
+                </section>
+
+
+
+
+
+
+                <!--
                 <section class="center-text">
                     <h1><a href="https://codepen.io/WorthyD/pen/zdxgJQ?editors=1000">Fork this Code Pen</a></h1>
                     <a href="https://codepen.io/WorthyD/pen/zdxgJQ?editors=1000">Link</a>
@@ -517,8 +977,7 @@
                         <li> All text in `span` tags should be underlined.</li>
                         <li> All text inside of the element with the class 'main-point' should have the following font applied
                             to it. `"Courier New", Courier, monospace`</li>
-                        <li> <del>All text inside of an `h2` tag should be bold. Use CSS and not a `strong` tag to do this.</del>
-                        Make the text in the h2 normal font weight</li>
+                        <li> All text inside of an `h2` tag should be bold. Use CSS and not a `strong` tag to do this.</li>
                     </ul>
                 </section>
                 <section>
@@ -526,7 +985,7 @@
                     <img src="../images/exercises/exercise3.png" alt="">
 
                 </section>
-
+-->
             </div>
 
         </div>
