@@ -12,14 +12,12 @@ var sass = require('gulp-sass');
 var banner = '/* This is a generated file on ' + new Date() + '  */\n';
 
 gulp.task('fileinclude', function () {
-    gulp.src(['src/templates/**/*.html', '!src/templates/resources/**/*.html', '!src/templates/base.html', '!src/templates/footer.html', '!src/templates/header.html'])
+ return    gulp.src(['src/templates/**/*.html', '!src/templates/resources/**/*.html', '!src/templates/base.html', '!src/templates/footer.html', '!src/templates/header.html'])
         .pipe(fileinclude({
             prefix: '<!-- @@',
             suffix: '-->'
         }))
-        .pipe(gulp.dest('./docs')).pipe(browserSync.reload({
-            stream: true
-        }));
+        .pipe(gulp.dest('./docs'));
 });
 var sassPath = 'src/sass/**/*.scss';
 
@@ -77,6 +75,7 @@ gulp.task('browserSync', ['sass'], function () {
 gulp.task('dev', ['browserSync', 'copy', 'sass', 'fileinclude'], function () {
     gulp.watch('src/templates/**/*.html', ['fileinclude']);
     gulp.watch('src/scripts/**/*.js', browserSync.reload);
+    gulp.watch('docs/**/*.html', browserSync.reload);
     gulp.watch(sassPath, ['sass']);
 });
 
