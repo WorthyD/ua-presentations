@@ -34,8 +34,8 @@
     <h1>Inside a <code>script</code> tag</h1>
     <pre>
 <code class="xml">
-                    <p id="myBlock">
-    </p>
+<p id="myBlock">
+</p>
                     <script>
     var message = 'Hello World';
     document.getElementById('myBlock').innerHTML = message;
@@ -48,7 +48,7 @@
     <h1>Including a reference to a external <code>script</code> file</h1>
     <pre>
 <code class="xml">
-                    <p id="myBlock">
+    <p id="myBlock">
     </p>
     &lt;script src="script/main.js"&gt;&lt;/script&gt;
 </code>
@@ -73,12 +73,12 @@
     </p>
     <pre>
 <code class="xml">
-                    <p id="myBlock">
-    </p>
-                    <script>
+<p id="myBlock">
+</p>
+<script>
     var message = 'Hello World';
     document.getElementById('myBlock').innerHTML = message;
-    </script>
+</script>
 </code>
 </pre>
 
@@ -90,7 +90,7 @@
     <!--//Single line-->
     <pre>
 <code class="xml">
-                    <script>
+<script>
     //This is a Single line comment
     var message = 'Hello World';
     /*
@@ -100,7 +100,7 @@
 
     */
     document.getElementById('myBlock').innerHTML = message;
-    </script>
+</script>
 </code>
 </pre>
 
@@ -207,7 +207,8 @@
 </code>
 </pre>
     </div>
-    <div class="fragment">
+</section>
+<section>
         <pre>
 <code class="js">
     var $foo  = "Hello World"; //Valid
@@ -219,7 +220,6 @@
     var _name = "Daniel";  //Valid
 </code>
 </pre>
-    </div>
 
 
 </section>
