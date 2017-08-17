@@ -1,1 +1,2 @@
 Copy-Item  -Path .\docs\* -Destination ..\MyForks\front-end-development-course-info\docs -Recurse -force
+Copy-Item  -Path .\src\Exercises\* -Destination ..\MyForks\front-end-development-course-info\Exercises -Recurse -force

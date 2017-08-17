@@ -55,221 +55,6 @@
                         </div>
                     </div>
                 </section>
-                <section id="terms">
-    <h1>Methods</h1>
-    <p>
-        Methods are actions that can be taken on objects.
-    </p>
-    <div class="fragment">
-        <h1>Properties</h1>
-        <p>
-            Properties are values associated with an object.
-        </p>
-    </div>
-</section>
-<section id="string-props">
-    <h1>String Properties and Methods</h1>
-    <ul>
-        <li class="fragment"><code>length</code> property - returns a numeric value of the length of the string.</li>
-        <li class="fragment"><code>indexOf</code> method - returns the position (index) of the first occurrence of text in a string.</li>
-    </ul>
-</section>
-<section>
-    <h1><code>length</code></h1>
-    <pre>
-<code class="js">
-    var x = "name".length;
-    console.log(x);  // x equals 4
-    var y = "name"
-    console.log(y.length);  //
-</code>
-</pre>
-    <pre class="fragment">
-<code class="js">
-    var username = "danielworthy";
-    var userNameLength = username.length; //12
-    var isValid = (userNameLength > 20 || userNameLength < 10);  //Returns true
-</code>
-</pre>
-</section>
-
-<section>
-    <h1><code>indexOf</code></h1>
-    <pre>
-<code class="js">
-    var x = "name".indexOf("n");  ///// x = 0;
-    var y = "name name name".indexOf("n");  //y = 0;
-    var z = "name".indexOf("z"); // z = -1;
-</code>
-</pre>
-    <pre class="fragment">
-<code class="js">
-    var email = "dan@outlook.com";
-    var isValidEmail = (email.indexOf('@') > -1);
-</code>
-</pre>
-</section>
-
-<section id="num-meth">
-    <h1>Number Methods</h1>
-    <p>
-        These methods are considered global methods.
-    </p>
-    <ul>
-        <li class="fragment"><code>parseInt</code> - Attempts to convert a string to an integer</li>
-        <li class="fragment"><code>parseFloat</code> - Attempts to convert a string to a float</li>
-    </ul>
-</section>
-<section>
-    <h1><code>parseInt</code></h1>
-    <pre>
-<code class="js">
-    parseInt("10");         // returns 10
-    parseInt("10.33");      // returns 10
-    parseInt("ten");        // returns NaN
-</code>
-</pre>
-    <pre class="fragment">
-<code class="js">
-    parseInt("10 11 12");   // returns 10
-    parseInt("10 tacos");   // returns 10
-    parseInt("tacos 10");   // returns NaN
-</code>
-</pre>
-</section>
-<section>
-    <h1><code>parseFloat</code></h1>
-    <pre>
-<code class="js">
-    parseFloat("10");         // returns 10
-    parseFloat("10.33");      // returns 10.33
-    parseFloat("ten");        // returns NaN
-</code>
-</pre>
-    <pre class="fragment">
-<code class="js">
-   parseFloat("10 11 12");   // returns 10
-   parseFloat("10 tacos");   // returns 10
-   parseFloat("tacos 10");   // returns NaN
-</code>
-</pre>
-</section>
-<section>
-    <!--Complex Variables -->
-    <h1>Complex Variables</h1>
-    <ul>
-        <li class="fragment">Arrays</li>
-        <li class="fragment">Objects</li>
-    </ul>
-</section>
-<section id="arrays">
-    <h1>Arrays</h1>
-    <p>
-        Arrays are used to store a collection of variables.
-    </p>
-    <pre class="fragment">
-<code class="js">
-    var list = ["A", "B", "C", "D"];
-    var list2 = [1, 10, 0, 3];
-    var list3 = [1, 'ten', '0', 3];
-</code>
-</pre>
-</section>
-<section>
-    <h1>Accessing Values in Array</h1>
-    <p>
-        You can access individual items in an array by referencing its index or position. Accessing an invalid index will return
-        <code>undefined</code>.
-    </p>
-    <p class="fragment">
-        Arrays operate off of a "zero" based index. The first position has an index of 0.
-    </p>
-
-    <pre class="fragment">
-<code class="js">
-    var list = ["A", "B", "C", "D"];
-    console.log(list[1]); // Outputs "B"
-    console.log(list[0]); // Outputs "A"
-    console.log(list[20]); // Outputs undefined
-</code>
-</pre>
-
-
-</section>
-
-<section>
-    <h1>Array Methods</h1>
-    <p>
-        There are several different methods to modify an array. We're going to focus primarily on one.
-    </p>
-    <ul>
-        <li class="fragment"><code>push</code> - Adds item to the end of an array</li>
-    </ul>
-    <h1>Array Properties</h1>
-    <ul>
-        <li class="fragment"><code>length</code> - gives the count of items in the array</li>
-    </ul>
-
-
-</section>
-
-<section>
-    <h1>Array Pushing</h1>
-    <pre>
-<code class="js">
-    var x = ["a", "b", "c"];
-    x.push('d');
-    x.push('e');
-    console.log(x);     //["a", "b", "c", "d", "e"];
-</code>
-</pre>
-</section>
-
-
-<section id="js-obj">
-    <h1>JavaScript Objects</h1>
-    <p>
-        Just about everything in JavaScript is an object. Primitive variables are the only things that are not actual objects.
-    </p>
-    <p class="fragment">
-        Objects are variables that contain many variables.
-    </p>
-    <pre>
-<code class="js">
-    var me = {
-        firstName: "Daniel",
-        lastName: "Worthy",
-        age: 60,
-        city: 'Cave Springs',
-        fullName: function(){
-            return this.firstName + " " + this.lastName;
-        };
-    };
-    console.log(me.age) //Outputs 60;
-    console.log(me.height) //Outputs undefined;
-    me.height = '5\' 9"';
-    console.log(me.height) //Outputs undefined;
-</code>
-</pre>
-
-</section>
-<section>
-    <h1><code>this</code></h1>
-    <h2>The most confusing thing in JavaScript</h2>
-   <pre>
-<code class="js" data-noescape>
-    var <mark>me</mark> = {
-        <mark class="orange">firstName</mark>: "Daniel",
-        <mark class="blue">lastName</mark> "Worthy",
-        age: 60,
-        city: 'Cave Springs',
-        fullName: function(){
-            return <mark>this</mark>.<mark class="orange">firstName</mark> + " " + <mark>this</mark>.<mark class="blue">lastName</mark>;
-        };
-    };
-</code>
-</pre> 
-</section>
                 ﻿<section id="incrementing">
     <h1>Incrementing and Decrementing</h1>
     <p>
@@ -478,6 +263,237 @@ html = html + '&lt;/ul>';
     <aside class="notes">
         Multi global vars can cause issues with conflicting names.
     </aside>
+</section>
+                ﻿<section>
+    <h1>Today's Topics</h1>
+    <ul>
+        <li class="fragment">JavaScript Styles</li>
+        <li class="fragment">Changing Classes in JS</li>
+        <!--<li class="fragment">Window Events</li>
+                        <li class="fragment">History</li>-->
+        <li class="fragment">Inputs
+            <ul>
+                <li class="fragment">Text</li>
+                <li class="fragment">Password</li>
+            </ul>
+        </li>
+        <li class="fragment">Label</li>
+        <li class="fragment">Button</li>
+        <li class="fragment">Event Listeners</li>
+    </ul>
+</section>
+<section>
+    <section>
+        <h1>JavaScript Styles</h1>
+        <p>
+            You can access styles and change an element's styles inside of css.
+        </p>
+        <h4><span class="fragment">object</span>
+            <span class="fragment">.style</span>
+            <span class="fragment">.[CSS Property]</span>
+        </h4>
+    </section>
+    <section>
+        <h1>Example</h1>
+        <pre><code class="js">
+    var elm = document.getElementById('id');
+    elm.style.color = '#000000';
+    elm.style.padding = '20px';
+
+                         </code></pre>
+        <h3><a href="http://www.w3schools.com/jsref/dom_obj_style.asp">Full Reference</a></h3>
+    </section>
+    <section>
+        <h1>Remember Hyphens Aren't Valid in JavaScript</h1>
+        <pre class="fragment"><code class="css">
+    #div{
+        background-color:#fff;
+        margin-bottom: 20px;
+    }
+                            </code></pre>
+        <pre class="fragment"><code class="js">
+    var elm = document.getElementById('div');
+    elm.style.backgroundColor = '#fff';
+    elm.style.marginBottom = '#fff';
+                            </code></pre>
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/sg3Lr81d/embed/"></script>
+        <a href="//jsfiddle.net/WorthyD/sg3Lr81d" target="_blank">Link</a>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>JavaScript <code>classList</code></h1>
+        <p>
+            The class list property is used to add and remove classes from HTML elements. It acts like an array, but the methods are
+            easier to understand
+        </p>
+        <h2><code>classList</code> Methods</h2>
+        <ul>
+            <li class="fragment"><code>.add('class1', 'class2', ..)</code> - Adds one or more classes to the class list</li>
+            <li class="fragment"><code>.contains('class')</code> - returns <code>true</code> or <code>false</code> if the element contains the
+                class.</li>
+            <li class="fragment"><code>.item(index)</code> - Returns the index of the class if it is inside the element list</li>
+            <li class="fragment"><code>.remove('c1', 'c2', ....)</code> - removes one or more classes from an element</li>
+            <li class="fragment"><code>.toggle('c1')</code> - Adds or removes class based on if it exists or not</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Examples</h1>
+        <pre><code class="js">
+    var elm = document.getElementById('id');
+
+    elm.classList.add('new-class'); //Adds the new class
+
+    console.log(elm.classList.contains('new-class')); //Outputs true
+
+    elm.classList.remove('new-class'); //Adds the new class
+
+    console.log(elm.classList.contains('new-class')); //Outputs false
+</code></pre>
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/gstnttw6/embed/"></script>
+        <a href="//jsfiddle.net/WorthyD/gstnttw6" target="_blank">Link</a>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>HTML Inputs</h1>
+        <p>
+            Input elements are the primary way we retrieve information from the user.
+        </p>
+        <h3 class="fragment">&lt;input type="text" value="" /&gt;</h3>
+        <h2 class="fragment">Input Types</h2>
+        <ul>
+            <li class="fragment">text</li>
+            <li class="fragment">password</li>
+            <li class="fragment">radio</li>
+            <li class="fragment">checkbox</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Input Attributes</h1>
+        <p>
+            There are many different attributes available to us, but we are only going to focus on the basics
+        </p>
+        <ul>
+            <li class="fragment"><code>id</code> and <code>class</code></li>
+            <li class="fragment"><code>type</code> - sets the behavior of the input </li>
+            <li class="fragment"><code>name</code> - represents the input's name inside a form.</li>
+            <li class="fragment"><code>value</code> - represents the current text or value for the input</li>
+            <li class="fragment"><code>placeholder</code> - text displayed before the element is filled out.</li>
+        </ul>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>The Text Input</h1>
+        <p>
+            The text input is the most commonly used html input you will use. It represents a single line text.
+        </p>
+        <pre><code class="xml">
+    <input type="text" id="myText" name="myText" value="Hello" />
+                            </code></pre>
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/khm05t4a/embed/"></script>
+        <a href="//jsfiddle.net/WorthyD/khm05t4a" target="_blank">Link</a>
+    </section>
+    <section>
+        <h1>The Password Input</h1>
+        <p>
+            The Password Input is very similar to the text input, but any text put in the textbox will be represented with circles or
+            asterisks.
+        </p>
+        <pre><code class="xml">
+    <input type="password" id="myText" name="myText" value="Hello" />
+                            </code></pre>
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/myufbce0/embed/"></script>
+        <a href="//jsfiddle.net/WorthyD/myufbce0" target="_blank">Link</a>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>Labels</h1>
+        <p>Labels are used to make inputs more accessible. </p>
+        <h3 class="fragment">&lt;label>Content&lt;/label></h3>
+    </section>
+    <section>
+        <h1>Usage</h1>
+        <pre><code class="xml">
+    <label for="itemId">Input</label>
+    <input type="text" id="itemId" />
+
+    <label >Check Box
+    <input type="checkbox" id="chkBox" />
+    </label>
+                          </code></pre>
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/2d2yt1nn/embed/html,result/"></script>
+        <a href="//jsfiddle.net/WorthyD/2d2yt1nn" target="_blank">Link</a>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>The Button Element</h1>
+        <p>
+            The button element is a clickable element inside of your HTML. The button element can contain content of multiple types inside
+            it.
+        </p>
+        <h3>Attributes</h3>
+        <ul>
+            <li class="fragment"><code>type</code> - defines default behavior of the button.
+                <ul>
+                    <li class="fragment"><code>button</code></li>
+                    <li class="fragment"><code>reset</code> - Clears inputs when in a form</li>
+                    <li class="fragment"><code>submit</code> - Triggers a form submission</li>
+                </ul>
+            </li>
+            <li class="fragment"><code>Name</code></li>
+            <li class="fragment"><code>Value</code></li>
+        </ul>
+        <aside class="notes">
+            Mention the button input. Type is required.
+        </aside>
+
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/4v2y0kp1/embed/html,result"></script>
+        <a href="//jsfiddle.net/WorthyD/4v2y0kp1/embed/" target="_blank">Link</a>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>Event Listeners</h1>
+        <p>
+            Event listeners allow us execute JavaScript when the user interactions with the document.
+        </p>
+        <ul>
+            <li class="fragment">addEventListener</li>
+            <li class="fragment">removeEventListener</li>
+        </ul>
+    </section>
+    <section>
+        <h1>addEventListener</h1>
+        <h2>Syntax</h2>
+        <h3>
+            <span class="fragment">element</span>
+            <span class="fragment">.addEventListener</span>
+            <span class="fragment">('click', </span>
+            <span class="fragment">function)</span>
+        </h3>
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/8yaz3ryd/embed/js,html,result/"></script>
+        <a href="//jsfiddle.net/WorthyD/8yaz3ryd" target="_blank">Link</a>
+
+
+    </section>
 </section>
             </div>
 
