@@ -1,29 +1,9 @@
-﻿<html>
-
-<head>
-    <title>Basics</title>
-
-</head>
-<body>
-    <div class="reveal">
-        <div class="slides">
-            <section>
-                <h1>Today's Topics</h1>
-                <ul>
-                    <li class="fragment">Incrementing</li>
-                    <li class="fragment">Loops</li>
-                    <li class="fragment">Scope</li>
-                </ul>
-            </section>
-            <section>
-                <h1>Incrementing and Decrementing</h1>
-                <p>
-                    There is a very easy way to increment or decrementing a variable. You can use the <code>++</code> or <code>--</code> to increment or decrement your variable by 1.
-                </p>
-
-
-
-                <pre class="fragment">
+﻿<section id="incrementing">
+    <h1>Incrementing and Decrementing</h1>
+    <p>
+        There is a very easy way to increment or decrementing a variable. You can use the <code>++</code> or <code>--</code>        to increment or decrement your variable by 1.
+    </p>
+    <pre class="fragment">
 <code class="js">
     var x = 0;
     x++  // equivalent to x = x + 1;
@@ -34,58 +14,58 @@
     console.log(x); //outputs 1
 </code>
 </pre>
-            </section>
-            <section>
-                <h1>JavaScript Loops</h1>
-                <p>
-                    Loops in JavaScript are used to execute the same statement multiple times.
-                </p>
-                <h2 class="fragment">There are two types of Loops</h2>
-                <ul>
-                    <li class="fragment">For Loops</li>
-                    <li class="fragment">While Loops</li>
-                </ul>
-            </section>
-            <section>
-                <section>
-                    <h1>The For Loop</h1>
-                    <p>
-                        The for loop is most often used when dealing with collections.  It is possible to not even execute if the condition evaluates to true.
-                    </p>
-                    <h2>Syntax</h2>
-                    <h3 class="align-left">
-                        <code class="fragment">for (</code>
-                        <code class="fragment">statement 1;</code>
-                        <code class="fragment">statement 2;</code>
-                        <code class="fragment">statement 3;</code>
-                        <code class="fragment">){</code>
-                    </h3>
-                    <h3>
-                        <code class="fragment">//Code Block</code>
-                    </h3>
-                    <h3 class="align-left">
-                        <code class="fragment">}</code>
-                    </h3>
-                </section>
-                <section>
-                    <h1>Code Samples</h1>
-                    <pre class="fragment"><code class="js">
+</section>
+<section>
+    <h1>JavaScript Loops</h1>
+    <p>
+        Loops in JavaScript are used to execute the same statement multiple times.
+    </p>
+    <h2 class="fragment">There are two types of Loops</h2>
+    <ul>
+        <li class="fragment">For Loops</li>
+        <li class="fragment">While Loops</li>
+    </ul>
+</section>
+<section id="for-loop">
+    <h1>The For Loop</h1>
+    <p>
+        The for loop is most often used when dealing with collections. It is possible to not even execute if the condition evaluates
+        to true.
+    </p>
+    <h2>Syntax</h2>
+    <h3 class="align-left">
+        <code class="fragment">for (</code>
+        <code class="fragment">statement 1;</code>
+        <code class="fragment">statement 2;</code>
+        <code class="fragment">statement 3;</code>
+        <code class="fragment">){</code>
+    </h3>
+    <h3>
+        <code class="fragment">//Code Block</code>
+    </h3>
+    <h3 class="align-left">
+        <code class="fragment">}</code>
+    </h3>
+</section>
+<section>
+    <h1>Code Samples</h1>
+    <pre class="fragment"><code class="js">
     var x = [1, 2, 3, 4];
     for(var i = 0; i < x.length; i++){
         console.log(x[i]);
     }
                     </code></pre>
-                    <pre class="fragment"><code class="js">
+    <pre class="fragment"><code class="js">
     var x = [1, 2, 3, 4];
     var i = 0;
     for(; i < x.length; i++){
         console.log(x[i]);
     }
                     </code></pre>
-                </section>
-                <section>
-                    <h1>More Examples</h1>
-                    <pre><code class="js">
+</section>
+<section>
+    <h1>More Examples</h1>
+    <pre><code class="js">
     var names = ['Daniel', 'Josh', 'Amanda'];
     var html = "&lt;ul>"
     for( var i = 0; i < names.length; i++){
@@ -94,10 +74,10 @@
     html = html + '&lt;/ul>';
 
                         </code></pre>
-                </section>
-                <section>
-                    <h1>More Examples</h1>
-                    <pre><code class="js">
+</section>
+<section>
+    <h1>More Examples</h1>
+    <pre><code class="js">
 var names = [
     { firstname: 'John', lastname: 'Doe'},
     { firstname: 'Jane', lastname: 'Doe'}
@@ -108,21 +88,28 @@ for( var i = 0; i < names.length; i++){
 }
 html = html + '&lt;/ul>';
                         </code></pre>
-                </section>
-            </section>
-            <section>
-                <section>
-                    <h1>Do and While Loops</h1>
-                    <p>
-                        Do and While loops are easier to read, but require more care to code properly.
-                    </p>
-                </section>
-                <section>
-                    <h2>A While Loop</h2>
-                    <p>
-                        May not execute depending on the condition.
-                    </p>
-                    <pre class="fragment">
+</section>
+<section>
+<h1>Reverse Loops</h1>
+<pre><code class="js">
+    var array = [1,2,3,4,5]
+    for(var i = array.length; i--;){
+
+    }
+    </code></pre>
+</section>
+<section id="while-loop">
+    <h1>Do and While Loops</h1>
+    <p>
+        Do and While loops are easier to read, but require more care to code properly.
+    </p>
+</section>
+<section>
+    <h2>A While Loop</h2>
+    <p>
+        May not execute depending on the condition.
+    </p>
+    <pre class="fragment">
 <code class="js">
     var i = 0;
     while(i < 25){
@@ -131,11 +118,11 @@ html = html + '&lt;/ul>';
     }
 </code>
 </pre>
-                    <h2 class="fargment">Do Loop</h2>
-                    <p class="fragment">
-                        Will always execute at least once.
-                    </p>
-                    <pre class="fragment">
+    <h2 class="fargment">Do Loop</h2>
+    <p class="fragment">
+        Will always execute at least once.
+    </p>
+    <pre class="fragment">
 <code class="js">
     var i = 0;
     do{
@@ -145,10 +132,10 @@ html = html + '&lt;/ul>';
     while (i < 25);
 </code>
 </pre>
-                </section>
-                <section>
-                    <h1>More Examples</h1>
-                    <pre class="fragment">
+</section>
+<section>
+    <h1>More Examples</h1>
+    <pre class="fragment">
 <code class="js">
     var condition = false;
     var i = 0;
@@ -161,26 +148,24 @@ html = html + '&lt;/ul>';
     }
 </code>
 </pre>
-                </section>
-                <section>
-                    <h1>Dangers of Do and While Loops</h1>
-                    <h1 class="fragment">Infinite Loops</h1>
-                </section>
+</section>
+<section>
+    <h1>Dangers of Do and While Loops</h1>
+    <h1 class="fragment">Infinite Loops</h1>
+</section>
 
-            </section>
-            <section>
-                <section>
-                    <h1>JavaScript Scope</h1>
-                    <p>
-                        Scope is the collection of variables, objects and functions you have the ability to access.
-                    </p>
-                </section>
-                <section>
-                    <h1>Local Scope</h1>
-                    <p>
-                        Local scope is a group of items that can only be accessed within  the context it is declared.
-                    </p>
-                    <pre>
+<section>
+    <h1>JavaScript Scope</h1>
+    <p>
+        Scope is the collection of variables, objects and functions you have the ability to access.
+    </p>
+</section>
+<section>
+    <h1>Local Scope</h1>
+    <p>
+        Local scope is a group of items that can only be accessed within the context it is declared.
+    </p>
+    <pre>
 <code class="js">
 
     function testing(){
@@ -196,13 +181,13 @@ html = html + '&lt;/ul>';
 
 </code>
 </pre>
-                </section>
-                <section>
-                    <h1>Global Scope</h1>
-                    <p>
-                        Global scope items can be accessed by all JavaScript on the page.
-                    </p>
-                    <pre>
+</section>
+<section>
+    <h1>Global Scope</h1>
+    <p>
+        Global scope items can be accessed by all JavaScript on the page.
+    </p>
+    <pre>
 <code class="js">
 
     var x = 0;
@@ -218,16 +203,7 @@ html = html + '&lt;/ul>';
 
 </code>
 </pre>
-                    <aside class="notes">
-                        Multi global vars can cause issues with conflicting names.
-                    </aside>
-                </section>
-
-            </section>
-        </div>
-
-    </div>
-
-
-</body>
-</html>
+    <aside class="notes">
+        Multi global vars can cause issues with conflicting names.
+    </aside>
+</section>
