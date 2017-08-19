@@ -5,6 +5,8 @@ You may ask the instructor for clarification on any questions or parts. Skip ove
 
 Create a Github Repository to submit your completed work. 
 
+[Download the assessment here](Assessment1.zip)
+
 
 ## Grading Criteria (in order of priority)
 - Completeness
