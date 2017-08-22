@@ -24,13 +24,13 @@
 <section>
     <h1>Date Declaration</h1>
     <pre class="fragment"><code class="js">//Creates a date variable that is set to now;
-const now = new Date();         </code></pre>
+var now = new Date();         </code></pre>
     <pre class="fragment"><code class="js">// Wed Apr 05 2017 12:57:05 GMT-0500 (Central Daylight Time);
-const newDate = new Date(1491415025702); </code></pre>
+var newDate = new Date(1491415025702); </code></pre>
     <pre class="fragment"><code class="js">//Tue Aug 17 2010 12:09:36 GMT-0500 (Central Daylight Time)
-const newDate = new Date("2010/08/17 12:09:36"); 
+var newDate = new Date("2010/08/17 12:09:36"); 
 //Fri Jan 01 2010 00:00:00 GMT-0600 (Central Standard Time)
-const newDate2 = new Date("1/1/2010");</code></pre>
+var newDate2 = new Date("1/1/2010");</code></pre>
 </section>
 <section>
     <h1>More Specific Examples</h1>
@@ -42,11 +42,11 @@ new Date(year, month[, date[, hours[, minutes[, seconds[, milliseconds]]]]]);
     </p>
     <pre class="fragment"><code class="js">
 //Tue Feb 01 2010 00:00:00 GMT-0600 (Central Standard Time)
-const d = new Date(2010, 1) 
+var d = new Date(2010, 1) 
     </code></pre>
     <pre class="fragment"><code class="js">
 //Thu Apr 15 2010 12:04:14 GMT-0500 (Central Daylight Time)
-const d = new Date(2010, 3, 15, 12, 4, 14) 
+var d = new Date(2010, 3, 15, 12, 4, 14) 
     </code></pre>
 </section>
 <!--
@@ -69,7 +69,7 @@ var birthday = new Date(1995, 11, 17, 3, 24, 0);
     </p>
 
     <pre class="fragment"><code class="js">
-const d = new Date(2010, 0, 1);
+var d = new Date(2010, 0, 1);
 console.log(d.getFullYear()); //2010;
 
 console.log(d.getDate()); // 1
@@ -84,7 +84,7 @@ console.log(d.getDate()); // 1
 <section>
     <h1>Converting Dates to Strings</h1>
     <pre><code class="js">
-const d = new Date(1993,6, 28);
+var d = new Date(1993,6, 28);
 console.log(d.toString());     // logs Wed Jul 28 1993 14:39:07 GMT-0600 (PDT)
 console.log(d.toDateString()); // logs Wed Jul 28 1993
 console.log(d.toTimeString()); // logs 14:39:07 GMT-0600 (PDT)
@@ -96,7 +96,7 @@ console.log(d.toTimeString()); // logs 14:39:07 GMT-0600 (PDT)
         We use set methods change these values.
     </p>
     <pre><code class="js">
-const d = new Date(2010, 0, 1);
+var d = new Date(2010, 0, 1);
 d.setDate(7)  // 1-7-2010;
 d.setMonth(1) // 2-7-2010;
 d.setHours(40); // 2-8-2010 16:00
@@ -113,9 +113,9 @@ console.log(d);
 <section>
     <h1>Comparison</h1>
     <pre><code class="js">
-const d1 = new Date(1990, 1, 1);
-const d2 = new Date(2000, 1, 1);
-const isNewer = d2 > d1;  //True       
+var d1 = new Date(1990, 1, 1);
+var d2 = new Date(2000, 1, 1);
+var isNewer = d2 > d1;  //True       
          </code></pre>
 </section>
 <section>

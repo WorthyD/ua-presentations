@@ -186,12 +186,12 @@
         city: 'Cave Springs',
         fullName: function(){
             return this.firstName + " " + this.lastName;
-        };
+        }
     };
     console.log(me.age) //Outputs 60;
-    console.log(me.height) //Outputs undefined;
+    console.log(me.height); //Outputs undefined
     me.height = '5\' 9"';
-    console.log(me.height) //Outputs undefined;
+    console.log(me.height); //Outputs 5' 9"
 </code>
 </pre>
 
