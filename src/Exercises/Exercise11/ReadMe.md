@@ -22,9 +22,20 @@ Set the following element's innerHTML with the following values
 ### Numbers 
 Set the following element's innerHTML with the following values
 
+- `p3_number` - put `randomNumber`'s value here
+- `p3_valid` - is `randomNumber` a number? Hint: try to parse the number. If it's a number it will be greater than 0.
+
+### Arrays 
+
+- Add the value of `arrayInput` to the array named `arrayItems`. `arrayItems is declared on the first line of the file.
+- `p4_arraylength` - the number of items in `arrayItems`
+- `p4_valid` - the value of `arrayItems`
+
+
 
 ### Additional Challenge 
-- In part 1, 2, and 3, if the input field is invalid (it's empty or doesn't meet all of its requirements), add a class of invalid  
+- In part 1, 2, and 3, if the input field is invalid (it's empty or doesn't meet all of its requirements), add a class of `invalid`. This class is already in the CSS.
+- At the beginning of the function, remove the class `invalid` from all inputs
 
 
 ## CSS 
