@@ -1,4 +1,4 @@
-<section>
+<section id="undefined">
     <h1>Undefined</h1>
     <p><code>Undefined</code> is the value that is given to a variable <strong>before</strong> it has a value. </p>
     <pre><code class="js">
@@ -15,12 +15,40 @@
     var x = 10;
     console.log(x); //10
     </code></pre>
-    <h4>Is actually</h4>
-    <pre><code class="js">
+    <div class="fragment">
+        <h4>Is actually</h4>
+        <pre><code class="js">
     var x;
     console.log(x); //undefined     
     x = 10;
     console.log(x); //10
     </code></pre>
+    </div>
 
+</section>
+<section>
+    <h1>null</h1>
+    <p><code>null</code> is a value given to objects that are not defined.</p>
+    <pre><code class="js">
+var x = null;
+if (x !== null){
+    //perform logic
+}    
+var d = document.getElementById('fdfdfdfdf');
+console.log(d); //null;
+</code></pre>
+</section>
+<section>
+    <h1>Which one do I need to use?</h1>
+    <p>It can get confusing which to use, but there is an easy solution for if statements.</p>
+    <pre><code class="js">
+var d = document.getElementById('yarg');
+if (d){
+    //executes if not null (not found)
+}
+var x;
+if (x){
+    //executes if not undefined
+}
+        </code></pre>
 </section>

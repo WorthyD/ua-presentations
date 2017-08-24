@@ -43,6 +43,7 @@
                         <div>
                             <h2>Review</h2>
                             <ul>
+                                <li>Exercise Review</li>
                                 <li><a href="#operators">Operators</a></li>
                                 <li><a href="#comparison">Comparison</a></li>
                                 <li><a href="#equality">Equality</a></li>
@@ -60,6 +61,7 @@
                                 <li><a href="#num-meth">Number Methods</a></li>
                                 <li><a href="#arrays">Arrays</a></li>
                                 <li><a href="#js-obj">Objects</a></li>
+                                <li><a href="#undefined">Undefined & null</a></li>
                             </ul>
                         </div>
                     </div>
@@ -617,10 +619,7 @@ if (x === true || y > 10){
 
 </code></pre>
 </section>
-                <section>
-    
-</section>
-
+                
 <section id="terms">
     <h1>Methods</h1>
     <p>
@@ -836,6 +835,111 @@ if (x === true || y > 10){
 </code>
 </pre> 
 </section>
+                <section id="undefined">
+    <h1>Undefined</h1>
+    <p><code>Undefined</code> is the value that is given to a variable <strong>before</strong> it has a value. </p>
+    <pre><code class="js">
+    var x;
+    console.log(x); //undefined     
+    x = 10;
+    console.log(x); //10
+    </code></pre>
+</section>
+<section>
+    <h1>Variable hoisting.</h1>
+    <pre><code class="js">
+    console.log(x); //undefined     
+    var x = 10;
+    console.log(x); //10
+    </code></pre>
+    <div class="fragment">
+        <h4>Is actually</h4>
+        <pre><code class="js">
+    var x;
+    console.log(x); //undefined     
+    x = 10;
+    console.log(x); //10
+    </code></pre>
+    </div>
+
+</section>
+<section>
+    <h1>null</h1>
+    <p><code>null</code> is a value given to objects that are not defined.</p>
+    <pre><code class="js">
+var x = null;
+if (x !== null){
+    //perform logic
+}    
+var d = document.getElementById('fdfdfdfdf');
+console.log(d); //null;
+</code></pre>
+</section>
+<section>
+    <h1>Which one do I need to use?</h1>
+    <p>It can get confusing which to use, but there is an easy solution for if statements.</p>
+    <pre><code class="js">
+var d = document.getElementById('yarg');
+if (d){
+    //executes if not null (not found)
+}
+var x;
+if (x){
+    //executes if not undefined
+}
+        </code></pre>
+</section>
+                <section>
+    <h1>getElementsByClassName</h1>
+    <p>
+        Allows you to retrieve DOM elements by their class names.
+    </p>
+    <p>
+        There is one major difference between this and getElementById.  This one returns an HTMLCollection which is like an array.
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <pre><code class="js">
+document.getElementsByClassName('side-bar-item')
+        </code></pre>
+        <div class="fragment">
+    <pre><code class="js">
+//targets elements with both user-input and invalid classes
+document.getElementsByClassName('user-input invalid')
+        </code></pre>
+        </div>
+</section>
+<section>
+    <h1>Accessing the object.</h1>
+    <p>
+        To modify the object's properties, we need to loop through them or reference a specific index.
+    </p>
+    <p class="fragment">
+        We haven't covered loops yet so you can just reference by the index.
+    </p>
+        <div class="fragment">
+    <pre><code class="js">
+var elms = document.getElementsByClassName('user-input');
+var elm = elms[0];
+if (elm){
+    elm.innerHTML = "Yay!";
+}
+        </code></pre>
+        </div>
+
+</section>
+                <section>
+                    <h1>Exercise 11</h1>
+                    <ul>
+                        <li><a href="https://github.com/uagc-it-readiness/front-end-development-course-info" target="_blank">Clone this repo</a></li>
+                        <li>Create a repo on GitHub for your assignments.</li>
+                        <li>Clone it and get it all setup.</li>
+                        <li>Copy the folder from Exercise11 from the course info into your new repo. </li>
+                        <li>Perform the exercise in your new repo and push to GitHub when finished.</li>
+                        <li>Send me a link when done.</li>
+                    </ul>
+                </section>
             </div>
 
         </div>

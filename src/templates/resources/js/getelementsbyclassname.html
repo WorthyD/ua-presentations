@@ -1,0 +1,40 @@
+<section>
+    <h1>getElementsByClassName</h1>
+    <p>
+        Allows you to retrieve DOM elements by their class names.
+    </p>
+    <p>
+        There is one major difference between this and getElementById.  This one returns an HTMLCollection which is like an array.
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <pre><code class="js">
+document.getElementsByClassName('side-bar-item')
+        </code></pre>
+        <div class="fragment">
+    <pre><code class="js">
+//targets elements with both user-input and invalid classes
+document.getElementsByClassName('user-input invalid')
+        </code></pre>
+        </div>
+</section>
+<section>
+    <h1>Accessing the object.</h1>
+    <p>
+        To modify the object's properties, we need to loop through them or reference a specific index.
+    </p>
+    <p class="fragment">
+        We haven't covered loops yet so you can just reference by the index.
+    </p>
+        <div class="fragment">
+    <pre><code class="js">
+var elms = document.getElementsByClassName('user-input');
+var elm = elms[0];
+if (elm){
+    elm.innerHTML = "Yay!";
+}
+        </code></pre>
+        </div>
+
+</section>
