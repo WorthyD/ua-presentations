@@ -1,0 +1,26 @@
+<section>
+    <h1>Undefined</h1>
+    <p><code>Undefined</code> is the value that is given to a variable <strong>before</strong> it has a value. </p>
+    <pre><code class="js">
+    var x;
+    console.log(x); //undefined     
+    x = 10;
+    console.log(x); //10
+    </code></pre>
+</section>
+<section>
+    <h1>Variable hoisting.</h1>
+    <pre><code class="js">
+    console.log(x); //undefined     
+    var x = 10;
+    console.log(x); //10
+    </code></pre>
+    <h4>Is actually</h4>
+    <pre><code class="js">
+    var x;
+    console.log(x); //undefined     
+    x = 10;
+    console.log(x); //10
+    </code></pre>
+
+</section>
