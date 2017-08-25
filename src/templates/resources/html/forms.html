@@ -1,62 +1,161 @@
-﻿<html>
+﻿<section>
+    <h1>Topics</h1>
+    <ul>
+        <li class="fragment">Forms</li>
+        <li class="fragment">
+            Inputs
+            <ul>
+                <li class="fragment">Radio Buttons</li>
+                <li class="fragment">Check Box</li>
 
-<head>
-    <title>Basics</title>
+            </ul>
+        </li>
+        <li class="fragment">Select</li>
+        <li class="fragment">TextArea</li>
 
-    <!-- @@include('../header.html') -->
-</head>
-<body>
-    <div class="reveal">
-        <div class="slides">
-            <section>
-                <h1>Topics</h1>
+    </ul>
+</section>
+<section>
+    <section>
+        <h1>HTML Inputs</h1>
+        <p>
+            Input elements are the primary way we retrieve information from the user.
+        </p>
+        <h3 class="fragment">&lt;input type="text" value="" /&gt;</h3>
+        <h2 class="fragment">Input Types</h2>
+        <ul>
+            <li class="fragment">text</li>
+            <li class="fragment">password</li>
+            <li class="fragment">radio</li>
+            <li class="fragment">checkbox</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Input Attributes</h1>
+        <p>
+            There are many different attributes available to us, but we are only going to focus on the basics
+        </p>
+        <ul>
+            <li class="fragment"><code>id</code> and <code>class</code></li>
+            <li class="fragment"><code>type</code> - sets the behavior of the input </li>
+            <li class="fragment"><code>name</code> - represents the input's name inside a form.</li>
+            <li class="fragment"><code>value</code> - represents the current text or value for the input</li>
+            <li class="fragment"><code>placeholder</code> - text displayed before the element is filled out.</li>
+        </ul>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>The Text Input</h1>
+        <p>
+            The text input is the most commonly used html input you will use. It represents a single line text.
+        </p>
+        <pre><code class="xml">
+    <input type="text" id="myText" name="myText" value="Hello" />
+                            </code></pre>
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/khm05t4a/embed/"></script>
+        <a href="//jsfiddle.net/WorthyD/khm05t4a" target="_blank">Link</a>
+    </section>
+    <section>
+        <h1>The Password Input</h1>
+        <p>
+            The Password Input is very similar to the text input, but any text put in the textbox will be represented with circles or
+            asterisks.
+        </p>
+        <pre><code class="xml">
+    <input type="password" id="myText" name="myText" value="Hello" />
+                            </code></pre>
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/myufbce0/embed/"></script>
+        <a href="//jsfiddle.net/WorthyD/myufbce0" target="_blank">Link</a>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>Labels</h1>
+        <p>Labels are used to make inputs more accessible. </p>
+        <h3 class="fragment">&lt;label>Content&lt;/label></h3>
+    </section>
+    <section>
+        <h1>Usage</h1>
+        <pre><code class="xml">
+    <label for="itemId">Input</label>
+    <input type="text" id="itemId" />
+
+    <label >Check Box
+    <input type="checkbox" id="chkBox" />
+    </label>
+                          </code></pre>
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/2d2yt1nn/embed/html,result/"></script>
+        <a href="//jsfiddle.net/WorthyD/2d2yt1nn" target="_blank">Link</a>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>The Button Element</h1>
+        <p>
+            The button element is a clickable element inside of your HTML. The button element can contain content of multiple types inside
+            it.
+        </p>
+        <h3>Attributes</h3>
+        <ul>
+            <li class="fragment"><code>type</code> - defines default behavior of the button.
                 <ul>
-                    <li class="fragment">Forms</li>
-                    <li class="fragment">
-                        Inputs
-                        <ul>
-                            <li class="fragment">Radio Buttons</li>
-                            <li class="fragment">Check Box</li>
-
-                        </ul>
-                    </li>
-                    <li class="fragment">Select</li>
-                    <li class="fragment">TextArea</li>
-
+                    <li class="fragment"><code>button</code></li>
+                    <li class="fragment"><code>reset</code> - Clears inputs when in a form</li>
+                    <li class="fragment"><code>submit</code> - Triggers a form submission</li>
                 </ul>
-            </section>
-            <section>
-                <section>
-                    <h1>The Form Tag</h1>
-                    <h2 class="fragment">
-                        <pre><code class="xml">&lt;form&gt; Content &lt;/form&gt;</code></pre>
-                    </h2>
+            </li>
+            <li class="fragment"><code>Name</code></li>
+            <li class="fragment"><code>Value</code></li>
+        </ul>
+        <aside class="notes">
+            Mention the button input. Type is required.
+        </aside>
 
-                    <h3 class="fragment">Accepted Attributes</h3>
-                    <ul>
-                        <li class="fragment"><code>action</code> - Represents the url where we are sending the data.</li>
-                        <li class="fragment">
-                            <code>method</code> - specifies the HTTP method used
-                            <ul>
-                                <li class="fragment"><code>get</code></li>
-                                <li class="fragment"><code>post</code></li>
-                            </ul>
-                        </li>
-                        <li class="fragment"><code>name</code></li>
-                        <li class="fragment">
-                            <code>autocomplete</code>
-                            <ul>
-                                <li class="fragment">on</li>
-                                <li class="fragment">off</li>
-                            </ul>
-                        </li>
-                        <li class="fragment">
-                            <code>novalidate</code>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <pre>
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/4v2y0kp1/embed/html,result"></script>
+        <a href="//jsfiddle.net/WorthyD/4v2y0kp1/embed/" target="_blank">Link</a>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>The Form Tag</h1>
+        <h2 class="fragment">
+            <pre><code class="xml">&lt;form&gt; Content &lt;/form&gt;</code></pre>
+        </h2>
+
+        <h3 class="fragment">Accepted Attributes</h3>
+        <ul>
+            <li class="fragment"><code>action</code> - Represents the url where we are sending the data.</li>
+            <li class="fragment">
+                <code>method</code> - specifies the HTTP method used
+                <ul>
+                    <li class="fragment"><code>get</code></li>
+                    <li class="fragment"><code>post</code></li>
+                </ul>
+            </li>
+            <li class="fragment"><code>name</code></li>
+            <li class="fragment">
+                <code>autocomplete</code>
+                <ul>
+                    <li class="fragment">on</li>
+                    <li class="fragment">off</li>
+                </ul>
+            </li>
+            <li class="fragment">
+                <code>novalidate</code>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <pre>
 <code class="xml">
                     <form action="test.html" method="post">
                     <label for="firstName">First Name</label>
@@ -69,34 +168,34 @@
     </form>
 </code>
 </pre>
-                </section>
-            </section>
-            <section>
-                <section>
-                    <h1>Radio Input</h1>
-                    <p>
-                        Radio inputs provide the user a list of items where only one can be selected
-                    </p>
-                    <h2>
-                        <pre>
+    </section>
+</section>
+<section>
+    <section>
+        <h1>Radio Input</h1>
+        <p>
+            Radio inputs provide the user a list of items where only one can be selected
+        </p>
+        <h2>
+            <pre>
 <code class="xml"><input type="radio" name="myradio" value="yes" /></code>
 </pre>
-                    </h2>
-                    <h3>Important Attributes</h3>
-                    <ul>
-                        <li class="fragment">
-                            <code>name</code>
-                        </li>
-                        <li class="fragment">
-                            <code>value</code>
-                        </li>
-                        <li class="fragment">
-                            <code>checked</code>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <pre>
+        </h2>
+        <h3>Important Attributes</h3>
+        <ul>
+            <li class="fragment">
+                <code>name</code>
+            </li>
+            <li class="fragment">
+                <code>value</code>
+            </li>
+            <li class="fragment">
+                <code>checked</code>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <pre>
 <code class="xml">
                     <input type="radio" name="myradio" value="yes" checked> Yes<br>
                     <input type="radio" name="myradio" value="no"> No<br>
@@ -104,68 +203,68 @@
 </code>
 </pre>
 
-                </section>
-                <section>
-                    <!--Source example-->
-                    <script async src="//jsfiddle.net/WorthyD/m45kskf2/embed/"></script>
-                    <a href="https://jsfiddle.net/WorthyD/m45kskf2/" target="_blank">link</a>
-                </section>
-            </section>
+    </section>
+    <section>
+        <!--Source example-->
+        <script async src="//jsfiddle.net/WorthyD/m45kskf2/embed/"></script>
+        <a href="https://jsfiddle.net/WorthyD/m45kskf2/" target="_blank">link</a>
+    </section>
+</section>
 
-            <section>
-                <section>
-                    <h1>Check box Input</h1>
-                    <p>
-                        Radio inputs provide the user a list of items where only one can be selected
-                    </p>
-                    <h2>
-                        <pre>
+<section>
+    <section>
+        <h1>Check box Input</h1>
+        <p>
+            Radio inputs provide the user a list of items where only one can be selected
+        </p>
+        <h2>
+            <pre>
 <code class="xml"><input type="radio" name="myradio" value="yes" /></code>
 </pre>
-                    </h2>
-                    <h3>Important Attributes</h3>
-                    <ul>
-                        <li class="fragment">
-                            <code>name</code>
-                        </li>
-                        <li class="fragment">
-                            <code>value</code>
-                        </li>
-                        <li class="fragment">
-                            <code>checked</code>
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <pre>
+        </h2>
+        <h3>Important Attributes</h3>
+        <ul>
+            <li class="fragment">
+                <code>name</code>
+            </li>
+            <li class="fragment">
+                <code>value</code>
+            </li>
+            <li class="fragment">
+                <code>checked</code>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <pre>
 <code class="xml">
                     <input type="checkbox" name="mycheck1" value="yes" checked> Yes<br>
                     <input type="checkbox" name="mycheck2" value="no"> No<br>
 </code>
 </pre>
 
-                </section>
-            </section>
+    </section>
+</section>
 
-            <section>
-                <section>
-                    <h1>The <code>select</code> element</h1>
-                    <p>
-                        Selects, or dropdowns, are used to provide the user the ability to select one of many options. <code>Selects</code> are composed posed of <code>option</code> tags.
-                    </p>
-                    <h1 class="fragment">The <code>option</code> element</h1>
-                    <p class="fragment">
-                        <code>Option</code> are only used inside <code>select</code> elements.
-                    </p>
-                    <h3 class="fragment">Attributes</h3>
-                    <ul>
-                        <li class="fragment"><code>selected</code></li>
-                        <li class="fragment"><code>value</code></li>
-                    </ul>
-                </section>
-                <section>
-                    <h1>Select Example</h1>
-                    <pre>
+<section>
+    <section>
+        <h1>The <code>select</code> element</h1>
+        <p>
+            Selects, or dropdowns, are used to provide the user the ability to select one of many options. <code>Selects</code>            are composed posed of <code>option</code> tags.
+        </p>
+        <h1 class="fragment">The <code>option</code> element</h1>
+        <p class="fragment">
+            <code>Option</code> are only used inside <code>select</code> elements.
+        </p>
+        <h3 class="fragment">Attributes</h3>
+        <ul>
+            <li class="fragment"><code>selected</code></li>
+            <li class="fragment"><code>value</code></li>
+        </ul>
+    </section>
+    <section>
+        <h1>Select Example</h1>
+        <pre>
 <code class="js">
                     <select id="myDropDown">
                     <option value="1">Car</option>
@@ -175,33 +274,23 @@
     </select>
 </code>
 </pre>
-                </section>
-                <section>
-                    <script async src="//jsfiddle.net/WorthyD/wz5myyag/embed/"></script>
-                    <a href="http://jsfiddle.net/WorthyD/wz5myyag/" target="_blank">Link</a>
-                </section>
-            </section>
-            <section>
-                <section>
-                    <h1><code>Textarea</code></h1>
-                    <p>
-                        The <code>textarea</code> element provides the user with the option for multi line input
-                    </p>
-                    <p>
-                        There are attributes to control its size, but you should use CSS to set its size.
-                    </p>
-                </section>
-                <section>
-                    <script async src="//jsfiddle.net/WorthyD/kqk3tgjt/1/embed/"></script>
-                </section>
-            </section>
-
-
-        </div>
-
-    </div>
-
-
-    <!-- @@include('../footer.html' ) -->
-</body>
-</html>
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/wz5myyag/embed/"></script>
+        <a href="http://jsfiddle.net/WorthyD/wz5myyag/" target="_blank">Link</a>
+    </section>
+</section>
+<section>
+    <section>
+        <h1><code>Textarea</code></h1>
+        <p>
+            The <code>textarea</code> element provides the user with the option for multi line input
+        </p>
+        <p>
+            There are attributes to control its size, but you should use CSS to set its size.
+        </p>
+    </section>
+    <section>
+        <script async src="//jsfiddle.net/WorthyD/kqk3tgjt/1/embed/"></script>
+    </section>
+</section>

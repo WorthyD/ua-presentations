@@ -1,0 +1,25 @@
+<section>
+    <h1>Document Ready</h1>
+    <p>
+        The safest way to execute JavaScript is to wait for the document to load, and then execute your JavaScript.
+    </p>
+</section>
+<section>
+    <h1>Old Method</h1>
+    <pre><code class="xml">
+       <body onload="load()">
+    </code></pre>
+    <p class="fragment">
+        We may not always have access to the HTML though.
+    </p>
+</section>
+<section>
+    <h1>New Method</h1>
+    <pre><code class="js">
+if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+    fn();
+} else {
+    document.addEventListener('DOMContentLoaded', fn);
+}
+</code></pre>
+</section>
