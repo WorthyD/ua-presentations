@@ -461,8 +461,66 @@ console.log(d1);
 
                 <section>
     <!-- Single Line If Statement -->
-</section>
+    <h1>The Ternary Operator</h1>
+    <h2>AKA: Single Line If Else Statement</h2>
 
+
+    <h4>
+        <code class="fragment">condition</code>
+        <code class="fragment">?</code>
+        <code class="fragment">expression1</code>
+        <code class="fragment">:</code>
+        <code class="fragment">expression2</code>
+    </h4>
+</section>
+<section>
+    <div>
+        <h2>This gets replaced with</h2>
+
+        <pre><code class="js">
+var isValid;
+if (name.length > 0){
+
+    isValid = true;
+
+}else{
+
+    isValid = false;
+
+}
+            </code></pre>
+
+    </div>
+    <div class="fragment">
+        <h2>This</h2>
+
+        <pre><code class="js">
+var isValid = (name.length > 0) ? true: false;
+            </code></pre>
+    </div>
+
+
+</section>
+<section>
+    <h1>Where can you use this?</h1>
+    <div class="fragment">
+        <p>Simple Validation</p>
+        <pre><code class="js">
+    var isValid = (name.length > 0) ? true: false;
+            </code></pre>
+    </div>
+    <div class="fragment">
+        <p>Age Gate</p>
+        <pre><code class="js">
+    var oldEnough = (age > 17) ? true: false;
+            </code></pre>
+    </div>
+    <div class="fragment">
+        <pre><code class="js">
+    var prefix = (isMarried) ? "Mrs.": "Ms.";
+            </code></pre>
+    </div>
+</section>
                 ﻿<section>
     <h1>JavaScript Styles</h1>
     <p>
@@ -512,9 +570,15 @@ console.log(d1);
         <li class="fragment"><code>.add('class1', 'class2', ..)</code> - Adds one or more classes to the class list</li>
         <li class="fragment"><code>.contains('class')</code> - returns <code>true</code> or <code>false</code> if the element contains the class.
         </li>
+    </ul>
+</section>
+<section>
+    <h2><code>classList</code> Methods Continued</h2>
+    <ul>
         <li class="fragment"><code>.item(index)</code> - Returns the index of the class if it is inside the element list</li>
         <li class="fragment"><code>.remove('c1', 'c2', ....)</code> - removes one or more classes from an element</li>
         <li class="fragment"><code>.toggle('c1')</code> - Adds or removes class based on if it exists or not</li>
+
     </ul>
 </section>
 <section>
@@ -571,7 +635,7 @@ console.log(d1);
 <section>
     <h1>Old Method</h1>
     <pre><code class="xml">
-       <body onload="load()">
+       &lt;body onload="load()">
     </code></pre>
     <p class="fragment">
         We may not always have access to the HTML though.
@@ -586,6 +650,9 @@ if (document.attachEvent ? document.readyState === "complete" : document.readySt
     document.addEventListener('DOMContentLoaded', fn);
 }
 </code></pre>
+<p class="fragment">
+    This ensures your code is consistency executed wherever it is placed.
+</p>
 </section>
 
             </div>

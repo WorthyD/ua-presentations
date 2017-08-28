@@ -1,3 +1,62 @@
 <section>
     <!-- Single Line If Statement -->
+    <h1>The Ternary Operator</h1>
+    <h2>AKA: Single Line If Else Statement</h2>
+
+
+    <h4>
+        <code class="fragment">condition</code>
+        <code class="fragment">?</code>
+        <code class="fragment">expression1</code>
+        <code class="fragment">:</code>
+        <code class="fragment">expression2</code>
+    </h4>
+</section>
+<section>
+    <div>
+        <h2>This gets replaced with</h2>
+
+        <pre><code class="js">
+var isValid;
+if (name.length > 0){
+
+    isValid = true;
+
+}else{
+
+    isValid = false;
+
+}
+            </code></pre>
+
+    </div>
+    <div class="fragment">
+        <h2>This</h2>
+
+        <pre><code class="js">
+var isValid = (name.length > 0) ? true: false;
+            </code></pre>
+    </div>
+
+
+</section>
+<section>
+    <h1>Where can you use this?</h1>
+    <div class="fragment">
+        <p>Simple Validation</p>
+        <pre><code class="js">
+    var isValid = (name.length > 0) ? true: false;
+            </code></pre>
+    </div>
+    <div class="fragment">
+        <p>Age Gate</p>
+        <pre><code class="js">
+    var oldEnough = (age > 17) ? true: false;
+            </code></pre>
+    </div>
+    <div class="fragment">
+        <pre><code class="js">
+    var prefix = (isMarried) ? "Mrs.": "Ms.";
+            </code></pre>
+    </div>
 </section>
