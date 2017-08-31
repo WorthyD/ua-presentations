@@ -1,0 +1,41 @@
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin:0;
+    padding:0;
+}
+.main{
+    width:960px;
+    margin:0 auto;
+}
+.site-header{
+    background:url(images/sky.jpeg) 0 0 no-repeat;
+    height:430px;
+    text-align:center;
+    color:#fff;
+}
+.site-header h1,
+.site-header h2{
+    color:#fff;
+}
+.site-header nav{
+    text-align:right;
+}
+.site-header nav a{
+    display:inline-block;
+    color:#fff;
+    font-size:12px;
+    padding:10px;
+    text-decoration:none;
+}
+.site-header nav a:hover{
+    text-decoration:underline;
+}
+.site-header h1{
+    margin-top:100px;
+    font-size:56px;
+    font-weight:normal;
+}
+article h1, 
+article h2{
+    color:#30396D;
+} 
