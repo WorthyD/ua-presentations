@@ -1,41 +1,87 @@
-body{
+body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
-.main{
-    width:960px;
-    margin:0 auto;
+
+a {
+    color: #30396D;
 }
-.site-header{
-    background:url(images/sky.jpeg) 0 0 no-repeat;
-    height:430px;
-    text-align:center;
-    color:#fff;
+
+.main {
+    width: 960px;
+    margin: 0 auto;
 }
+
+.site-header {
+    background: url(images/sky.jpeg) 0 0 no-repeat;
+    height: 430px;
+    text-align: center;
+    color: #fff;
+}
+
 .site-header h1,
-.site-header h2{
-    color:#fff;
+.site-header h2 {
+    color: #fff;
 }
-.site-header nav{
-    text-align:right;
+
+.site-header nav {
+    text-align: right;
 }
-.site-header nav a{
+
+.site-header nav a {
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.site-header nav a:hover {
+    text-decoration: underline;
+}
+
+.site-header h1 {
+    margin-top: 100px;
+    font-size: 56px;
+    font-weight: normal;
+}
+
+article {
+    float: left;
+    width: 70%;
+}
+
+article h1,
+article h2,
+aside h3 {
+    color: #30396D;
+}
+
+aside {
+    float: right;
+    width: 20%;
+}
+
+aside section {
+    border-bottom: 2px solid #30396D;
+    padding-bottom:20px;
+    color: #30396D;
+}
+ul{
+    margin:0;
+    padding-left:18px;
+}
+
+.tags a{
     display:inline-block;
-    color:#fff;
-    font-size:12px;
-    padding:10px;
     text-decoration:none;
+    padding:5px;
+    margin:0  3px 5px  0;
+    border:1px solid #888888
 }
-.site-header nav a:hover{
-    text-decoration:underline;
+
+.tags a:hover{
+    border:1px solid #30396D;
+
 }
-.site-header h1{
-    margin-top:100px;
-    font-size:56px;
-    font-weight:normal;
-}
-article h1, 
-article h2{
-    color:#30396D;
-} 
