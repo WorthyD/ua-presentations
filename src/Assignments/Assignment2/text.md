@@ -1,5 +1,19 @@
 # Assignment 2 - CSS - Text
 
+## Colors
+- Dark Text - #000;
+- All Blue/Purple  - #30396D
+- Dark borders, Dark borders - #888;
+
+## Fonts
+- Use a font family of Helvetica with an Arial fallback
+- Use your best judgement font sizes. Most are the default font style.
+- Navigation and footers have a font-size of 12px.
+
+## Images
+
+
+
 ## Navigation
 - Home 
 - Blog 
@@ -35,3 +49,15 @@
 - Kid 
 - Crafts 
 - Painting
+
+## News
+- Mystery of restaurant's exploding tea towels
+- Woman finds a hat in a tree.
+- Warning over dangerous cupcakes
+- Grass growing fast after the rain
+
+## Events
+- Cheese Pizza Day (9/5/2017)
+- National Peanut Day (9/13/2017)
+- Hobbit Day (9/22/2017)
+- National Comic Book Day (9/25/2017)
