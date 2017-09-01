@@ -75,6 +75,7 @@ ul{
 
 .tags a{
     display:inline-block;
+    font-size:12px;
     text-decoration:none;
     padding:5px;
     margin:0  3px 5px  0;
@@ -84,4 +85,8 @@ ul{
 .tags a:hover{
     border:1px solid #30396D;
 
+}
+aside section img{
+    display:block;
+    width:100%;
 }
