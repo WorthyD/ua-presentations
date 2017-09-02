@@ -1,10 +1,8 @@
 # Assignment 2
 
 
-
 ## CSS HTML Component
-Recreate from JPEG
-
+Recreate the website in the picture [assignment2.png](assignment2.png).  You'll find two images in this folder to use for the site.  You'll get all the text, font sizes and colors in [text.md](text.md)
 
 ## JS Component
 Write a lightweight JavaScript library for converting dates into readable strings.

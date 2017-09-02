@@ -1,5 +1,7 @@
 # Assignment 2 - CSS - Text
 
+# Styles
+
 ## Colors
 - Dark Text - #000;
 - All Blue/Purple  - #30396D
@@ -10,9 +12,7 @@
 - Use your best judgement font sizes. Most are the default font style.
 - Navigation and footers have a font-size of 12px.
 
-## Images
-
-
+# Content
 
 ## Navigation
 - Home 
