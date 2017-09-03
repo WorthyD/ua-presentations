@@ -12,7 +12,7 @@ var sass = require('gulp-sass');
 var banner = '/* This is a generated file on ' + new Date() + '  */\n';
 
 gulp.task('fileinclude', function () {
- return    gulp.src(['src/templates/**/*.html', '!src/templates/resources/**/*.html', '!src/templates/base.html', '!src/templates/footer.html', '!src/templates/header.html'])
+    return gulp.src(['src/templates/**/*.html', '!src/templates/resources/**/*.html', '!src/templates/base.html', '!src/templates/footer.html', '!src/templates/header.html'])
         .pipe(fileinclude({
             prefix: '<!-- @@',
             suffix: '-->'
@@ -38,25 +38,18 @@ gulp.task('sass', function () {
 
 });
 
-gulp.task('copy', function(){
+gulp.task('copy', function () {
     gulp.src(['node_modules/reveal.js/js/reveal.js']).pipe(gulp.dest('docs/vendor/reveal'));
     gulp.src(['node_modules/reveal.js/plugin/**']).pipe(gulp.dest('docs/vendor/reveal/plugin'));
     gulp.src(['node_modules/reveal.js/css/**/*.css']).pipe(gulp.dest('docs/vendor/reveal/css'));
     gulp.src(['node_modules/reveal.js/lib/js/**/*.js']).pipe(gulp.dest('docs/vendor/reveal/lib/js'));
-    
+
     gulp.src(['node_modules/reveal-code-focus/reveal-code-focus.js']).pipe(gulp.dest('docs/vendor/reveal/plugin/codefocus'));
     gulp.src(['src/images/**']).pipe(gulp.dest('docs/images'));
 
     gulp.src([
-            'node_modules/font-awesome/**'
-            , '!node_modules/font-awesome/**/*.map'
-            , '!node_modules/font-awesome/**/*.less'
-            , '!node_modules/font-awesome/**/*.scss'
-            , '!node_modules/font-awesome/.npmignore'
-            , '!node_modules/font-awesome/*.txt'
-            , '!node_modules/font-awesome/*.md'
-            , '!node_modules/font-awesome/*.json'
-        ]).pipe(gulp.dest('docs/vendor/font-awesome'))
+        'node_modules/font-awesome/**', '!node_modules/font-awesome/**/*.map', '!node_modules/font-awesome/**/*.less', '!node_modules/font-awesome/**/*.scss', '!node_modules/font-awesome/.npmignore', '!node_modules/font-awesome/*.txt', '!node_modules/font-awesome/*.md', '!node_modules/font-awesome/*.json'
+    ]).pipe(gulp.dest('docs/vendor/font-awesome'))
 });
 
 
@@ -75,9 +68,13 @@ gulp.task('browserSync', ['sass'], function () {
 gulp.task('dev', ['browserSync', 'copy', 'sass', 'fileinclude'], function () {
     gulp.watch('src/templates/**/*.html', ['fileinclude']);
     gulp.watch('src/scripts/**/*.js', browserSync.reload);
-    gulp.watch('docs/**/*.html', browserSync.reload);
+    gulp.watch('docs/**/*.html', ['delayreload']);
     gulp.watch(sassPath, ['sass']);
 });
-
+gulp.task('delayreload', function () {
+    setTimeout(function () {
+        browserSync.reload();
+    }, 1000);
+});
 
 gulp.task('default', ['copy', 'fileinclude', 'sass']);
