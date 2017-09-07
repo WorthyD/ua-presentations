@@ -1,6 +1,6 @@
 # Assignment 14
 
-In today's assignment you are going to be recreating the form that can be found here: [https://worthyd.github.io/dummy-sites/simple-forms/](https://worthyd.github.io/dummy-sites/simple-forms/)
+In today's assignment you are going to be recreating the form that can be found here: [https://worthyd.github.io/dummy-sites/simple-forms-3/](https://worthyd.github.io/dummy-sites/simple-forms-3/)
 
 Focus on the HTML first, then the JavaScript and then work on the CSS.
 
