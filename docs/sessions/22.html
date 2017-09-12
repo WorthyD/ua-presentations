@@ -57,6 +57,7 @@
 
                             <h2>New</h2>
                             <ul>
+                                <li><a href="#cursor">CSS Cursor</a></li>
                                 <li><a href="#effects">jQuery Effects</a></li>
                             </ul>
                         </div>
@@ -399,6 +400,26 @@
                  <section>
                     <h1>Questions?</h1>
                 </section>
+                <section id="cursor">
+    <h1>CSS Cursor Property</h1>
+    <p>
+        You can use this CSS property to modify how your mouse cursor appears when moused over an element.
+    </p>
+    <pre class="fragment"><code class="css">
+div {
+    cursor:pointer; // changes the arrow to a pointer 
+}
+    </code></pre>
+    <h4 class="fragment">There are over 20 properties you can use.</h4>
+    <h4 class="fragment">Yes... you can change it to an image.</h4>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="YxmYGd" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="YxmYGd" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/YxmYGd/">YxmYGd</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
                 <section>
     <h1>Basic Effects with jQuery</h1>
     <ul>
@@ -408,115 +429,142 @@
     </ul>
 </section>
 <section>
-    <section>
-        <h1>Show and Hide</h1>
-        <p>
-            Shows and hides an element by using CSS
-        </p>
-        <h2 class="fragment">
-            <pre><code class="js">$('element').show()
+    <h1>Show and Hide</h1>
+    <p>
+        Shows and hides an element by using CSS
+    </p>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').show()
 $('element').hide()</code></pre>
-        </h2>
-    </section>
-    <section>
-        <h1>Toggle</h1>
-        <p>
-            Detects if the element is visible or hidden and will apply the opposite style.
-        </p>
-        <h2 class="fragment">
-            <pre><code class="js">$('element').toggle()
+    </h2>
+</section>
+<section>
+    <h1>Toggle</h1>
+    <p>
+        Detects if the element is visible or hidden and will apply the opposite style.
+    </p>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').toggle()
 </code></pre>
-        </h2>
-    </section>
-    <section>
-        <h1>Parameters</h1>
-        <p>
-            We can extend the functionality by passing in parameters.
-        </p>
-        <h2 class="fragment">
-            <pre><code class="js">$('element').show('slow')
+    </h2>
+</section>
+<section>
+    <h1>Parameters</h1>
+    <p>
+        We can extend the functionality by passing in parameters.
+    </p>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').show('slow')
 $('element').hide('fast')</code></pre>
-        </h2>
-        <h2 class="fragment">
-            <pre><code class="js">$('element').show(200)
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').show(200)
 $('element').hide(500)</code></pre>
-        </h2>
-    </section>
-    <section>
-        <script async src="//jsfiddle.net/WorthyD/hj0xcduf/embed/"></script>
-        <a href="https://jsfiddle.net/WorthyD/hj0xcduf/" target="_blank">Link</a>
-    </section>
+    </h2>
 </section>
 <section>
-    <section>
-        <h1>FadeIn and FadeOut</h1>
-        <p>
-            Fades the selected element in and out of view.
-        </p>
-        <h2 class="fragment">
-            <pre><code class="js">$('element').fadeIn()
+    <p data-height="265" data-theme-id="0" data-slug-hash="brXMyg" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-JQ-Effects" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/brXMyg/">UA-ITR-JQ-Effects</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>FadeIn and FadeOut</h1>
+    <p>
+        Fades the selected element in and out of view.
+    </p>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').fadeIn()
 $('element').fadeOut()</code></pre>
-        </h2>
-    </section>
-    <section>
-        <h1>Toggle</h1>
-        <h2 class="fragment">
-            <pre><code class="js">$('element').fadeToggle()
-</code></pre>
-        </h2>
-     </section>
-    <section>
-        <h1>Parameters</h1>
-        <h2 class="fragment">
-            <pre><code class="js">$('element').fadeIn('fast')
-$('element').fadeOut('slow')</code></pre>
-        </h2>
-         <h2 class="fragment">
-            <pre><code class="js">$('element').fadeIn(200)
-$('element').fadeOut(500)</code></pre>
-        </h2>
-    </section>
-    <section>
-        <script async src="//jsfiddle.net/WorthyD/L7buLj6f/embed/"></script>
-        <a href="https://jsfiddle.net/WorthyD/L7buLj6f/" target="_blank">Link</a>
-    </section>
+    </h2>
 </section>
 <section>
-    <section>
-        <h1>SlideUp and SlideDown</h1>
-        <p>
-            Expands and collapses an element
-        </p>
-        <h2 class="fragment">
-            <pre><code class="js">$('element').slideDown()
-$('element').slideUp()</code></pre>
-        </h2>
-    </section>
-    <section>
-        <h1>Toggle</h1>
-        <h2 class="fragment">
-            <pre><code class="js">$('element').slideToggle()
+    <h1>Toggle</h1>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').fadeToggle()
 </code></pre>
-        </h2>
-     </section>
-    <section>
-        <h1>Parameters</h1>
-        <h2 class="fragment">
-            <pre><code class="js">$('element').slideDown('fast')
-$('element').slideUp('slow')</code></pre>
-        </h2>
-         <h2 class="fragment">
-            <pre><code class="js">$('element').slideDown(200)
-$('element').slideUp(500)</code></pre>
-        </h2>
-    </section>
-    <section>
-        <script async src="//jsfiddle.net/WorthyD/jp30rjwc/embed/"></script>
-        <a href="https://jsfiddle.net/WorthyD/jp30rjwc/" target="_blank">Link</a>
-    </section>
+    </h2>
 </section>
- 
-
+<section>
+    <h1>Parameters</h1>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').fadeIn('fast')
+$('element').fadeOut('slow')</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').fadeIn(200)
+$('element').fadeOut(500)</code></pre>
+    </h2>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="ayeGrQ" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-JQ-Effects-Fade" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/ayeGrQ/">UA-ITR-JQ-Effects-Fade</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>SlideUp and SlideDown</h1>
+    <p>
+        Expands and collapses an element
+    </p>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').slideDown()
+$('element').slideUp()</code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Toggle</h1>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').slideToggle()
+</code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Parameters</h1>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').slideDown('fast')
+$('element').slideUp('slow')</code></pre>
+    </h2>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').slideDown(200)
+$('element').slideUp(500)</code></pre>
+    </h2>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="qXeYew" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-JQ-Effects-Slide" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/qXeYew/">UA-ITR-JQ-Effects-Slide</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Asynchronous Events</h1>
+    <p>
+        The following block of code will execute at almost the same time
+    </p>
+        <pre><code class="js">$('element').fadeOut(200)
+$('element2').slideUp(500)</code></pre>
+<p>JavaScript doesn't wait for the first line to finish before the second line is executed.</p>
+</section>
+<section>
+    <h1>On Complete Callbacks</h1>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').slideDown(duration, callback)
+</code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Use Case: Slide a box down and then fade in the text.</h1>
+    <pre><code class="js">
+    $('div').slideDown(1000, function(){
+        $('p').fadeIn(1000);
+    });     
+    </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="eGONxo" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-jQuery Callbacks" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/eGONxo/">UA-ITR-jQuery Callbacks</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
             </div>
 
         </div>
