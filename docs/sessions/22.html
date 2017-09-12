@@ -57,7 +57,12 @@
 
                             <h2>New</h2>
                             <ul>
+                                <li><a href="#cursor">CSS Cursor</a></li>
                                 <li><a href="#effects">jQuery Effects</a></li>
+                                <li><a href="#showhide">Show/Hide</a></li>
+                                <li><a href="#fade">FadeIn/FadeOut</a></li>
+                                <li><a href="#slide">SlideUp/SlideDown</a></li>
+                                <li><a href="#async">Asynchronous Events</a></li>
                             </ul>
                         </div>
                     </div>
@@ -396,11 +401,30 @@
      $('button').val('New Value')           </code></pre>
     </div>
 </section>
-                 <section>
+                <section>
                     <h1>Questions?</h1>
                 </section>
-                <!-- @include('../resources/css/pointer.html' ) -->
-                <section>
+                <section id="cursor">
+    <h1>CSS Cursor Property</h1>
+    <p>
+        You can use this CSS property to modify how your mouse cursor appears when moused over an element.
+    </p>
+    <pre class="fragment"><code class="css">
+div {
+    cursor:pointer; // changes the arrow to a pointer 
+}
+    </code></pre>
+    <h4 class="fragment">There are over 20 properties you can use.</h4>
+    <h4 class="fragment">Yes... you can change it to an image.</h4>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="YxmYGd" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="YxmYGd" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/YxmYGd/">YxmYGd</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="effects">
     <h1>Basic Effects with jQuery</h1>
     <ul>
         <li class="fragment">Show/Hide</li>
@@ -408,7 +432,7 @@
         <li class="fragment">Slide Up/ Slide Down</li>
     </ul>
 </section>
-<section>
+<section id="showhide">
     <h1>Show and Hide</h1>
     <p>
         Shows and hides an element by using CSS
@@ -448,7 +472,7 @@ $('element').hide(500)</code></pre>
         on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-<section>
+<section id="fade">
     <h1>FadeIn and FadeOut</h1>
     <p>
         Fades the selected element in and out of view.
@@ -482,7 +506,7 @@ $('element').fadeOut(500)</code></pre>
         on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-<section>
+<section id="slide">
     <h1>SlideUp and SlideDown</h1>
     <p>
         Expands and collapses an element
@@ -515,6 +539,41 @@ $('element').slideUp(500)</code></pre>
         data-pen-title="UA-ITR-JQ-Effects-Slide" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/qXeYew/">UA-ITR-JQ-Effects-Slide</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
         on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section id="async">
+    <h1>Asynchronous Events</h1>
+    <p>
+        The following block of code will execute at almost the same time
+    </p>
+        <pre><code class="js">$('element').fadeOut(200)
+$('element2').slideUp(500)</code></pre>
+<p>JavaScript doesn't wait for the first line to finish before the second line is executed.</p>
+</section>
+<section>
+    <h1>On Complete Callbacks</h1>
+    <h2 class="fragment">
+        <pre><code class="js">$('element').slideDown(duration, callback)
+</code></pre>
+    </h2>
+</section>
+<section>
+    <h1>Use Case: Slide a box down and then fade in the text.</h1>
+    <pre><code class="js">
+    $('div').slideDown(1000, function(){
+        $('p').fadeIn(1000);
+    });     
+    </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="eGONxo" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-jQuery Callbacks" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/eGONxo/">UA-ITR-jQuery Callbacks</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+                <section id="exercise16">
+
+    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise16" target="_blank">Exercise 16</a></h1>
+   
 </section>
             </div>
 
