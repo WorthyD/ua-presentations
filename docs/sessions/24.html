@@ -374,8 +374,10 @@ $('element2').slideUp(500)</code></pre>
         <h3 class="fragment">Applies only to the a immediately after the div</h3>
 </section>
 <section>
-    <script async src="//jsfiddle.net/WorthyD/k18sqn0h/embed/html,css,result/"></script>
-    <a href="https://jsfiddle.net/WorthyD/k18sqn0h/" target="_blank">Link</a>
+    <p data-height="265" data-theme-id="0" data-slug-hash="rGOQVY" data-default-tab="css,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-ChildSelectors" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/rGOQVY/">UA-ITR-ChildSelectors</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
                 <section>
     <h1>jQuery .css()</h1>
@@ -445,8 +447,10 @@ $('element').css({
 <section>
     <!-- Example -->
     <h1>Example Code</h1>
-    <script async src="//jsfiddle.net/WorthyD/dkLyyenj/embed/"></script>
-    <a href="https://jsfiddle.net/WorthyD/dkLyyenj/" target="_blank">link</a>
+    <p data-height="265" data-theme-id="0" data-slug-hash="aLvQvG" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-jQUery-CSS" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/aLvQvG/">UA-ITR-jQUery-CSS</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
                 <section>
     <h1>jQuery Class Manipulation</h1>
@@ -502,26 +506,26 @@ $('element').css({
         selector for a container and then write less specific selectors for behaviors.
     </p>
 </section>
-    <section>
-        <h1>.find()</h1>
-        <p>
-            The .find() method allows you to run a selector within a specific context. It will search its descendants.
-        </p>
-        <aside class="notes">This helps with performance</aside>
-    </section>
-    <section>
-        <h1>Example</h1>
-        <pre><code class="js">
+<section>
+    <h1>.find()</h1>
+    <p>
+        The .find() method allows you to run a selector within a specific context. It will search its descendants.
+    </p>
+    <aside class="notes">This helps with performance</aside>
+</section>
+<section>
+    <h1>Example</h1>
+    <pre><code class="js">
     $('.myForm').find('input[type="text"]').on('blur', validate);            
     $('.myForm').find('button').on('click', submit);            
 </code></pre>
-<aside class="notes">
-    Explain the performance issues with this.
-</aside>
-    </section>
-    <section>
-        <h1>A little more realistic example</h1>
-        <pre><code class="js">
+    <aside class="notes">
+        Explain the performance issues with this.
+    </aside>
+</section>
+<section>
+    <h1>A little more realistic example</h1>
+    <pre><code class="js">
     var frm = $('.myForm');
 
     frm.find('input[type="text"]').on('blur', validate);            
@@ -529,37 +533,37 @@ $('element').css({
     frm.find('button').on('click', submit);            
             </code></pre>
 
-    </section>
-    <section>
-        <!-- jsfiddle example -->
-        <script async src="//jsfiddle.net/WorthyD/kfbex15q/embed/"></script>
-        <a href="https://jsfiddle.net/WorthyD/kfbex15q/" target="_blank">Link</a>
-    </section>
-    <section>
-        <h1>.closest()</h1>
-        <p>
-            The .closest() method searches up the DOM until it finds the <strong>first</strong> element that matches.
-        </p>
-    </section>
-    <section>
-        <h1>Example</h1>
-       <pre><code class="js">
+</section>
+<section>
+    <!-- jsfiddle example -->
+    <p data-height="265" data-theme-id="0" data-slug-hash="EwVOKL" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-jQUery-Find" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/EwVOKL/">UA-ITR-jQUery-Find</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>.closest()</h1>
+    <p>
+        The .closest() method searches up the DOM until it finds the <strong>first</strong> element that matches.
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <pre><code class="js">
         $('.btn').closest('div').hide();    
         </code></pre>
-        <pre class="fragment"><code class="xml">
+    <pre class="fragment"><code class="xml">
     <div> <!--This div does not get targeted-->
         <div> <!--This div gets targeted-->
               <button class="btn">Click Me</button>
         </div>
     </div>
         </code></pre>
- 
-    </section>
-    <section>
-        <script async src="//jsfiddle.net/WorthyD/pnmrocq1/embed/"></script>
 
-        <a href="https://jsfiddle.net/WorthyD/pnmrocq1/"  target="_blank">Link</a>
-    </section>
+</section>
+<section>
+    <p data-height="265" data-theme-id="0" data-slug-hash="BwoGQo" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-jQUery-Clossets" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/BwoGQo/">UA-ITR-jQUery-Clossets</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
                 <section>
     <h1>jQuery .filter()</h1>
     <p>
