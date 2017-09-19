@@ -58,6 +58,12 @@
                             <h2>New</h2>
                             <ul>
 
+                                <li><a href="#child">Child Selector</a></li>
+                                <li><a href="#jq-css">jQuery CSS</a></li>
+                                <li><a href="#jq-class">jQuery Class</a></li>
+                                <li><a href="#traverse">Traversing</a></li>
+                                <li><a href="#filter">Filter</a></li>
+                                <li><a href="#EvenOdd">Even & Odd</a></li>
                             </ul>
                         </div>
                     </div>
@@ -229,11 +235,6 @@ $('element2').slideUp(500)</code></pre>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 
-                <section id="exercise16">
-
-    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise16" target="_blank">Exercise 16</a></h1>
-   
-</section>
                 <section id="npm">
     <h1>NPM</h1>
     <h2>Node Package Manager</h2>
@@ -342,7 +343,7 @@ $('element2').slideUp(500)</code></pre>
                 <section>
                     Questions?
                 </section>
-                <section>
+                <section id="child">
     <h1>The Child Selector</h1>
     <p>
         The child selector targets elements immediately inside of the parent element.
@@ -379,7 +380,7 @@ $('element2').slideUp(500)</code></pre>
         on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-                <section>
+                <section id="jq-css">
     <h1>jQuery .css()</h1>
     <p>
         We can retrieve and modify an element's css value using jQuery's .css() method.
@@ -452,7 +453,7 @@ $('element').css({
         on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-                <section>
+                <section id="jq-class">
     <h1>jQuery Class Manipulation</h1>
     <p>
         Manipulating an object's class in jQuery is very similar to what you would do in vanilla JavaScript.
@@ -499,7 +500,7 @@ $('element').css({
     <p data-height="265" data-theme-id="0" data-slug-hash="veNQLM" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-jQUery-ClassList" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/veNQLM/">UA-ITR-jQUery-ClassList</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-                <section>
+                <section id="traversing">
     <h1>Traversing with jQuery</h1>
     <p>
         Traversing your DOM allows you to write code that wont interfere with other parts of your application. You can write a specific
@@ -562,10 +563,12 @@ $('element').css({
 
 </section>
 <section>
-    <p data-height="265" data-theme-id="0" data-slug-hash="BwoGQo" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-jQUery-Clossets" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/BwoGQo/">UA-ITR-jQUery-Clossets</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="BwoGQo" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="UA-ITR-jQUery-Clossets" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/BwoGQo/">UA-ITR-jQUery-Clossets</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>)
+        on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-    </section>  
-                <section>
+</section>
+                <section id="filter">
     <h1>jQuery .filter()</h1>
     <p>
         The jQuery .filter() method takes the current jQuery object and reduces the set based on the following.
@@ -598,7 +601,7 @@ $('element').css({
             </code></pre>
 
 </section>
-                <section>
+                <section id="EvenOdd">
     <h1>Even and Odd Selectors</h1>
     <p>
         These are jQuery specific selectors. They do not take advantage of the browser's built in selector system.

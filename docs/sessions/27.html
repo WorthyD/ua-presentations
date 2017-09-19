@@ -43,7 +43,10 @@
                         <div>
                             <h2>Review</h2>
                             <ul>
-            
+                                <li><a href="#json">JSON</a></li>
+                                <li><a href="#ajax1">Ajax</a></li>
+                                <li><a href="#post">Ajax Post</a></li>
+
                             </ul>
 
                         </div>
@@ -51,31 +54,29 @@
 
                             <h2>New</h2>
                             <ul>
-                            
-                           </ul>
+                            </ul>
                         </div>
                     </div>
                     <h4 style="clear:both;"><a href="#exercise13">Exercise 13</a></h4>
                 </section>
-      
-                     <section>
-    <section>
-        <h1>JSON</h1>
-        <p>
-            Stands for <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation. It
-            is object syntax that is standardized by the same organization that standardizes JavaScript.
-        </p>
-        <p class="fragment">
-            JSON is frequently used to communicate data between programming languages. XML (extensible markup language) was primarily
-            used before JSON.
-        </p>
-        <p class="fragment">
-            A JSON file has the extension of .json. It is frequently used for configuration or smaller data sets.
-        </p>
-    </section>
-    <section>
-        <h1>Syntax</h1>
-        <pre><code class="js">
+
+                <section id="json">
+    <h1>JSON</h1>
+    <p>
+        Stands for <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation. It is
+        object syntax that is standardized by the same organization that standardizes JavaScript.
+    </p>
+    <p class="fragment">
+        JSON is frequently used to communicate data between programming languages. XML (extensible markup language) was primarily
+        used before JSON.
+    </p>
+    <p class="fragment">
+        A JSON file has the extension of .json. It is frequently used for configuration or smaller data sets.
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <pre><code class="js">
 {
     "name": "Daniel",
     "isAwake": true,
@@ -92,33 +93,32 @@
 
 }
             </code></pre>
-        <aside class="notes">
-            Must start and end with { } Must use quotation marks. Ticks don't work Cannot have comments
-        </aside>
-    </section>
-    <section>
-        <h1>JSON in JavaScript</h1>
-        <div class="fragment">
-            <h2>Convert a string to JSON</h2>
-        </div>
-        <pre class="fragment"><code class="js">
+    <aside class="notes">
+        Must start and end with { } Must use quotation marks. Ticks don't work Cannot have comments
+    </aside>
+</section>
+<section>
+    <h1>JSON in JavaScript</h1>
+    <div class="fragment">
+        <h2>Convert a string to JSON</h2>
+    </div>
+    <pre class="fragment"><code class="js">
             var jsonString = "{\"name\": \"Daniel\"}";
             var jsonObj = JSON.parse(jsonString);
 
             console.log(jsonObj.name);
             </code></pre>
-        <div class="fragment">
-            <h2>Convert Object to a JSON string</h2>
-        </div>
-        <pre class="fragment"><code class="js">
+    <div class="fragment">
+        <h2>Convert Object to a JSON string</h2>
+    </div>
+    <pre class="fragment"><code class="js">
              var obj = {name: "Daniel"};
             var jsonString = JSON.stringify(obj);
 
             console.log(jsonString); //"{\"name\": \"Daniel\"}";
             </code></pre>
-    </section>
 </section>
-                <section>
+                <section id="ajax1">
     <h1>AJAX</h1>
     <ul>
         <li class="fragment"><strong>A</strong>syncronous</li>
@@ -167,7 +167,7 @@
     <script async src="//jsfiddle.net/WorthyD/47sLLzd9/embed/"></script>
     <a href="https://jsfiddle.net/WorthyD/47sLLzd9/" target="_blank"></a>
 </section>
-                <section>
+                <section id="post">
     <h1>Http POST Method</h1>
     <p>
         One of the primary methods for sending data from a website to a web server to be processed.

@@ -1,4 +1,4 @@
-<section>
+<section id="debugging">
     <h1>Tips for debugging code.</h1>
     <p>
         We all get stuck from time to time with broken code. We know what it needs to do, but don't know why it isn't doing what
@@ -13,46 +13,42 @@
     </aside>
 </section>
 <section>
-    <section>
-        <h1>Batch your work.</h1>
-        <p>
-            Don't write 20 or 30 lines of code without testing what you have written.
-        </p>
-        <p class="fragment">
-            Batch your work into smaller units to understand what is going on.
-        </p>
-        <p class="fragment">
-            Bugs are easier to find when they are small.
-        </p>
-    </section>
-    <section>
-        <h1>Example</h1>
-        <p>
-            I want to validate a form field when I click a button.
-        </p>
-        <pre class="fragment"><code class="js">
+    <h1>Batch your work.</h1>
+    <p>
+        Don't write 20 or 30 lines of code without testing what you have written.
+    </p>
+    <p class="fragment">
+        Batch your work into smaller units to understand what is going on.
+    </p>
+    <p class="fragment">
+        Bugs are easier to find when they are small.
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <p>
+        I want to validate a form field when I click a button.
+    </p>
+    <pre class="fragment"><code class="js">
             $('btn').on('click', function(){
                 console.log('click worked');
             });
             </code></pre>
-        <p class="fragment">
-            I test that my click is working before continuing with my work.
-        </p>
-        <pre class="fragment"><code class="js">
+    <p class="fragment">
+        I test that my click is working before continuing with my work.
+    </p>
+    <pre class="fragment"><code class="js">
             $('btn').on('click', function(){
                 console.log($('input').val());
             });
             </code></pre>
-    </section>
 </section>
 <section>
-    <section>
-        <h1>Read the documentation.</h1>
-        <p>
-            Using a third party library can be hard at times. Good libraries provide good documentation, examples and demos. Study them
-            to understand how they should be used.
-        </p>
-    </section>
+    <h1>Read the documentation.</h1>
+    <p>
+        Using a third party library can be hard at times. Good libraries provide good documentation, examples and demos. Study them
+        to understand how they should be used.
+    </p>
 </section>
 <section>
     <h1>Read your error messages</h1>
@@ -64,13 +60,11 @@
     </p>
 </section>
 <section>
-    <section>
-        <h1>Use caution when copy and pasting examples.</h1>
-        <p>
-            You loose understanding when copy and pasting someone elses code.
-        </p>
-        <h2 class="fragment">Manually type out code instead of copying it.</h2>
-    </section>
+    <h1>Use caution when copy and pasting examples.</h1>
+    <p>
+        You loose understanding when copy and pasting someone elses code.
+    </p>
+    <h2 class="fragment">Manually type out code instead of copying it.</h2>
 </section>
 <section>
     <h1>Take advantage of your tools</h1>

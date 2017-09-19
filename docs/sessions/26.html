@@ -43,6 +43,11 @@
                         <div>
                             <h2>Review</h2>
                             <ul>
+                                <li><a href="#debugging">Debugging Tips</a></li>
+                                <li><a href="#callbacks">Callbacks</a></li>
+                                <li><a href="#blur">Blur Event</a></li>
+                                <li><a href="#hover">Hover Event</a></li>
+                                <li><a href="#data">Data Attributes</a></li>
 
                             </ul>
 
@@ -51,13 +56,15 @@
 
                             <h2>New</h2>
                             <ul>
-
+                                <li><a href="#json">JSON</a></li>
+                                <li><a href="#ajax1">Ajax</a></li>
+                                <li><a href="#post">Ajax Post</a></li>
                             </ul>
                         </div>
                     </div>
                     <h4 style="clear:both;"><a href="#exercise13">Exercise 13</a></h4>
                 </section>
-                <section>
+                <section id="debugging">
     <h1>Tips for debugging code.</h1>
     <p>
         We all get stuck from time to time with broken code. We know what it needs to do, but don't know why it isn't doing what
@@ -72,46 +79,42 @@
     </aside>
 </section>
 <section>
-    <section>
-        <h1>Batch your work.</h1>
-        <p>
-            Don't write 20 or 30 lines of code without testing what you have written.
-        </p>
-        <p class="fragment">
-            Batch your work into smaller units to understand what is going on.
-        </p>
-        <p class="fragment">
-            Bugs are easier to find when they are small.
-        </p>
-    </section>
-    <section>
-        <h1>Example</h1>
-        <p>
-            I want to validate a form field when I click a button.
-        </p>
-        <pre class="fragment"><code class="js">
+    <h1>Batch your work.</h1>
+    <p>
+        Don't write 20 or 30 lines of code without testing what you have written.
+    </p>
+    <p class="fragment">
+        Batch your work into smaller units to understand what is going on.
+    </p>
+    <p class="fragment">
+        Bugs are easier to find when they are small.
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <p>
+        I want to validate a form field when I click a button.
+    </p>
+    <pre class="fragment"><code class="js">
             $('btn').on('click', function(){
                 console.log('click worked');
             });
             </code></pre>
-        <p class="fragment">
-            I test that my click is working before continuing with my work.
-        </p>
-        <pre class="fragment"><code class="js">
+    <p class="fragment">
+        I test that my click is working before continuing with my work.
+    </p>
+    <pre class="fragment"><code class="js">
             $('btn').on('click', function(){
                 console.log($('input').val());
             });
             </code></pre>
-    </section>
 </section>
 <section>
-    <section>
-        <h1>Read the documentation.</h1>
-        <p>
-            Using a third party library can be hard at times. Good libraries provide good documentation, examples and demos. Study them
-            to understand how they should be used.
-        </p>
-    </section>
+    <h1>Read the documentation.</h1>
+    <p>
+        Using a third party library can be hard at times. Good libraries provide good documentation, examples and demos. Study them
+        to understand how they should be used.
+    </p>
 </section>
 <section>
     <h1>Read your error messages</h1>
@@ -123,13 +126,11 @@
     </p>
 </section>
 <section>
-    <section>
-        <h1>Use caution when copy and pasting examples.</h1>
-        <p>
-            You loose understanding when copy and pasting someone elses code.
-        </p>
-        <h2 class="fragment">Manually type out code instead of copying it.</h2>
-    </section>
+    <h1>Use caution when copy and pasting examples.</h1>
+    <p>
+        You loose understanding when copy and pasting someone elses code.
+    </p>
+    <h2 class="fragment">Manually type out code instead of copying it.</h2>
 </section>
 <section>
     <h1>Take advantage of your tools</h1>
@@ -143,16 +144,16 @@
         You wont learn anything if everything worked the first time you try it.
     </p>
 </section>
-                <section>
-    <section>
-        <h1>JavaScript Callbacks</h1>
-        <p>
-            Callbacks are functions passed into other functions as parameters.  These functions are intended to be used inside of the functions they are passed into.
-        </p>
-    </section>
-    <section>
-        <h1>Examples</h1>
-        <pre><code class="js">
+                <section id="callbacks">
+    <h1>JavaScript Callbacks</h1>
+    <p>
+        Callbacks are functions passed into other functions as parameters. These functions are intended to be used inside of the
+        functions they are passed into.
+    </p>
+</section>
+<section>
+    <h1>Examples</h1>
+    <pre><code class="js">
     function myCallback()
         console.log('Operation Complete');
     }            
@@ -166,23 +167,23 @@
     addSomething(1, 3, myCallback);
 
             </code></pre>
-    </section>
-    <section>
-        <h1>We've been doing callbacks already.</h1>
-        <pre class="fragment"><code class="js">
+</section>
+<section>
+    <h1>We've been doing callbacks already.</h1>
+    <pre class="fragment"><code class="js">
     document.getElementById('id').addEventListener('click', function(){
         //Callback
     });
             </code></pre>
-         <pre class="fragment"><code class="js">
+    <pre class="fragment"><code class="js">
     $('button').on('click', function(){
         //This is a callback
     });            
             </code></pre>
-    </section>
-    <section>
-        <h1>Using callbacks for the UI</h1>
-         <pre class="fragment"><code class="js">
+</section>
+<section>
+    <h1>Using callbacks for the UI</h1>
+    <pre class="fragment"><code class="js">
     $('button').on('click', function(){
          //Click Event
          $('.container').slideDown('fast', function(){
@@ -193,14 +194,13 @@
          });
     });            
             </code></pre>
-    </section>
-    <section>
-        <!-- jsFiddle Example -->
-        <script async src="//jsfiddle.net/WorthyD/kun86m8L/embed/"></script>
-        <a href="https://jsfiddle.net/WorthyD/kun86m8L/" target="_blank"></a>
-    </section>
 </section>
-                <section>
+<section>
+    <!-- jsFiddle Example -->
+    <script async src="//jsfiddle.net/WorthyD/kun86m8L/embed/"></script>
+    <a href="https://jsfiddle.net/WorthyD/kun86m8L/" target="_blank"></a>
+</section>
+                <section id="blur">
     <h1>The Blur Event</h1>
     <p>
         The Blur event is triggered when an element has lost focus.
@@ -221,7 +221,7 @@
     <p data-height="265" data-theme-id="0" data-slug-hash="dVYxVX" data-default-tab="js,result" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-ITR-jQUery-Blur" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/dVYxVX/">UA-ITR-jQUery-Blur</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-                <section>
+                <section id="hover">
     <h1>Hover</h1>
     <p>
         The hover events allow you to add JavaScript to elements as the user uses their mouse to move around them.
@@ -259,7 +259,7 @@
         on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-                <section>
+                <section id="data">
     <h1>jQuery Data Attributes</h1>
     <p>
         Data attributes allow you to store arbitrary information in your HTML elements for later use.
@@ -340,24 +340,23 @@
                     <h1>Questions?</h1>
                 </section>
 
-                <section>
-    <section>
-        <h1>JSON</h1>
-        <p>
-            Stands for <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation. It
-            is object syntax that is standardized by the same organization that standardizes JavaScript.
-        </p>
-        <p class="fragment">
-            JSON is frequently used to communicate data between programming languages. XML (extensible markup language) was primarily
-            used before JSON.
-        </p>
-        <p class="fragment">
-            A JSON file has the extension of .json. It is frequently used for configuration or smaller data sets.
-        </p>
-    </section>
-    <section>
-        <h1>Syntax</h1>
-        <pre><code class="js">
+                <section id="json">
+    <h1>JSON</h1>
+    <p>
+        Stands for <strong>J</strong>ava<strong>S</strong>cript <strong>O</strong>bject <strong>N</strong>otation. It is
+        object syntax that is standardized by the same organization that standardizes JavaScript.
+    </p>
+    <p class="fragment">
+        JSON is frequently used to communicate data between programming languages. XML (extensible markup language) was primarily
+        used before JSON.
+    </p>
+    <p class="fragment">
+        A JSON file has the extension of .json. It is frequently used for configuration or smaller data sets.
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <pre><code class="js">
 {
     "name": "Daniel",
     "isAwake": true,
@@ -374,33 +373,32 @@
 
 }
             </code></pre>
-        <aside class="notes">
-            Must start and end with { } Must use quotation marks. Ticks don't work Cannot have comments
-        </aside>
-    </section>
-    <section>
-        <h1>JSON in JavaScript</h1>
-        <div class="fragment">
-            <h2>Convert a string to JSON</h2>
-        </div>
-        <pre class="fragment"><code class="js">
+    <aside class="notes">
+        Must start and end with { } Must use quotation marks. Ticks don't work Cannot have comments
+    </aside>
+</section>
+<section>
+    <h1>JSON in JavaScript</h1>
+    <div class="fragment">
+        <h2>Convert a string to JSON</h2>
+    </div>
+    <pre class="fragment"><code class="js">
             var jsonString = "{\"name\": \"Daniel\"}";
             var jsonObj = JSON.parse(jsonString);
 
             console.log(jsonObj.name);
             </code></pre>
-        <div class="fragment">
-            <h2>Convert Object to a JSON string</h2>
-        </div>
-        <pre class="fragment"><code class="js">
+    <div class="fragment">
+        <h2>Convert Object to a JSON string</h2>
+    </div>
+    <pre class="fragment"><code class="js">
              var obj = {name: "Daniel"};
             var jsonString = JSON.stringify(obj);
 
             console.log(jsonString); //"{\"name\": \"Daniel\"}";
             </code></pre>
-    </section>
 </section>
-                <section>
+                <section id="ajax1">
     <h1>AJAX</h1>
     <ul>
         <li class="fragment"><strong>A</strong>syncronous</li>
@@ -449,7 +447,7 @@
     <script async src="//jsfiddle.net/WorthyD/47sLLzd9/embed/"></script>
     <a href="https://jsfiddle.net/WorthyD/47sLLzd9/" target="_blank"></a>
 </section>
-                <section>
+                <section id="post">
     <h1>Http POST Method</h1>
     <p>
         One of the primary methods for sending data from a website to a web server to be processed.
