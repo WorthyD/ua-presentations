@@ -15,16 +15,11 @@ $(document).ready(function () {
 
     function loadPosts() {
 
-        $.get(url, function (result) {
-            var html = convertResponseToHTML(result);
-
-            $('#main').html(html);
-
-        });
-    }
+   }
 
     function convertResponseToHTML(resp) {
-        var html = ''
+        var html = '';
+        
         for (var i = 0; i < resp.length; i++) {
             var post = resp[i];
             var postHTML = '<div class="post">';
