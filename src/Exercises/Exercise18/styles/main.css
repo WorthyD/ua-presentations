@@ -16,3 +16,11 @@ body {
     float:right;
     width:40%;
 }
+
+blue{
+    border:1px solid blue;
+}
+
+red{
+    border: 1px solid red;
+}

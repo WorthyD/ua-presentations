@@ -1,7 +1,10 @@
 # Exercise 18 - Appending and Prepending 
-Today we are going to work on a short assignment to learn how to do an ajax request and how to prepend/append html to an existing element
+Today we are going to fix some broken code. We're also going to perform an ajax request and prepend/append html to an existing element
 
-## Overview
+## Part 1 Overview
+Inside of the file `fixmycode.js` you'll find a block of javascript that is supposed to take the value of the first input, add it to the value of the second input and place the sum in the third input.  It doesn't work.  You'll find some documentation inside the code to help explain what it is expected to do.
+
+## Part 2 Overview
 I've provided you two urls in main.js.  I want you to write two ajax requests and perform different actions for each url.
 
 - Take the variable `appendUrl` and perform a get request against the URL

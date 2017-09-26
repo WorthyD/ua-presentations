@@ -4,14 +4,6 @@ $(document).ready(function () {
     $(document).ready(function () {
         $('#btnLoad').on('click', loadPosts);
         $('#btnAdd').on('click', savePost);
-
-      //  $('#btnLoadMore').on('click', loadMorePosts);
-
-       // $('#main').on('click', '.btnLoadBody', loadBody);
-        //$('.btnLoadBody').on('click', loadBody);
-
-        $('#btnLoadMore').hide();
-        $('.loading').hide();
         loadPosts();
     });
 
@@ -19,39 +11,30 @@ $(document).ready(function () {
         e.preventDefault();
         var postObj = $('#frm').serialize();
 
-        $('.loading').show()
-        if (isPosting === false) {
-            isPosting = true;
-            $.post(url, postObj, function (result) {
-                loadPosts();
-                isPosting = false;
-            });
-        }
-
     }
 
     function loadPosts() {
-        //$('#main').html(loadingHtml);
-        $('.loading').show()
 
-        $.get(url, function (result) {
-            console.log(result);
-           // var templateHtml = $('#entry-template').html();
-            // var hbs = Handlebars.compile(templateHtml);
-            // var filteredEntries = filterEntries(result)
+   }
 
-          //  var pagedEntries = pageEntries(filteredEntries);
+    function convertResponseToHTML(resp) {
+        var html = '';
+        
+        for (var i = 0; i < resp.length; i++) {
+            var post = resp[i];
+            var postHTML = '<div class="post">';
+            postHTML += '<img src="' + post.pic + '"/>';
+            postHTML += '<div class="content">';
+            postHTML += '<h3>' + post.name + '</h3>';
+            postHTML += '<p>' + post.body + '</p>';
+            postHTML += "</div>";
 
-            var obj = {
-                entry: pagedEntries
-            };
+            postHTML += "</div>";
 
-         //   allEntries = pagedEntries;
+            html += postHTML;
 
-            var html = hbs(obj);
+        }
+        return html;
 
-            $('.loading').hide()
-            $('#main').append(html);
-        });
     }
 });
