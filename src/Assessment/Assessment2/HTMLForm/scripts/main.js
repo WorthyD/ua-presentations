@@ -1,5 +1,8 @@
-document.getElementById('btnSubmit').addEventListener('click', submit);
+$(function(){
+    $('#btnSubmit').on('click', submit);
 
-function submit() {
 
-}
+    function submit(){
+
+    }
+});
