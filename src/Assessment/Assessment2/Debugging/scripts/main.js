@@ -1,12 +1,16 @@
 /*
     Read the comments and follow the instructions
-    Total Points available -> 70
-    Total Bonus points -> 15
+    Total Points available -> 80
+    Part 1 - 30 points
+    Part 2 - 40 points
+    Clean Code and Comments - 10 points
+
+    Total Challenge/Bonus points -> 10
 */ 
 
 
 /*========================
-    Part 1 Writing Functions -  10 points each
+    Part 1 Fixing Code - 30
 ====================================*/
 
 
@@ -145,7 +149,7 @@ $(function () {
 
 
 /*
-    BONUS
+    Challenge - 
     Write a javascript function to take an array of numbers
     and sorts them in ascending order.
 

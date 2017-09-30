@@ -26,6 +26,8 @@ Use JavaScript to enforce the following rules.  This is exactly like what we hav
 
 Display a success message if everything is filled out correctly. 
 
+- Challenge: AJAX Post the form to the url '/AddEntry'. There isn't an endpoint setup, but that's ok.  I only care about syntax.
+
 **Use HTML attributes to enforce these rules if you are too stuck**
 
 ## Tips
