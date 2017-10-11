@@ -19,6 +19,9 @@
     </ul>
 </section>
 <section>
+    <h1>Desktop First CSS Example</h1>
+</section>
+<section>
     <h1>Mobile First</h1>
     <p>
         Takes the simplistic approach of targeting the smallest screens first.
@@ -37,14 +40,59 @@
 <section>
     <h1>Responsive Showcase</h1>
     <ul>
-        <li class="fragment"><a href="https://www.etsy.com/">Etsy</a></li>
-        <li class="fragment"><a href="https://www.nationwide.com/">Nationwide</a></li>
-        <li class="fragment"><a href="http://abc.go.com/">Abc Go</a></li>
-        <li class="fragment"><a href="http://www.ebags.com/">Ebags.com</a></li>
-        <li class="fragment"><a href="https://www.salesforce.com/">Sales Force</a></li>
-        <li class="fragment"><a href="http://time.com/">Time</a></li>
-        <li class="fragment"><a href="http://www.disney.com/">Disney</a></li>
-        <li class="fragment"><a href="https://www.smashingmagazine.com">Smashing Magazine</a></li>
+        <li class="fragment">
+            <a href="https://www.etsy.com/">Etsy</a>
+        </li>
+        <li class="fragment">
+            <a href="https://www.nationwide.com/">Nationwide</a>
+        </li>
+        <li class="fragment">
+            <a href="http://abc.go.com/">Abc Go</a>
+        </li>
+        <li class="fragment">
+            <a href="http://www.ebags.com/">Ebags.com</a>
+        </li>
+        <li class="fragment">
+            <a href="https://www.salesforce.com/">Sales Force</a>
+        </li>
+        <li class="fragment">
+            <a href="http://time.com/">Time</a>
+        </li>
+        <li class="fragment">
+            <a href="http://www.disney.com/">Disney</a>
+        </li>
+        <li class="fragment">
+            <a href="https://www.smashingmagazine.com">Smashing Magazine</a>
+        </li>
     </ul>
+</section>
+<section>
+    <h1>Mobile First CSS</h1>
+    <pre><code class="css">
+    /* Global Default Style */
+    body{
+        font-size:16px;
+    }
+
+    @media screen and (min-width:480px) {
+        /* Small Screen Style */
+       body{
+            font-size:14px;
+        }
+    }
+            
+    @media screen and (min-width:620px) {
+        /* Medium Screen Style */
+        body{
+            font-size:12px;
+        }
+    }
+            
+    @media screen and (min-width:960px) {
+        /* Large Screen Style */
+        body{
+            font-size:10px;
+        }
+    }        </code></pre>
 </section>
 <!-- Mobile First -->
