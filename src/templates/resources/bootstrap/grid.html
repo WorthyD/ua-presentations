@@ -1,7 +1,8 @@
 <section>
     <h1>Grid System</h1>
     <p>
-        Bootstrap's Grid system is based of a 12 column grid with 5 breakpoints.
+        Bootstrap's Grid system is based of a 12 column grid with 5 breakpoints. Bootstrap 4 provides a much more robust grid than
+        Bootstrap 3. We are going to focus on Bootstrap 4's
     </p>
 </section>
 <section>
@@ -51,8 +52,56 @@
             <td>1200px</td>
             <td>.col-xl-#</td>
         </tr>
-
-
     </table>
-
+</section>
+<section>
+    <h1>Grid Behavior</h1>
+    <p>
+        Instead of dictating widths in your CSS you will now dictate your desired widths with classes. Columns will need to add up
+        to 12
+    </p>
+    <h2>This code will always be two columns</h2>
+    <pre><code class="xml">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">Column 1</div>
+            <div class="col-6">Column 2</div>
+        </div>
+    </div>
+</code></pre>
+</section>
+<section>
+    <h1>Grid Behavior</h1>
+    <h2>This code will be two columns until you reach the MD breakpoint. It will then become 4 colums</h2>
+    <pre><code class="xml">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3">Column 1</div>
+            <div class="col-6 col-md-3">Column 2</div>
+            <!-- Row Break below md -->
+            <div class="col-6 col-md-3">Column 3</div>
+            <div class="col-6 col-md-3">Column 4</div>
+ 
+        </div>
+    </div>
+</code></pre>
+</section>
+<section>
+    <h1>Grid Behavior</h1>
+    <h2>Not specifying a column with make it 100%. This will be 1 column until the MD break point</h2>
+    <pre><code class="xml">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xl-2">Column 1</div>
+            <div class="col-md-6 col-xl-2">Column 2</div>
+            <!-- Row Break  at md -->
+            <div class="col-md-6 col-xl-2">Column 3</div>
+            <div class="col-md-6 col-xl-2">Column 4</div>
+            <!-- Row Break at md -->
+             <div class="col-md-6 col-xl-2">Column 5</div>
+            <div class="col-md-6 col-xl-2">Column 6</div>
+ 
+        </div>
+    </div>
+</code></pre>
 </section>
