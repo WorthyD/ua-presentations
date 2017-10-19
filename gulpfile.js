@@ -66,10 +66,10 @@ gulp.task('browserSync', ['sass'], function () {
 //Starts up a dev server for us
 //It also watches files and reloads the browser when they change.
 gulp.task('dev', ['browserSync', 'copy', 'sass', 'fileinclude'], function () {
-    gulp.watch('src/templates/**/*.html', ['fileinclude']);
+    gulp.watch('src/templates/**/*.html', ['fileinclude', 'delayreload']);
     gulp.watch('src/scripts/**/*.js', browserSync.reload);
-    gulp.watch('docs/**/*.html', ['delayreload']);
-    gulp.watch(sassPath, ['sass']);
+    //gulp.watch('docs/**/*.html', ['delayreload']);
+    gulp.watch(sassPath, ['sass', 'delayreload']);
 });
 gulp.task('delayreload', function () {
     setTimeout(function () {
