@@ -1,0 +1,106 @@
+<section>
+    <h1>Forms</h1>
+    <p>
+        Bootstrap provides a great way to style forms and customize their layout.
+    </p>
+    <p class="fragment">
+        Bootstrap applies a width of 100% to almost all of their form elements, but can easily be changed with additional classes.
+    </p>
+    <p class="fragment">
+        There is a good chance I'm going to misspell form somewhere in here.
+    </p>
+</section>
+<section>
+    <h1>Basic Form Components</h1>
+    <ul>
+        <li class="fragment">
+            <code>form-group</code> - A container for a specific input. Primary purpose is to add spacing between inputs</li>
+        <li class="fragment">
+            <code>col-form-label</code> - Class for dictating a label</li>
+        <li class="fragment">
+            <code>form-control</code> - applies Bootstrap's look and feel to an input.</li>
+    </ul>
+</section>
+<section>
+    <h1>Markup</h1>
+    <p>
+        This markup generates a stacked form.
+    </p>
+    <pre><code class="xml">
+<form>
+    <div class="form-group">
+        <label class="col-form-label" for="formGroupExampleInput">Example label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" for="formGroupExampleInput2">Another label</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    </div>
+</form>        
+    </code></pre>
+</section>
+<section>
+    <h1>Horizontal Forms</h1>
+    <p>
+        You can use Bootstrap's grid system to generate a horizontal form.
+    </p>
+    <pre><code class="xml">
+<form>
+    <div class="form-group row">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        </div>
+    </div>
+</form>
+        </code></pre>
+</section>
+<section>
+    <h1>Validation Styles</h1>
+    <p>
+        There are built in styles to help provide a visual indicator that there are missing fields.
+    </p>
+    <ul>
+        <li class="fragment">
+            <code>is-valid</code>
+        </li>
+        <li class="fragment">
+            <code>is-invalid</code>
+        </li>
+        <li class="fragment">
+            <code>invalid-feedback</code> - Validation message. Automatically displays when input has
+            <code>is-invalid</code>
+        </li>
+    </ul>
+</section>
+<section>
+    <pre class="fragment"><code class="xml">
+<form>
+    <div class="form-group">
+        <label class="col-form-label" for="formGroupExampleInput">Example label</label>
+        <input type="text" class="form-control is-valid" id="formGroupExampleInput" placeholder="Example input">
+        <div class="invalid-feedback">
+            Please fill out this input
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" for="formGroupExampleInput2">Another label</label>
+        <input type="text" class="form-control is-invalid" id="formGroupExampleInput2" placeholder="Another input">
+        <div class="invalid-feedback">
+            Please fill out this input
+        </div>
+ 
+    </div>
+</form>    
+    </code></pre>
+
+</section>
+<section>
+    <!-- Code Pen -->
+</section>
