@@ -60,6 +60,11 @@
                             <h2>New</h2>
                             <ul>
                                 <li>
+                                    <a href="#bs-cards">Cards</a>
+
+                                </li>
+ 
+                                <li>
                                     <a href="#bs-buttons">Buttons</a>
                                 </li>
                                 <li>
@@ -332,6 +337,84 @@
                     <h2>Questions?</h2>
                 </section>
                 <section>
+    <h1>Cards</h1>
+    <p>
+        Bootstrap's Cards are content containers that are highly customizable. We're going to look at just the basic implementation.
+    </p>
+</section>
+<section>
+    <h1>Markup</h1>
+    <h3 class="fragment"><code>card</code> - Class that dictates the element is a card</h3>
+    <h3 class="fragment"><code>card-body</code> - Adds padding to main content of the card.</h3>
+
+    <pre class="fragment"><code class="xml">
+<div class="card">
+    <div class="card-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    </div>
+</div>
+        </code></pre>
+</section>
+<section>
+        <p data-height="265" data-theme-id="0" data-slug-hash="dVLZQO" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="BS - Card" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/dVLZQO/">BS - Card</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Card Images</h1>
+    <p>
+        You can add an image at the top of a card. Card images will automatically scale with the card.
+    </p>
+    <pre class="fragment"><code class="xml">
+<div class="card" >
+    <img class="card-img-top" src="https://placeimg.com/100/48/tech" alt="Card image cap">
+    <div class="card-body">
+        <p class="card-tex">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+</div>        
+    </code></pre>
+</section>
+<section>
+        <p data-height="265" data-theme-id="0" data-slug-hash="OxGOaQ" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="BS - Card-2" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/OxGOaQ/">BS - Card-2</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Card Content</h1>
+    <p>
+        Cards have a large number of custom classes that provide a way to have consistent looking content.
+    </p>
+    <ul>
+        <li class="fragment"><code>card-title</code></li>
+        <li class="fragment"><code>card-subtitle</code></li>
+        <li class="fragment"><code>card-text</code></li>
+        <li class="fragment"><code>card-link</code></li>
+    </ul>
+</section>
+<section>
+    <h1>Markup</h1>
+    <pre><code class="xml">
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Article 1 title</h4>
+        <h6 class="card-subtitle ">Article 1 subtitle</h6>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis iusto temporibus voluptatem et repellendus accusantium?</p>
+        <a href="#" class="card-link">Read More</a>
+        <a href="#" class="card-link">Article Source</a>
+    </div>
+</div>        
+</code></pre>
+</section>
+<section>
+        <p data-height="265" data-theme-id="0" data-slug-hash="EwJbGa" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="BS - Card-4" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/EwJbGa/">BS - Card-4</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Themed Cards</h1>
+    <p>
+        Cards have the ability to use the same themed layouts as buttons and other Bootstrap Elements.
+    </p>
+
+</section>
+                <section>
     <h1>Bootstrap Buttons</h1>
     <p>
         Bootstrap offers several predefined styles and behaviors. Most are designed around semantic usage.
@@ -510,7 +593,7 @@
 <section>
     <h1>Markup</h1>
     <pre><code class="xml">
-<table class="table table-dark">
+<table class="table">
     <thead>
         <tr>
         <th scope="col">#</th>
@@ -531,7 +614,8 @@
         </code></pre>
 </section>
 <section>
-    <!-- Code Pen --> 
+        <p data-height="265" data-theme-id="0" data-slug-hash="MEdKyN" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="BS - Table" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/MEdKyN/">BS - Table</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1>Table Stripes and Borders</h1>
@@ -561,6 +645,10 @@
             &lt;tr class="table-light"&gt;...&lt;/tr&gt;
             &lt;tr class="table-dark"&gt;...&lt;/tr&gt;       
     &lt;/table&gt;</code></pre>
+</section>
+<section>
+        <p data-height="265" data-theme-id="0" data-slug-hash="ZXNQpz" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="BS - Table" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/ZXNQpz/">BS - Table</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
                 <section id="bs-images">
     <h1>Images in Bootstrap</h1>
@@ -596,12 +684,13 @@
         Rounded corners are apart of Bootstrap's Utilities, but you can easily apply them to images for better appearance
     </p>
     <pre><code class="xml">
-    <img src="..." alt="..." class="img-thumbnail rounded">
-    <img src="..." alt="..." class="img-thumbnail circle">
+    <img src="..." alt="..." class="rounded">
+    <img src="..." alt="..." class="rounded-circle">
         </code></pre>
 </section>
 <section>
-    <!-- Pens -->
+        <p data-height="265" data-theme-id="0" data-slug-hash="eGaJZO" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="BS - Images" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/eGaJZO/">BS - Images</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+        <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
                 <section id="bs-utilities">
     <h1>Utilities</h1>
