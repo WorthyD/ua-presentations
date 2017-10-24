@@ -1,71 +1,78 @@
-<section>
+<section id="bs-nav">
     <h1>Bootstrap Navigation</h1>
     <p>
         Bootstrap's Navigation component takes care of most of the typical scenarios for navigation.
     </p>
+    <h2>
+        <a href="https://getbootstrap.com/docs/4.0/components/navbar/" target="_blank">Docs</a>
+    </h2>
 </section>
 <section>
     <h1>Structure</h1>
     <pre><code class="xml">
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    </div><!-- /.container-fluid -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <!-- Menu-->
 </nav>
-        
         </code></pre>
 </section>
 <section>
     <h1>Main Section</h1>
     <pre><code class="xml">
-     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
-     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-         <!-- Menu Items here -->
-    </div>
-
-        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+               <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </code></pre>
 </section>
 <section>
-    <h1>Standard Left items</h1>
+    <p data-height="265" data-theme-id="0" data-slug-hash="KXjPmV" data-default-tab="html,result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="BS-Basic Nav" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/KXjPmV/">BS-Basic Nav</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h1>Adding a drop down link</h1>
     <pre><code class="xml">
-       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-              <!-- Navbar drop down items -->
-         </ul>
-        </li>
-      </ul>
-        </code></pre>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" >
+        Dropdown link
+    </a>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+</li>
+</code></pre>
 </section>
 <section>
-    <h1>Right Items</h1>
-    <pre><code class="xml">
-     <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-              <!-- Navbar drop down items -->
-         </ul>
-        </li>
-      </ul>
-        
-        </code></pre>
+    <p data-height="265" data-theme-id="0" data-slug-hash="LzKPOr" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
+        data-pen-title="BS-Basic Nav - drop down" class="codepen">See the Pen
+        <a href="https://codepen.io/WorthyD/pen/LzKPOr/">BS-Basic Nav - drop down</a> by Daniel Worthy (
+        <a href="https://codepen.io/WorthyD">@WorthyD</a>) on
+        <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-<section>
-    <h1>All Together</h1>
-    <script async src="//jsfiddle.net/WorthyD/rsrLzn82/embed/html,css,result/"></script>
-    <a href="https://jsfiddle.net/WorthyD/rsrLzn82/      " target="_blank"></a>
-</section>
+<!-- Todo: postion -->
+<!-- <section>
+    https://getbootstrap.com/docs/4.0/components/navbar/#placement
+</section> -->
