@@ -36,7 +36,7 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>10/26/2017</h1>
+                    <h1>11/2/2017</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
@@ -56,13 +56,15 @@
 
                             <h2>New</h2>
                             <ul>
+                                <li><a href="#scss-parent">Parent Selectors</a></li>
+                                <li><a href="#scss-if">If Statement</a></li>
+                                <li><a href="#scss-for">Loops</a></li>
+                                <li><a href="#fb-sharing">FB Sharing</a></li>
+                                <li><a href="#fb-like">FB Like Button</a></li>
                             </ul>
                         </div>
                     </div>
                </section>
-
-
-
                 <section id="scss">
     <h1>SASS</h1>
     <h2>How CSS should behave.</h2>
@@ -317,14 +319,13 @@ h1,h2,h3, p{
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 
-
                 <section>
                     <h2>Questions?</h2>
                 </section>
                 <section>
     <h1>Sass continued</h1>
 </section>
-<section>
+<section id="scss-parent">
     <h1>Referencing a parent selector</h1>
     <p>
         You can reference a nested selectors parent by using the <code>&</code> symbol.
@@ -374,7 +375,7 @@ h1,h2,h3, p{
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 </section>
-<section>
+<section id="scss-if">
     <h1><code>@if</code></h1>
     <p>
         SCSS has the ability to use if, else if, and else statements. These can be used to theme a your styles or setup conditional
@@ -387,7 +388,7 @@ h1,h2,h3, p{
         on <a href="http://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-<section>
+<section id="scss-for">
     <h1><code>@for</code></h1>
     <p>
         You can use SCSS to execute a for loop based on indexes. This is useful for generating grids and removing duplicate code.
@@ -425,6 +426,111 @@ h1,h2,h3, p{
 </section>
 <!-- http://thesassway.com/-->
 <!-- %extend -->
+                <section>
+    <h1>Facebook Integration</h1>
+    <h3>
+        <a href="https://developers.facebook.com/" target="_blank">Documentation</a>
+    </h3>
+</section>
+<section id="fb-sharing">
+    <h1>Link Sharing</h1>
+    <p>
+        You can customize the previews of you links being shared on Facebook by leveraging OG meta tags.
+    </p>
+    <h3>
+        <a href="https://developers.facebook.com/docs/sharing/webmasters">Documentation</a>
+    </h3>
+</section>
+<section>
+    <h1>OG Tags</h1>
+    <p>
+        OG tags are meta tags that tell Facebook what to display when sharing.
+    </p>
+    <h3 class="fragment">The Basic Tags</h3>
+    <ul>
+        <li class="fragment">
+            <code>og:url</code> - The URL to the page.</li>
+        <li class="fragment">
+            <code>og:title</code> - The title of the page.</li>
+        <li class="fragment">
+            <code>og:description</code>
+        </li>
+        <li class="fragment">
+            <code>og:image</code> - Preview image</li>
+    </ul>
+</section>
+<section>
+    <h1>In Markup</h1>
+    <pre><code class="xml">
+<head>    
+    <meta property="og:url" content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="When Great Minds Don’t Think Alike" />
+    <meta property="og:description" content="How much does culture influence creative thinking?" />
+    <meta property="og:image" content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />        
+</head>
+    </code></pre>
+</section>
+<section>
+    <h1>Testing</h1>
+    <h3>
+        <a href="https://developers.facebook.com/tools/debug/">Facebook Debug Tool</a>
+    </h3>
+</section>
+
+
+<section id="fb-like">
+    <h1>Adding a Like Button</h1>
+    <h3><a href="https://developers.facebook.com/docs/plugins/like-button">Like Button Generator</a></h3>
+</section>
+<section>
+    <h1>Step 1: Including the Facebook SDK</h1>
+    <p>
+        This needs to be included right next to the opening <code>body</code> tag.
+    </p>
+<pre><code class="xml">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=440441316067845';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    </code></pre>
+</section>
+<section>
+    <h1>Step 2: Adding the Markup </h1>
+    <pre><code class="xml">
+  <!-- Your like button code -->
+<div class="fb-like" 
+  data-href="http://www.your-domain.com/your-page.html" 
+  data-layout="standard" 
+  data-action="like" 
+  data-show-faces="true">
+</div>
+        </code></pre>
+</section>
+<section>
+    <h1>Facebook Share Button</h1>
+    <h3><a href="https://developers.facebook.com/docs/plugins/share-button/">Share Button Generator</a></h3>
+</section>
+<section>
+    <h1>Step 1: Add the Facebook SDK.</h1>
+    <p>
+        But only if you haven't added it yet.
+    </p>
+</section>
+<section>
+    <h1>Step 2: Add the Markup</h1>
+    <pre><code class="xml">
+  <!-- Your share button code -->
+<div class="fb-share-button" 
+    data-href="http://www.your-domain.com/your-page.html" 
+    data-layout="button_count">
+</div>    
+</code></pre>
+</section>
 
             </div>
 
