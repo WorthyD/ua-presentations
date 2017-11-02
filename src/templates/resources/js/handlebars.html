@@ -45,7 +45,8 @@
   </div>
 </script>
 </code></pre>
-<h2>The <code>type</code> tells the browser not to execute the script.</h2>
+    <h2>The
+        <code>type</code> tells the browser not to execute the script.</h2>
 </section>
 <section>
     <h1>Retrieving your template string.</h1>
@@ -54,12 +55,12 @@
     var template = Handlebars.compile(source);
     </code></pre>
     <div class="fragment">
-    <h2>Using your compiled template</h2>
-    <pre><code class="js">    
+        <h2>Using your compiled template</h2>
+        <pre><code class="js">    
     var input = { title: 'testing'};
     var output = template(input);
 </code></pre>
-</div>
+    </div>
 </section>
 <section>
     <h1>Basic Helpers</h1>
@@ -71,21 +72,25 @@
     </ul>
 </section>
 <section>
-    <h1><code>if</code></h1>
+    <h1>
+        <code>if</code>
+    </h1>
     <pre class="fragment"><code class="xml">
 <div class="entry">
   {{#if username}}
     <h1>{{username}}</h1>
   {{else}}
-    <h1>Unkown User</h1>
+    <h1>Unknown User</h1>
   {{/if}}
 </div>
         </code></pre>
 
 </section>
 <section>
-    <h1><code>each</code></h1>
-<pre><code class="xml">
+    <h1>
+        <code>each</code>
+    </h1>
+    <pre><code class="xml">
 <ul class="blog-list">
   <!-- blog = [{title: 'test'}, {title: 'test2'}]'-->
   {{#each blog}}
@@ -93,4 +98,28 @@
   {{/each}}
 </ul>
     </code></pre>
+</section>
+<section>
+    <h1><code>log</code> helper</h1>
+    <p>You can use a logging technique in your templates if you start running into issues.</p>
+    <pre><code class="xml">
+  {{#each blog}}
+    <li>{{title}}</li>
+    {{log "blog" blog}}
+    {{log "Title" title}}
+  {{/each}}
+    </code></pre>
+    <h4 class="fragment">
+        This logs the blog object and title to the console so that you can see their values.
+    </h4>
+</section>
+
+
+<section>
+    <h1>Installation</h1>
+    <pre><code class="xml">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
+
+
+        </code></pre>
 </section>
