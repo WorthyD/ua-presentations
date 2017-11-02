@@ -1,5 +1,5 @@
 /*
-    Exercise 26 JavaScript Review
+    Exercise 26 
 */
 var productList = [{
         product: 'Shirt',
@@ -17,10 +17,7 @@ var productList = [{
         color: 'Blue'
     }
 ];
-
-
-
-
+//////////////////////////////////////////Part 1
 /*
     This function should get the total price of the items in your cart.
 
@@ -31,8 +28,6 @@ var productList = [
 ];
 
     The total is 35.
-
-
 */
 function getTotalCost(cart) {
     var totalCost = 0;
@@ -43,12 +38,12 @@ function getTotalCost(cart) {
     return totalCost;
 }
 
-
 var totalCost = getTotalCost(productList);
 console.log(totalCost);
 
 
 
+//////////////////////////////////////////Part 2
 /*
     This function should get the total price of the items in your cart AND add tax to it.
 var productList = [
@@ -76,11 +71,14 @@ var totalCostPlusTax = getTotalCostPlusTax(productList);
 console.log(totalCostPlusTax);
 
 
+//////////////////////////////////////////Part 3
+/*
+   Use jQuery to perform the following tasks 
+*/
 
 
+//3.1 -  Select the element with the id 'title' and add the class 'color' to it.
 
+//3.2 - Select the odd articles  inside the '.container' element.  Add the class 'odd' to them.
 
-
-
-
-
+//3.3 - Select and remove the class 'active' from the Home nav link. Add active to the 'About' link.
