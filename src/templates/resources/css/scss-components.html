@@ -1,0 +1,47 @@
+<section>
+    <h1>Styling a Component</h1>
+    <p>
+        What are a few things we need to pay attention to when making a custom component?
+    </p>
+    <ul>
+        <li class="fragment">Isolate your CSS to prevent conflicts external conflicts?</li>
+        <li class="fragment">Enforce specificity to prevent external conflicts?</li>
+        <li class="fragment">What can we do to make it more user friendly?</li>
+        <li class="fragment"></li>
+    </ul>
+</section>
+<section>
+    <h1>Component Definition</h1>
+    <p>
+        We are going to build a component that resembles a facebook post or tweet.
+    </p>
+    <ul>
+        <li class="fragment">A post container.</li>
+        <li class="fragment">A post title, body</li>
+        <li class="fragment">A post author and picture</li>
+        <li class="fragment">Social Actions - Share, Like</li>
+    </ul>
+</section>
+<section>
+    <h1>Create a SCSS Partial</h1>
+    <p>
+        We're going to create a <code>_post.scss</code> file and work exclusively in it.
+    </p>
+</section>
+<section>
+    <h1>Base Class</h1>
+    <p>
+        Think of a base class that will act as the main anchor for all styles.
+    </p>
+    <h2 class="fragment">We are going to use <code>.post</code></h2>
+    <h2 class="fragment">Things to consider</h2>
+    <ul>
+        <li class="fragment">Will this be used in another website?</li>
+        <li class="fragment">How unique is this component type in the website?</li>
+    </ul>
+    <aside class="notes">
+        <pre>Consider .djw-post instead of .post 
+            Will another developer try to use this somewhere else
+        </pre>
+    </aside>
+</section>
