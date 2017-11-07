@@ -36,17 +36,14 @@
         <div class="reveal">
             <div class="slides">
                 <section class="review">
-                    <h1>11/14/2017</h1>
+                    <h1>11/16/2017</h1>
                     <!--Arrays and Methods-->
                     <div class="two-col">
 
                         <div>
                             <h2>Review</h2>
                             <ul>
-                                <li>
-                                    <a href="#handlebars">Handlebars</a>
-                                </li>
-                            </ul>
+                           </ul>
 
                         </div>
                         <div>
@@ -56,203 +53,6 @@
                             </ul>
                         </div>
                     </div>
-                </section>
-                <section id="handlebars">
-    <h1>Handlebars JS</h1>
-    <p>Handlebars allows you to write readable and reusable JavaScript templates.</p>
-</section>
-<section>
-    <h1>A Handlebars templates</h1>
-    <pre><code class="xml">
-<div class="entry">
-  <h1>{{title}}</h1>
-  <div class="body">
-    {{body}}
-  </div>
-</div>
-        </code></pre>
-</section>
-<section>
-    <h1>Things to note</h1>
-    <p>
-        Everything between a {{ and }} signify a Handlebars expression. Handlebars has a set of keywords to use inside expressions.
-        Any non-keywords get mapped from a JavaScript objec.t
-    </p>
-</section>
-<section>
-    <h1>Example</h1>
-    <pre><code class="js">
-    var template = '<div>{{title}}</div>'; 
-    var input = { title: 'testing'};
-        </code></pre>
-    <pre class="fragment">
-<code class="xml">
-    <div>testing</div>
-</code>
-</pre>
-
-</section>
-<section>
-    <h1>Template in script tag</h1>
-    <pre><code class="xml">
-<script id="entry-template" type="text/x-handlebars-template">
-  <div class="entry">
-    <h1>{{title}}</h1>
-    <div class="body">
-      {{body}}
-    </div>
-  </div>
-</script>
-</code></pre>
-    <h2>The
-        <code>type</code> tells the browser not to execute the script.</h2>
-</section>
-<section>
-    <h1>Retrieving your template string.</h1>
-    <pre><code class="js">
-     var source   = $("#entry-template").html();
-    var template = Handlebars.compile(source);
-    </code></pre>
-    <div class="fragment">
-        <h2>Using your compiled template</h2>
-        <pre><code class="js">    
-    var input = { title: 'testing'};
-    var output = template(input);
-</code></pre>
-    </div>
-</section>
-<section>
-    <h1>Basic Helpers</h1>
-    <ul>
-        <li class="fragment">
-            if
-        </li>
-        <li class="fragment">each</li>
-    </ul>
-</section>
-<section>
-    <h1>
-        <code>if</code>
-    </h1>
-    <pre class="fragment"><code class="xml">
-<div class="entry">
-  {{#if username}}
-    <h1>{{username}}</h1>
-  {{else}}
-    <h1>Unknown User</h1>
-  {{/if}}
-</div>
-        </code></pre>
-
-</section>
-<section>
-    <h1>
-        <code>each</code>
-    </h1>
-    <pre><code class="xml">
-<ul class="blog-list">
-  <!-- blog = [{title: 'test'}, {title: 'test2'}]'-->
-  {{#each blog}}
-    <li>{{title}}</li>
-  {{/each}}
-</ul>
-    </code></pre>
-</section>
-<section>
-    <h1><code>log</code> helper</h1>
-    <p>You can use a logging technique in your templates if you start running into issues.</p>
-    <pre><code class="xml">
-  {{#each blog}}
-    <li>{{title}}</li>
-    {{log "blog" blog}}
-    {{log "Title" title}}
-  {{/each}}
-    </code></pre>
-    <h4 class="fragment">
-        This logs the blog object and title to the console so that you can see their values.
-    </h4>
-</section>
-
-
-<section>
-    <h1>Installation</h1>
-    <pre><code class="xml">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-        </code></pre>
-</section>
-                <section>
-    <h1>Regular Expressions/RegExp</h1>
-    <p>
-        RegExp are patterns that are used to match specific characters.
-    </p>
-    <p class="fragment"> 
-        We'll use them for text searching and text replacement.
-    </p>
-
-    <p class="fragment"> 
-        RegExps are not unique to JavaScript.
-    </p>
-</section>
-<section>
-    <h1>Basic Patterns</h1>
-    <p>
-        Syntax: <code>/pattern/modifiers</code>
-    </p>
-    <pre class="fragment"><code class="js">
-var pattern = /lorem/i    
-      </code></pre>
-      <ul>
-          <li class="fragment">lorem - looks for 'lorem'</li>
-          <li class="fragment">i - indicates it is case-insensitive</li>
-      </ul>
-</section>
-<section>
-    <h1>Text Replace with RegExp</h1>
-
-    <pre><code class="js">
-    var str = "hello world. Hello class. hello things";
-    var pattern = /hello/i;
-    var newStr = str.replace(pattern, 'Goodbye'); 
-</code></pre>
-<p class="fragment">
-    Result: 'Goodbye world. Hello class. hello things'
-</p>
-</section>
-<section>
-    <h1>Global Flag</h1>
-    <p>
-        We can add <code>g</code> to our pattern to globally replace.
-    </p>
-    <pre class="fragment"><code class="js">
-    var str = "hello world. Hello class. hello things";
-    var pattern = /hello/ig;
-    var newStr = str.replace(pattern, 'Goodbye'); 
-</code></pre>
-<p class="fragment">
-    Result: 'Goodbye world. Hello class. hello things'
-</p>
-</section>
-
-<section>
-    <h1>Regex Test</h1>
-    <p>Regex Test is a method that allows us to see if a block of text <em>contains</em> a pattern.  This leverages the RegExp object.</p>
-    <pre class="fragment"><code class="js">
-    var str = "Lorem ipsum dolor";
-    var patt = new RegExp(/lorem/i);
-    var res = patt.test(str);        
-    </code></pre>
-    <p class="fragment">
-        The <code>i</code> flag allows 'Lorem' to match.
-    </p>
-</section>
-<section>
-    <h1>Useful Patterns</h1>
-    <p>
-        Constructing RegExp patterns can be really hard.  I always keep a few handy.
-    </p>
-</section>
-                <section>
-                    <h2>Questions?</h2>
                 </section>
                 <section>
     <h1>Styling a Component</h1>
@@ -450,6 +250,245 @@ var pattern = /lorem/i
         
     </p>
 </section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section>
+    <h1>Positioning</h1>
+    <p>
+        CSS Positioning allows you to apply specific positioning to HTML elements.
+    </p>
+</section>
+<section>
+    <h1>CSS Position Values</h1>
+    <ul>
+        <li class="fragment"><code>static</code></li>
+        <li class="fragment"><code>relative</code></li>
+        <li class="fragment"><code>absolute</code></li>
+        <li class="fragment"><code>fixed</code></li>
+    </ul>
+</section>
+<section>
+    <h1><code>Static</code> Position</h1>
+    <p>
+        Static CSS positioning is the default value of the <code>position</code> property.
+    </p>
+    <pre><code class="css">
+
+    .class{
+        position:static;
+        top: 100px; /*ignored*/
+        right:100px; /*ignored*/
+    }
+        </code></pre>
+</section>
+<section>
+    <h1><code>Relative</code> Position</h1>
+    <p>
+        Positions element relative to the content around it. It respects top, left, right and bottom. Content will not shift to take
+        up the space.
+    </p>
+    <pre><code class="css">
+
+    .class{
+        position:relative;
+        top: 100px; 
+        right:100px; 
+    }
+        </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/vro59xu0/embed/html,css,result/"></script>
+    <a href="https://jsfiddle.net/WorthyD/vro59xu0/" target="_blank">Link</a>
+</section>
+<section>
+    <h1><code>Fixed</code> Position</h1>
+    <p>
+        Fixed position elements are positioned based on the screen. Content will shift to take up the space the element would take
+        up.
+    </p>
+    <pre><code class="css">
+
+    .class{
+        position:fixed;
+        top: 100px; 
+        right:100px; 
+    }
+        </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/x8cty48u/embed/html,css,result/"></script>
+    <a href="https://jsfiddle.net/WorthyD/x8cty48u/">Example</a>
+</section>
+<section>
+    <h1><code>Absolute</code> Position</h1>
+    <p>
+        Absolute positioned elements are positioned based of the closest parent element that has a position that is not static. If
+        no parent is found, it is positioned off the the document.
+    </p>
+    <pre><code class="css">
+
+    .class{
+        position:absolute;
+        top: 100px; 
+        right:100px; 
+    }
+        </code></pre>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/uxx7w99q/embed/html,css,result/"></script>
+    <a href="http://jsfiddle.net/WorthyD/uxx7w99q/">Link</a>
+</section>
+<section>
+    <h1> Positioning tricks</h1>
+    <div class="fragment">
+        <h2>Horizontally Align Absolute positioned element</h2>
+        <pre><code class="css">
+.horizantal{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+            </code></pre>
+    </div>
+    <div class="fragment">
+        <h2>Vertially Align Absolute positioned element</h2>
+        <pre><code class="css">
+.vertical{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+            </code></pre>
+    </div>
+</section>
+<section>
+    <h1>Example</h1>
+    <script async src="//jsfiddle.net/WorthyD/5977run7/embed/html,css,result/"></script>
+    <a href="http://jsfiddle.net/WorthyD/5977run7/">Link</a>
+</section>
+                <section>
+    <h1>Website Rotators</h1>
+    <p>
+        Rotators provide interactive slide shows to users. They are frequently used to highlight important callouts or for featuring specific items.
+    </p>
+</section>
+<section>
+    <h1>Examples of Rotators</h1>
+    <!-- Examples -->
+</section>
+<section>
+    <h1>Common things to feature</h1>
+    <ul>
+        <li class="fragment">Important parts of your site</li>
+        <li class="fragment">Recent Events</li>
+        <li class="fragment">Featured products</li>
+        <li class="fragment">Work overview</li>
+        <li class="fragment">Product List</li>
+    </ul>
+</section>
+<section>
+    <h1>Things to consider</h1>
+    <ul>
+        <li class="fragment">Mobile Friendly</li>
+        <li class="fragment">Slide Count</li>
+        <li class="fragment">Image Sizes</li>
+    </ul>
+</section>
+                <section>
+    <h1>Modals/Dialogs</h1>
+    <p>
+        Modals allow you to present a small amount of content to the user without navigating away from the screen.
+    </p>
+</section>
+<section>
+    <h1>Common Common Uses</h1>
+    <ul>
+        <li class="fragment">Terms of Service</li>
+        <li class="fragment">Contact Forms</li>
+        <li class="fragment">Help Screens</li>
+        <li class="fragment">Small Signups/Forms</li>
+    </ul>
+</section>
+<section>
+    <h1>Best Practices</h1>
+    <ul>
+        <li class="fragment">
+            Visible Title
+        </li>
+        <li class="fragment">Easy to close
+            <ul>
+                <li class="fragment">Visible close button</li>
+                <li class="fragment">Pressing ESC</li>
+                <li class="fragment">Clicking outside of the dialog</li>
+            </ul> </li>
+        <li class="fragment">No auto open
+            <ul>
+                <li class="fragment">Make the user perform an action</li>
+            </ul>
+        </li>
+        <li class="fragment">Don't put too much information in it.</li>
+    </ul>
+</section>
+
+<section>
+    <h1>Plugins / Demos</h1>
+    <ul>
+        <li class="fragment"><a href="http://jqueryui.com/dialog/" target="_blank">jQuery UI</a></li>
+        <li class="fragment"><a href="https://github.com/VodkaBears/Remodal#remodal" target="_blank">Remodal</a></li>
+        <li class="fragment"><a href="https://github.com/kylefox/jquery-modal" target="_blank">A Simple jQuery Modal</a></li>
+        <li class="fragment"><a href="http://getbootstrap.com/javascript/#modalsl" target="_blank">Bootstrap's Modal</a></li>
+   </ul>
+</section>
+                <section>
+    <h1>Slick.js</h1>
+    <h2>"The last rotator you will ever need"</h2>
+    <h3> <a href="http://kenwheeler.github.io/slick/" target="_blank">http://kenwheeler.github.io/slick/</a>
+    </h3>
+</section>
+<section>
+    <!-- HTML Structure -->
+    <h1>Html</h1>
+    <pre><code class="xml">
+    <div class="your-class">
+        <div>your content</div>
+        <div>your content</div>
+        <div>your content</div>
+    </div>
+</code></pre>
+</section>
+<section>
+    <!-- CSS -->
+    <h1>CSS</h1>
+    <pre><code class="xml">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+</code></pre>
+</section>
+<section>
+    <!-- JS -->
+    <h1>JS</h1>
+    <pre><code class="xml">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+</code></pre>
+</section>
+<section>
+    <h1>JS - initialization</h1>
+    <pre><code class="js">
+    $(document).ready(function(){
+        $('.your-class').slick({
+            setting-name: setting-value
+        });
+    });
+        </code></pre>
+</section>
+<!-- Dummy Site Demos -->
             </div>
 
         </div>

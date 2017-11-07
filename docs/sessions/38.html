@@ -396,6 +396,152 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
         </code></pre>
 </section>
+                <section>
+    <h1>Regular Expressions/RegExp</h1>
+    <p>
+        RegExp are patterns that are used to match specific characters.
+    </p>
+    <p class="fragment"> 
+        We'll use them for text searching and text replacement.
+    </p>
+
+    <p class="fragment"> 
+        RegExps are not unique to JavaScript.
+    </p>
+</section>
+<section>
+    <h1>Basic Patterns</h1>
+    <p>
+        Syntax: <code>/pattern/modifiers</code>
+    </p>
+    <pre class="fragment"><code class="js">
+var pattern = /lorem/i    
+      </code></pre>
+      <ul>
+          <li class="fragment">lorem - looks for 'lorem'</li>
+          <li class="fragment">i - indicates it is case-insensitive</li>
+      </ul>
+</section>
+<section>
+    <h1>Text Replace with RegExp</h1>
+
+    <pre><code class="js">
+    var str = "hello world. Hello class. hello things";
+    var pattern = /hello/i;
+    var newStr = str.replace(pattern, 'Goodbye'); 
+</code></pre>
+<p class="fragment">
+    Result: 'Goodbye world. Hello class. hello things'
+</p>
+</section>
+<section>
+    <h1>Global Flag</h1>
+    <p>
+        We can add <code>g</code> to our pattern to globally replace.
+    </p>
+    <pre class="fragment"><code class="js">
+    var str = "hello world. Hello class. hello things";
+    var pattern = /hello/ig;
+    var newStr = str.replace(pattern, 'Goodbye'); 
+</code></pre>
+<p class="fragment">
+    Result: 'Goodbye world. Hello class. hello things'
+</p>
+</section>
+
+<section>
+    <h1>Regex Test</h1>
+    <p>Regex Test is a method that allows us to see if a block of text <em>contains</em> a pattern.  This leverages the RegExp object.</p>
+    <pre class="fragment"><code class="js">
+    var str = "Lorem ipsum dolor";
+    var patt = new RegExp(/lorem/i);
+    var res = patt.test(str);        
+    </code></pre>
+    <p class="fragment">
+        The <code>i</code> flag allows 'Lorem' to match.
+    </p>
+</section>
+<section>
+    <h1>Useful Patterns</h1>
+    <p>
+        Constructing RegExp patterns can be really hard.  I always keep a few handy.
+    </p>
+</section>
+
+                <section>
+    <h1>Regular Expressions/RegExp</h1>
+    <p>
+        RegExp are patterns that are used to match specific characters.
+    </p>
+    <p class="fragment"> 
+        We'll use them for text searching and text replacement.
+    </p>
+
+    <p class="fragment"> 
+        RegExps are not unique to JavaScript.
+    </p>
+</section>
+<section>
+    <h1>Basic Patterns</h1>
+    <p>
+        Syntax: <code>/pattern/modifiers</code>
+    </p>
+    <pre class="fragment"><code class="js">
+var pattern = /lorem/i    
+      </code></pre>
+      <ul>
+          <li class="fragment">lorem - looks for 'lorem'</li>
+          <li class="fragment">i - indicates it is case-insensitive</li>
+      </ul>
+</section>
+<section>
+    <h1>Text Replace with RegExp</h1>
+
+    <pre><code class="js">
+    var str = "hello world. Hello class. hello things";
+    var pattern = /hello/i;
+    var newStr = str.replace(pattern, 'Goodbye'); 
+</code></pre>
+<p class="fragment">
+    Result: 'Goodbye world. Hello class. hello things'
+</p>
+</section>
+<section>
+    <h1>Global Flag</h1>
+    <p>
+        We can add <code>g</code> to our pattern to globally replace.
+    </p>
+    <pre class="fragment"><code class="js">
+    var str = "hello world. Hello class. hello things";
+    var pattern = /hello/ig;
+    var newStr = str.replace(pattern, 'Goodbye'); 
+</code></pre>
+<p class="fragment">
+    Result: 'Goodbye world. Hello class. hello things'
+</p>
+</section>
+
+<section>
+    <h1>Regex Test</h1>
+    <p>Regex Test is a method that allows us to see if a block of text <em>contains</em> a pattern.  This leverages the RegExp object.</p>
+    <pre class="fragment"><code class="js">
+    var str = "Lorem ipsum dolor";
+    var patt = new RegExp(/lorem/i);
+    var res = patt.test(str);        
+    </code></pre>
+    <p class="fragment">
+        The <code>i</code> flag allows 'Lorem' to match.
+    </p>
+</section>
+<section>
+    <h1>Useful Patterns</h1>
+    <p>
+        Constructing RegExp patterns can be really hard.  I always keep a few handy.
+    </p>
+</section>
+                <section id="exercise27">
+    <h1><a href="https://github.com/uagc-it-readiness/front-end-development-course-info/tree/master/Exercises/Exercise27" target="_blank">Exercise 27</a></h1>
+</section>
             </div>
 
         </div>
