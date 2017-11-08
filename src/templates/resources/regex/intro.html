@@ -1,4 +1,4 @@
-<section>
+<section id="regex">
     <h1>Regular Expressions/RegExp</h1>
     <p>
         RegExp are patterns that are used to match specific characters.
@@ -69,8 +69,9 @@ var pattern = /lorem/i
         Constructing RegExp patterns can be really hard.  I always keep a few handy.
     </p>
     <ul>
-        <li class="fragment"><code>/^[a-z0-9]+$/i</code></li>
-        <li class="fragment"><code>/^[a-z0-9_-]{3,16}$/</code></li>
+        <li class="fragment"><code>/^[a-z]+$/i</code> - Letters only</li>
+        <li class="fragment"><code>/^[0-9]+$/i</code> - Numbers only</li>
+        <li class="fragment"><code>/^[a-z0-9_-]{3,16}$/</code> - User Name min 3 max 16</li>
         <li class="fragment"><code>/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/</code> - Email</li>
         <li class="fragment"><code>/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/</code> - URL </li>
     </ul>

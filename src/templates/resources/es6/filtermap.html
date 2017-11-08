@@ -1,4 +1,4 @@
-<section>
+<section id="array-methods">
     <h1>New Array Methods</h1>
     <ul>
         <li class="fragment">forEach()</li>
@@ -54,7 +54,8 @@
         <pre><code class="js">
 [1,2,3].map(function(element, index, array){ 
     return '';
-});</code></pre>
+});
+</code></pre>
     </h2>
     <ul>
         <li class="fragment"><code>element</code> - the current iterated element.</li>
@@ -82,9 +83,10 @@
 <section>
     <h1>Syntax</h1>
     <h2>
-        <pre><code class="js">[1,2,3].filter(function(element, index, array){
-                return true | false;
-            });</code></pre>
+        <pre><code class="js">
+[1,2,3].filter(function(element, index, array){
+    return true | false;
+});</code></pre>
     </h2>
     <ul>
         <li class="fragment"><code>element</code> - the current iterated element.</li>
@@ -116,9 +118,10 @@
 <section>
     <h1>Syntax</h1>
     <h2>
-        <pre><code class="js">[1,2,3].map(function(element, index, array){
-                return true | false;
-            });</code></pre>
+        <pre><code class="js">
+[1,2,3].map(function(element, index, array){
+    return true | false;
+});</code></pre>
     </h2>
     <ul>
         <li class="fragment"><code>element</code> - the current iterated element.</li>
@@ -138,6 +141,39 @@
 <section>
     <h1>Sort</h1>
     <p>
-        .... this got complicated so we're going to move on.
+        Sorting an array happens in place, it doesn't return a new array.
     </p>
+</section>
+<section>
+    <h1>Code</h1>
+<pre class="fragment"><code class="js">
+    var food = ['taco', 'burger', 'hotdog'];
+    food.sort();
+    console.log(food); //['burger', 'hotdog', 'taco'];
+</code></pre>
+<pre class="fragment"><code class="js">
+    var nums = [20, 3, 10, 1, 2]
+    nums.sort();
+    console.log(nums); //[1, 10, 2, 20, 3];
+</code></pre>
+</section>
+<section>
+    <h1>Uhhh?</h1>
+    <p>
+        <code>.sort</code> sorts by unicode character.  Everything gets converted to a string before sorting.
+    </p>
+    <h3 class="fragment">So how do we sort numbers?</h3>
+</section>
+<section>
+    <h1>It gets a little complicated</h1>
+    <p>
+        This is what we are going to use for now
+    </p>
+<pre class="fragment"><code class="js">
+    var nums = [20, 3, 10, 1, 2]
+    nums.sort(function(a,b){
+        return a - b;
+    });
+    console.log(nums); //[1, 2, 3, 10, 20];
+</code></pre>
 </section>
