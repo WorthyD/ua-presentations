@@ -1,0 +1,42 @@
+<section id="ga">
+    <h1>Google Analytics</h1>
+    <h3><a href="http://www.google.com/analytics/" target="_blank">http://www.google.com/analytics/</a></h3>
+</section>
+<section>
+    <h1>Getting Setup</h1>
+    <h3><a href="https://support.google.com/analytics/answer/1008015?hl=en" target="_blank">Setup</a></h3>
+</section>
+<section>
+    <h1>Tracking Code</h1>
+    <pre><code class="xml">
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=UA-3685134-9"&gt;&lt;/script&gt;
+&lt;script&gt;
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-XXXXXXX-X');
+&lt;/script&gt;
+    </code></pre>
+</section>
+<section>
+    <h1>Event Tracking</h1>
+    <h3><a href="https://developers.google.com/analytics/devguides/collection/gtagjs/events" target="_blank">Event Tracking</a></a></h3>
+</section>
+<section>
+    <h1>Event Tracking Code</h1>
+    <pre class="fragment"><code class="js">
+gtag('event', 'login');</code></pre>
+    <pre class="fragment"><code class="js">
+gtag('event', 'event_name', {
+    'event_category': categoryName,
+    'event_label': labelName
+});
+////
+gtag('event', 'login', {
+    'event_category': 'access',
+    'event_label': 'Google'
+  });
+        </code></pre>
+</section>
