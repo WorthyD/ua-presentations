@@ -71,7 +71,11 @@ test('q6', replacement);
 
 
 /*==============
-    Q7 - Use JavaScript to replace all instances of the word 'lorem' in this string using regular expressions
+    Q7 - What is the difference between .forEach() and .map()
+================*/
+
+/*==============
+    Q8 - What is the difference between .filter() and .find()
 ================*/
 
 
