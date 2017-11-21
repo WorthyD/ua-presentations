@@ -4,8 +4,8 @@
 ## Point Break Down
 
 ### HTML/CSS/SCSS
-- Responsive 30 - points
--
+- Responsive - 30 points
+- Questions - 30 points
 - SCSS - 20 points
  
 
