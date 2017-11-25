@@ -43,7 +43,7 @@
                         <div>
                             <h2>Review</h2>
                             <ul>
-                                 <li><a href="#">Parent Selectors</a></li>
+                                 <li>Wordpress</li>
                             </ul>
 
                         </div>
@@ -51,7 +51,10 @@
 
                             <h2>New</h2>
                             <ul>
-                                <li><a href="#array-methods">New Array Methods</a></li>
+                                <li><a href="#intro">ES6 Intro</a></li>
+                                <li><a href="#const">let and const</a></li>
+                                <li><a href="#es6-string">ES6 Strings</a></li>
+                                <li><a href="#arrows">ES6 Arrows</a></li>
                            </ul>
                         </div>
                     </div>
@@ -120,7 +123,7 @@
                 <section>
                     <h2>Questions?</h2>
                 </section>
-                <section>
+                <section id="intro">
     <h1>ECMAScript 6 Intro</h1>
 </section>
 <section>
@@ -136,13 +139,14 @@
 <section>
     <h1>Can I use ES6 now?</h1>
     <h2 class="fragment">Kinda sorta</h2>
-    <h2 class="fragment">Babel allows for maximum compatibility.</h2>
+    <h2 class="fragment"><a href="https://babeljs.io/">Babel</a> allows for maximum compatibility.  </h2>
+    <h2 class="fragment">We can use Gulp to compile with Babel</h2>
 </section>
 
 <!--https://github.com/lukehoban/es6features/blob/master/README.md -->
 
 <!-- http://exploringjs.com/es6/ch_faq.html#sec_from-es5-to-es6-->
-                <section>
+                <section id="const">
     <h1>New Variable Declarations</h1>
     <h1 class="fragment"><code>let</code> and <code>const</code></h1>
 </section>
@@ -154,16 +158,12 @@
 </section>
 <section>
     <h1>Prevents errors</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="LWJXRN" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="LWJXRN" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/LWJXRN/">LWJXRN</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
-        on <a href="http://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="LWJXRN" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="ES6 - Let" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/LWJXRN/">ES6 - Let</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
     <h1>Scoping</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="QpVJKV" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="QpVJKV" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/QpVJKV/">QpVJKV</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
-        on <a href="http://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="QpVJKV" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-Let-Scoping" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/QpVJKV/">UA-Let-Scoping</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
@@ -174,12 +174,10 @@
 </section>
 <section>
     <h1>Using <code>const</code></h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="peOQeG" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="UA-const" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/peOQeG/">UA-const</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
-        on <a href="http://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="peOQeG" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-const" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/peOQeG/">UA-const</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-                <section>
+                <section id="es6-strings">
     <h1>New String Features</h1>
     <p>
         We have several new feature inside of strings that are very helpful.
@@ -193,9 +191,7 @@
 </section>
 <section>
     <h1>Template Strings</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="yMxQKd" data-default-tab="result" data-user="WorthyD" data-embed-version="2"
-        data-pen-title="yMxQKd" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/yMxQKd/">yMxQKd</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>)
-        on <a href="http://codepen.io">CodePen</a>.</p>
+    <p data-height="265" data-theme-id="0" data-slug-hash="yMxQKd" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="ES6 - Interpolation" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/yMxQKd/">ES6 - Interpolation</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
     <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
@@ -206,8 +202,86 @@
 </section>
 <section>
     <h1>Usage</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="XMPyBm" data-default-tab="result" data-user="WorthyD" data-embed-version="2" data-pen-title="XMPyBm" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/WorthyD/pen/XMPyBm/">XMPyBm</a> by Daniel Worthy (<a href="http://codepen.io/WorthyD">@WorthyD</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+    <p data-height="265" data-theme-id="0" data-slug-hash="XMPyBm" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="ES6 - strings" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/XMPyBm/">ES6 - strings</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+                <section id="arrows">
+    <h1>Arrow Functions</h1>
+    <p>
+        Arrow functions are yet another feature introduced into ES6 that other languages leverage. Arrow functions help remove some
+        confusion of the `this` keyword. It is very helpful, but it isn't always the best fit.
+    </p>
+</section>
+<section>
+    <h1>Arrow Function Syntax</h1>
+    <h2>Function Expression</h2>
+    <pre><code class="js">
+    .on('click', function(){
+    });
+    </code></pre>
+    <h2>Arrow Function</h2>
+    <pre><code class="js">
+    .on('click', () => {
+    });
+    </code></pre>
+</section>
+<section>
+    <h1>Variations</h1>
+    <div class="fragment two-col">
+        <h2>Shorthand Functions</h2>
+        <div class="fragment">
+            <pre><code class="js">
+    function(y){
+        var x = 3;
+        return x * y; 
+    }
+   </code></pre>
+        </div>
+
+        <div class="fragment">
+            <pre><code class="js">
+    (y) => {
+        var x = 3;
+        return x * y; 
+    }
+   </code></pre>
+        </div>
+    </div>
+    <div class="fragment two-col">
+        <h2>Single Line</h2>
+        <div class="fragment">
+            <pre><code class="js">
+var rn = function(y){
+    return Math.random() * y; 
+}
+rn();
+   </code></pre>
+        </div>
+
+        <div class="fragment">
+            <pre><code class="js">
+//No curly braces signifies 
+//it is returning the calculation.
+var rn =  (y) => Math.random() * y; 
+n(4); 
+
+   </code></pre>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Even More Examples.</h1>
+    <p>
+        Arrow functions are awesome when used with Arrays.
+    </p>
+    <div class="fragment">
+        <pre><code class="js">[].filter((element) => element.isSomething == true); </code></pre>
+    </div>
+    <div class="fragment">
+        <pre><code class="js">[].filter((element) => {
+    return element.isActive && element.isInDate
+}); </code></pre>
+    </div>
 </section>
            </div>
 

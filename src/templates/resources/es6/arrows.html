@@ -1,4 +1,4 @@
-<section>
+<section id="arrows">
     <h1>Arrow Functions</h1>
     <p>
         Arrow functions are yet another feature introduced into ES6 that other languages leverage. Arrow functions help remove some
@@ -53,7 +53,8 @@ rn();
 
         <div class="fragment">
             <pre><code class="js">
-//No curly braces signifies it is returning the calculation.
+//No curly braces signifies 
+//it is returning the calculation.
 var rn =  (y) => Math.random() * y; 
 n(4); 
 
@@ -66,14 +67,12 @@ n(4);
     <p>
         Arrow functions are awesome when used with Arrays.
     </p>
-    <div class="two-col">
-        <div class="fragment">
-            <pre><code class="js">[].filter((element) => element.isSomething == true); </code></pre>
-        </div>
-        <div class="fragment">
-            <pre><code class="js">[].filter((element) => {
-                return element.isActive && element.isInDate
-            }); </code></pre>
-        </div>
+    <div class="fragment">
+        <pre><code class="js">[].filter((element) => element.isSomething == true); </code></pre>
+    </div>
+    <div class="fragment">
+        <pre><code class="js">[].filter((element) => {
+    return element.isActive && element.isInDate
+}); </code></pre>
     </div>
 </section>

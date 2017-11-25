@@ -43,19 +43,7 @@
                         <div>
                             <h2>Review</h2>
                             <ul>
-                                <li>
-                                    <a href="#intro">ES6 Intro</a>
-                                </li>
-                                <li>
-                                    <a href="#const">let and const</a>
-                                </li>
-                                <li>
-                                    <a href="#es6-string">ES6 Strings</a>
-                                </li>
-                                <li>
-                                    <a href="#arrows">ES6 Arrows</a>
-                                </li>
-
+                                 <li><a href="#">Parent Selectors</a></li>
                             </ul>
 
                         </div>
@@ -63,181 +51,11 @@
 
                             <h2>New</h2>
                             <ul>
-                                <li>
-                                    <a href="#module">Module</a>
-                                    <a href="#class">Class</a>
-                                    <a href="#adv-class">Advanced Classes</a>
-                                </li>
-                            </ul>
+                                <li><a href="#array-methods">New Array Methods</a></li>
+                           </ul>
                         </div>
                     </div>
-                </section>
-
-                <section id="intro">
-    <h1>ECMAScript 6 Intro</h1>
-</section>
-<section>
-    <h1>Primary Goals of ES6</h1>
-    <h2>Make JavaScript better for writing</h2>
-    <ul>
-        <li class="fragment">complex applications</li>
-        <li class="fragment">libraries</li>
-        <li class="fragment">code generators</li>
-        <li class="fragment">large scale applications</li>
-    </ul>
-</section>
-<section>
-    <h1>Can I use ES6 now?</h1>
-    <h2 class="fragment">Kinda sorta</h2>
-    <h2 class="fragment"><a href="https://babeljs.io/">Babel</a> allows for maximum compatibility.  </h2>
-    <h2 class="fragment">We can use Gulp to compile with Babel</h2>
-</section>
-
-<!--https://github.com/lukehoban/es6features/blob/master/README.md -->
-
-<!-- http://exploringjs.com/es6/ch_faq.html#sec_from-es5-to-es6-->
-                <section id="const">
-    <h1>New Variable Declarations</h1>
-    <h1 class="fragment"><code>let</code> and <code>const</code></h1>
-</section>
-<section>
-    <h1><code>let</code></h1>
-    <p>
-        <code>let</code> defines a block level variable. It can help prevent confusion in going through source code.
-    </p>
-</section>
-<section>
-    <h1>Prevents errors</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="LWJXRN" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="ES6 - Let" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/LWJXRN/">ES6 - Let</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Scoping</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="QpVJKV" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-Let-Scoping" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/QpVJKV/">UA-Let-Scoping</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1><code>const</code></h1>
-    <p>
-        <code>const</code> is used to generate variables that do not change.
-    </p>
-</section>
-<section>
-    <h1>Using <code>const</code></h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="peOQeG" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="UA-const" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/peOQeG/">UA-const</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-                <section id="es6-strings">
-    <h1>New String Features</h1>
-    <p>
-        We have several new feature inside of strings that are very helpful.
-    </p>
-</section>
-<section>
-    <h1>String interpolation</h1>
-    <p>
-        String concatenation is much easier with the new ES6 features. Variables can be injected into strings by using the <code>`</code>        (grave accent) instead of single/double quotes and using the <code>${x}</code> symbols.
-    </p>
-</section>
-<section>
-    <h1>Template Strings</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="yMxQKd" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="ES6 - Interpolation" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/yMxQKd/">ES6 - Interpolation</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-<section>
-    <h1>Multiline Strings</h1>
-    <p>
-        You can also use the <code>`</code> symbol for multi line strings.
-    </p>
-</section>
-<section>
-    <h1>Usage</h1>
-    <p data-height="265" data-theme-id="0" data-slug-hash="XMPyBm" data-default-tab="js" data-user="WorthyD" data-embed-version="2" data-pen-title="ES6 - strings" class="codepen">See the Pen <a href="https://codepen.io/WorthyD/pen/XMPyBm/">ES6 - strings</a> by Daniel Worthy (<a href="https://codepen.io/WorthyD">@WorthyD</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-    <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-</section>
-                <section id="arrows">
-    <h1>Arrow Functions</h1>
-    <p>
-        Arrow functions are yet another feature introduced into ES6 that other languages leverage. Arrow functions help remove some
-        confusion of the `this` keyword. It is very helpful, but it isn't always the best fit.
-    </p>
-</section>
-<section>
-    <h1>Arrow Function Syntax</h1>
-    <h2>Function Expression</h2>
-    <pre><code class="js">
-    .on('click', function(){
-    });
-    </code></pre>
-    <h2>Arrow Function</h2>
-    <pre><code class="js">
-    .on('click', () => {
-    });
-    </code></pre>
-</section>
-<section>
-    <h1>Variations</h1>
-    <div class="fragment two-col">
-        <h2>Shorthand Functions</h2>
-        <div class="fragment">
-            <pre><code class="js">
-    function(y){
-        var x = 3;
-        return x * y; 
-    }
-   </code></pre>
-        </div>
-
-        <div class="fragment">
-            <pre><code class="js">
-    (y) => {
-        var x = 3;
-        return x * y; 
-    }
-   </code></pre>
-        </div>
-    </div>
-    <div class="fragment two-col">
-        <h2>Single Line</h2>
-        <div class="fragment">
-            <pre><code class="js">
-var rn = function(y){
-    return Math.random() * y; 
-}
-rn();
-   </code></pre>
-        </div>
-
-        <div class="fragment">
-            <pre><code class="js">
-//No curly braces signifies 
-//it is returning the calculation.
-var rn =  (y) => Math.random() * y; 
-n(4); 
-
-   </code></pre>
-        </div>
-    </div>
-</section>
-<section>
-    <h1>Even More Examples.</h1>
-    <p>
-        Arrow functions are awesome when used with Arrays.
-    </p>
-    <div class="fragment">
-        <pre><code class="js">[].filter((element) => element.isSomething == true); </code></pre>
-    </div>
-    <div class="fragment">
-        <pre><code class="js">[].filter((element) => {
-    return element.isActive && element.isInDate
-}); </code></pre>
-    </div>
-</section>
-
-                <section>
-                    <h2>Questions?</h2>
-                </section>
-
+               </section>
                 <section id="module">
     <h1>Modules</h1>
     <p>
@@ -514,7 +332,260 @@ console.log(sq.area); //25
 <!--
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class https://googlechrome.github.io/samples/classes-es6/index.html-->
-            </div>
+ 
+
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+           <section>
+    <h1>TypeScript</h1>
+    <p>TypeScript is a superset of JavaScript that compiles down to vanilla JavaScript that can be consumed by any browser or NodeJS application.</p>
+</section>
+<section>
+    <h1>TypeScript</h1>
+    <ul>
+        <li class="fragment">
+            First appeared in Oct 2012
+        </li>
+        <li class="fragment">
+            The lead architect of  C# and creater of Delphi worked on the development of TS
+        </li>
+
+        <li class="fragment">
+            It finds and outputs errors when it compiles. It lets you know you've messed up before you run your code in browser.
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Compilation</h1>
+    <div class="two-col">
+        <div>
+            <h2 class="fragment">main.scss</h2>
+            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
+            <h2 class="fragment">main.css</h2>
+        </div>
+        <div>
+            <h2 class="fragment">main.ts</h2>
+            <h2 class="fragment"><i class="fa fa-arrow-down" aria-hidden="true"></i></h2>
+            <h2 class="fragment">main.js</h2>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>TypeScript Syntax</h1>
+    <div class="two-col">
+        <div>
+            <pre><code class="js">
+function logger(message){
+    console.log(`Log: ${message}`)
+} 
+
+logger('Hello World');
+                </code></pre>
+        </div>
+        <div>
+            <pre><code class="ts">
+function logger(message:string){
+    console.log(`Log: ${message}`)
+} 
+
+logger('Hello World');
+logger(1); //Outputs an error in the compiler.
+                </code></pre>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1>Getting TypeScript</h1>
+    <h3><a href="https://www.typescriptlang.org/index.html#download-links" target="_blank">Editor Plugins</a></h3>
+    <h4 class="fragment">Node.js</h4>
+    <h4 class="fragment"><code>npm install -g typescript</code></h4>
+    <h4 class="fragment"><code>tsc helloworld.ts</code></h4>
+</section>
+                <section>
+    <h1>TypeScript - Types</h1>
+    <p>
+        You use types to declare what type of variable you are declaring.  The TypeScript compiler will notify you if you missuse a type.
+    </p>
+</section>
+<section>
+    <h1>Boolean Type</h1>
+    <pre><code class="ts">
+let isValid: boolean = false;
+    
+function test(apply: boolean){
+    if (apply === true){
+    }
+}
+
+test(isValid);
+test('true'); // Error.
+        </code></pre>
+</section>
+<section>
+    <h1>Number</h1>
+    <pre><code class="ts">
+const pi: number = 3.14;
+
+function area(radius: number) : number{
+    return pi * (Math.pow(radius, 2));
+}
+
+let a: number = area(2); 
+let b: string = area(2); //Error
+        </code></pre>
+</section>
+<section>
+    <h1>String</h1>
+
+    <pre><code class="ts">
+const firstName: string = 'Daniel';
+const lastName: string = 'Worthy';
+
+function fullName(fName, lName) : string{
+    return `${fName} ${lName}`;
+}
+        </code></pre>
+</section>
+<section>
+    <h1>Array</h1>
+    <pre><code class="ts">
+    let list: number[] = [1, 2, 3];
+    let list: Array&lt;number&gt; = [1, 2, 3];
+        </code></pre>
+</section>
+
+<section>
+    <h1>Any</h1>
+    <p>
+        Best used when interacting with other libraries and frameworks.
+    </p>
+    <pre><code class="ts">
+let e: any = 30;
+e = true;
+e = "Hello World";
+        </code></pre>
+</section>
+
+
+                <section>
+    <h1>Interfaces</h1>
+    <p>
+        An interface provides a blueprint for JavaScript objects and classes.
+    </p>
+</section>
+<section>
+    <h1>Interface Example</h1>
+    <pre><code class="ts">
+
+interface Person {
+    firstName: string;
+    lastName: string;
+}        
+
+function getName(person: Person){
+}
+        </code></pre>
+</section>
+<section>
+    <h1>Interface Example</h1>
+    <pre><code class="ts">
+
+interface Shape {
+    Name: string;
+    Sides: number;
+    Height: number;
+    Width: number;
+}        
+
+let rectangle: Shape =  {
+   Name: 'Rectangle',
+   Sides: 4,
+   Height: 20,
+   Width: 20 
+}
+        </code></pre>
+</section>
+
+                <section>
+    <h1>Classes</h1>
+    <p>
+        TypeScript allows you to enforce rules upon a class as well.
+    </p>
+</section>
+<section>
+    <h1>Classes and Interfaces</h1>
+    <p>
+        Classes and Interfaces play well with each other.
+    </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <pre><code class="ts">
+class Student  implements Person{
+    fullName: string;
+    firstName: string;
+    lastName: string;
+    constructor( firstName: string,  middleInitial: string,  lastName: string) {
+        this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
+        this.firstName = firstName;
+        this.lastName = lastName
+    }
+}
+
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+//Accepts either a person or student
+function greeter(person : Person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+       </code></pre>
+</section>
+<section>
+    <h1>Class constructor changes</h1>
+    <pre><code class="ts">
+class Student  implements Person{
+    fullName: string;
+    constructor(public firstName: string, public middleInitial: string, public lastName:string) {
+        this.fullName = `${firstName} ${middleInitial}  ${lastName}`;
+    }
+}
+       </code></pre>
+</section>
+<section>
+    <h1>Interface Example</h1>
+    <pre><code class="ts">
+
+class Rectangle implements Shape{
+  constructor(public Name: string, public Sides: number, public Height: number, public Width: number){
+  }
+}
+        </code></pre>
+</section>
+                <section>
+    <h1>Casing matters on your types</h1>
+    <div class="two-col">
+        <div>
+            <h2>Wrong</h2>
+            <pre><code class="ts">
+               function logic(foo: String): String; 
+                </code></pre>
+        </div>
+        <div>
+            <h2>Right</h2>
+            <pre><code class="ts">
+               function logic(foo: String): String; 
+                </code></pre>
+        </div>
+    </div>
+    <h3 class="fragment"><code>Number</code>, <code>String</code>, <code>Boolean</code>, and <code>Object</code> refer to reserved words in JavaScript.</h3>
+</section>
+
+
+         </div>
 
         </div>
 
