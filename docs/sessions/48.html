@@ -1,0 +1,485 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>12/12/2017</h1>
+                    <!--Arrays and Methods-->
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li><a href="#ts-intro">Typescript Intro</a></li>
+                                <li><a href="#types">TS Types</a></li>
+                                <li><a href="#interfaces">TS Interfaces</a></li>
+                                <li><a href="#ts-classes">TS Classes</a></li>
+                                <li><a href="#tips">TS Tips</a></li>
+ 
+                            </ul>
+
+                        </div>
+                        <div>
+
+                            <h2>New</h2>
+                            <ul>
+                           </ul>
+                        </div>
+                    </div>
+                </section>
+                <section>
+    <h1>Angular CLI</h1>
+    <p>
+        The Angular CLI makes it very easy to create a new application, create new components, and test locally.
+    </p>
+</section>
+<section>
+    <h1>Angular CLI Benefits</h1>
+    <ul>
+        <li class="fragment">Generates Project Structure</li>
+        <li class="fragment">Creates Most Files</li>
+        <li class="fragment">Runs your development server</li>
+        <li class="fragment">Follows best practices</li>
+    </ul>
+</section>
+<section>
+    <h1>Installing Angular CLI</h1>
+    <pre><code class="bash">
+    npm install -g @angular/cli
+    </code></pre>
+    <p>
+        This installs all the dependencies needed to run the Angular CLI from the command line.
+    </p>
+</section>
+<section>
+    <h1>Creating a New Project</h1>
+    <pre><code class="bash">
+    ng new MY-PROJECT-NAME 
+    cd MY-PROJECT-NAME
+    ng serve
+        </code></pre>
+</section>
+<section>
+    <h1>Flags</h1>
+    <p>The <code>new</code> command has several useful flags available in it.</p>
+    <div class="two-col">
+        <ul>
+            <li class="fragment"><code>--dry-run</code></li>
+            <li class="fragment"><code>--prefix</code></li>
+            <li class="fragment"><code>--routing</code></li>
+            <li class="fragment"><code>--style</code></li>
+        </ul>
+    </div>
+</section>
+<section>
+    <h1>Files Created</h1>
+    <ul>
+        <li class="fragment"><code>e2e</code> - End to End tests</li>
+        <li class="fragment"><code>.angular-cli.json</code> - CLI settings</li>
+        <li class="fragment">.gitignore</li>
+        <li class="fragment">package.json</li>
+        <li class="fragment">ReadME.MD</li>
+
+    </ul>
+</section>
+<section>
+    <h1>SRC Files and Folders</h1>
+    <div class="two-col">
+        <div>
+            <ul>
+                <li class="fragment"><code>index.html</code></li>
+                <li class="fragment"><code>main.ts</code> - Main bootstraper</li>
+                <li class="fragment"><code>styles.css</code> - Global Styles</li>
+                <li class="fragment">assets folder</li>
+                <li class="fragment">environments</li>
+            </ul>
+
+        </div>
+        <div>
+            <h2 class="fragment">app folder</h2>
+            <ul>
+                <li class="fragment"><code>app.module.ts</code></li>
+                <li class="fragment"><code>app.component.ts</code></li>
+                <li class="fragment"><code>app.component.spec.ts</code></li>
+                <li class="fragment"><code>app.component.html</code></li>
+                <li class="fragment"><code>app.component.css</code></li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <h1>Creating a New Component</h1>
+    <pre><code class="bash">
+ng generate component  my-new-component-name
+#which is equal to
+ng g component  my-new-component-name
+
+#You can also assign folder paths
+ng g component shared/components/my-small-component
+        </code></pre>
+</section>
+
+<section>
+    <h1>Items you can Generate</h1>
+    <div class="two-col">
+        <div>
+            <ul>
+                <li class="fragment">component</li>
+                <li class="fragment">directive</li>
+                <li class="fragment">pipe</li>
+                <li class="fragment">service</li>
+                <li class="fragment">class</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li class="fragment">guard</li>
+                <li class="fragment">interface</li>
+                <li class="fragment">enum</li>
+                <li class="fragment">module</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--<section>
+    <h1>Testing</h1>
+</section>-->
+                <section>
+    <h1>The Angular Component</h1>
+    <p>Angular applications are made up of multiple <code>components</code>. An Angular component is composed of HTML (the View)
+        and a Component class that manipulates parts of the screen. </p>
+</section>
+<section>
+    <h1>Example</h1>
+    <div class="two-col">
+        <div>
+            <pre><code class="ts">
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template: `&lt;h1&gt;Hello {{name}}&lt;/h1&gt;`
+})
+export class AppComponent { 
+    name = 'Angular'; 
+}
+</code></pre>
+        </div>
+        <div>
+            <p class="fragment">imports</p>
+            <p class="fragment">@Component</p>
+            <p class="fragment">selector</p>
+            <p class="fragment">template</p>
+            <p class="fragment">class</p>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Example</h1>
+    <div class="two-col">
+        <div>
+            <pre><code class="ts">
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template: `&lt;h1&gt;Hello {{name}}&lt;/h1&gt;`
+})
+export class AppComponent { 
+    name = 'Angular'; 
+}
+</code></pre>
+        </div>
+        <div>
+            <h2>Input</h2>
+            <pre><code class="xml">
+&lt;my-app>&lt;/my-app>
+    </code></pre>
+            <div class="fragment">
+                <h2>Output</h2>
+                <pre><code class="xml">
+&lt;h1>Hello Angular&lt;/h1>
+               </code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+                <section>
+    <h1>Interpolation</h1>
+    <p>
+        Interpolation is the method to display a component property in a template.
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <pre><code class="ts" data-noescape>
+@Component({
+  selector: 'my-app',
+  template: `
+    &lt;h1><mark>{{title}}</mark>&lt;/h1>
+    &lt;h2>My favorite hero is: <mark>{{myHero}}</mark>&lt;/h2>
+    `
+})
+export class AppComponent {
+  <mark>title</mark> = 'Tour of Heroes';
+  <mark>myHero</mark> = 'Windstorm';
+}
+        </code></pre>
+</section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section>
+    <h1>ngIf</h1>
+    <p>
+        There are times where you may need to hide or show content based off a condition in JavaScript. In the past, we've use CSS
+        and classes to hide elements. We can use ngIf to show or hide content.
+    </p>
+    <p class="fragment">
+        NgIf actually adds and removes content from the DOM when its condition is triggered.
+
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+       <pre><code class="ts" data-noescape>
+@Component({
+  selector: 'my-app',
+  template: `
+       &lt;input id="textField" value="" /&gt;
+       &lt;span <mark>*ngIf="isInvalid"</mark>&gt;First name is Invalid&lt;/span&gt;
+    `
+})
+export class AppComponent {
+    if (txtField == ''){
+        <mark>isInvalid = true</mark>
+    }
+}
+        </code></pre> 
+</section>
+<section>
+    <h1>Else</h1>
+    <pre><code class="xml">
+<ng-template #hidden>
+    <p>Hidden else content</p>
+</ng-template>
+<p *ngIf="shown; else hidden">
+    Visible shown content
+</p>
+        </code></pre>
+</section>
+                <section>
+    <h1>ngFor</h1>
+    <p>
+        <code>ngFor</code> allows you to loop through and display an array of objects in the view.
+    </p>
+</section>
+<section>
+    <h1>Syntax</h1>
+    <div class="two-col">
+        <div>
+            <pre><code class="ts">
+export class AppComponent {
+  names = ['Ted', 
+    'Fred', 
+    'Marco', 
+    'Polo'];
+}</code></pre>
+            <pre><code class="xml">
+<ul>
+    <li *ngFor="let name of names">
+        {{name}}
+    </li>
+</ul>
+</code></pre>
+        </div>
+        <div class="fragment">
+            <h2>Output</h2>
+
+            <pre><code class="html">
+<ul>
+    <li> 
+        Ted
+    </li>
+    <li> 
+        Fred
+    </li>
+    <li> 
+       Marco 
+    </li>
+    <li> 
+        Polo
+    </li>
+</ul>
+</code></pre>
+
+        </div>
+
+    </div>
+
+</section>
+                <section>
+    <h1>Component Styles</h1>
+    <p>
+        Styling components in Angular is different than traditional styling.
+    </p>
+</section>
+<section>
+    <h1>Inline Syntax</h1>
+    <pre><code class="ts">
+@Component({
+  selector: 'app-comp',
+  template: `
+    <h1>Hello Angular</h1>
+  `,
+  styles: [`
+    h1 { font-weight: normal; }
+    h2 { font-weight: bold; }
+   `]
+})
+export class HeroAppComponent {
+/* . . . */
+}</code></pre>
+</section>
+<section>
+    <h1>External Syntax</h1>
+    <pre><code class="ts">
+@Component({
+  selector: 'app-comp',
+  template: `
+    <h1>Hello Angular</h1>
+  `,
+    styleUrls: ['app.component.css']
+})
+export class HeroAppComponent {
+/* . . . */
+}</code></pre>
+
+</section>
+<section>
+    <h1>CSS Encapsulation</h1>
+    <div>
+        <pre><code class="ts">
+@Component({
+  selector: 'app-comp',
+  template: `
+    <h1>Hello Angular</h1>
+  `,
+  styles: [`
+    h1 { font-weight: normal; }
+    h2 { font-weight: bold; }
+   `]
+})
+export class HeroAppComponent {
+/* . . . */
+}</code></pre>
+    </div>
+    <div class="fragment">
+
+        <pre><code class=" xml">
+&lt;h1 _ngcontent-pmm-1>Hello Angular&lt;/h1>
+</code></pre>
+    </div>
+    <div class="fragment">
+
+        <pre><code class=" css">
+h1[_ngcontent-pmm-1] { font-weight: normal; }
+</code></pre>
+
+
+    </div>
+</section>
+ 
+           </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
