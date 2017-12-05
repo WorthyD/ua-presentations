@@ -8,6 +8,11 @@
     </p>
 </section>
 <section>
+    <h1>Caution</h1>
+    <h2>This is where <code>this</code> starts getting complicated.</h2>
+    <h2 class="fragment">Puns</h2>
+</section>
+<section>
     <h1>Class Declaration</h1>
     <p>
         You must declare a class before you use it.
@@ -46,14 +51,15 @@ var sq = new Square();
     }
  }
    </code></pre>
-       <pre class="fragment"><code class="js">
+    <pre class="fragment"><code class="js">
 var rc = new Rectangle(10, 15);
   </code></pre>
 
 </section>
 <section>
     <h1> Methods</h1>
-    <p>No code is allowed outside of method.</p>
+    <p>No code is allowed outside of method. The
+        <code>function</code> keyword is not required.</p>
     <pre class="fragment"><code class="js">
  class Rectangle{
     constructor(height, width){
@@ -74,7 +80,8 @@ var rc = new Rectangle(10, 15);
 <section>
     <h1>Get Methods</h1>
     <p>
-       Get methods allow you to create dynamic properties without requiring the user to call a method.  
+        Get methods allow you to create dynamic
+        <strong>read only properties</strong> without requiring the user to call a method.
     </p>
     <pre class="fragment"><code class="js">
  class Rectangle{
@@ -99,7 +106,6 @@ var rc = new Rectangle(10, 15);
 <section>
     <h1>Set Methods </h1>
     <p>
-       Get methods allow you to create dynamic properties without requiring the user to call a method.  
     </p>
     <pre class="fragment"><code class="js">
  class Log{
@@ -119,6 +125,26 @@ var rc = new Rectangle(10, 15);
     lg.currentLog = 'new message';
     console.log(lg.logHistory);
         </code></pre>
+</section>
+<section>
+    <pre><code class="js">
+    class Person {
+
+        constructor(){}
+
+        get fullName() {
+            return this.firstName + ' ' + this.lastName;
+        }
+
+        set fullName (name) {
+            var words = name.toString().split(' ');
+            this.firstName = words[0] || '';
+            this.lastName = words[1] || '';
+        }
+
+    }
+
+            </code></pre>
 </section>
 <!--
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class
