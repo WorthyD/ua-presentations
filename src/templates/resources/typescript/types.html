@@ -28,7 +28,7 @@ function area(radius: number) : number{
 }
 
 let a: number = area(2); 
-let b: string = area(2); //Error
+let b: string = area(2); //Error due to b being a string
         </code></pre>
 </section>
 <section>
@@ -45,9 +45,12 @@ function fullName(fName, lName) : string{
 </section>
 <section>
     <h1>Array</h1>
+    <p>
+        Two ways to declare.  Both are correct.
+    </p>
     <pre><code class="ts">
-    let list: number[] = [1, 2, 3];
-    let list: Array&lt;number&gt; = [1, 2, 3];
+    let list: number[] = [1, 2, 3];  //similar to Java
+    let list: Array&lt;number&gt; = [1, 2, 3];  // similar to C#
         </code></pre>
 </section>
 
@@ -55,6 +58,9 @@ function fullName(fName, lName) : string{
     <h1>Any</h1>
     <p>
         Best used when interacting with other libraries and frameworks.
+    </p>
+    <p>
+        Some quality scanners discourage this.
     </p>
     <pre><code class="ts">
 let e: any = 30;
