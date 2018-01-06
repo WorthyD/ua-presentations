@@ -1,0 +1,367 @@
+<html>
+
+    <head>
+        <title></title>
+
+        
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+
+
+
+
+<link href="../vendor/reveal/css/reveal.css" rel="stylesheet" />
+
+<link href="../styles/main.min.css" rel="stylesheet" />
+<link href="../styles/theme-uofa.min.css" rel="stylesheet" />
+
+<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/vs.min.css" integrity="sha256-w6kCMnFvhY2tI1OnsYR/rb5DG9yFGodJknvFZOkp51E=" crossorigin="anonymous" />
+<!-- Printing and PDF exports -->
+<script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../vendor/reveal/css/print/pdf.css' : '../vendor/reveal/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+<!--<script src="//localhost:35729/livereload.js"></script>-->
+
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section class="review">
+                    <h1>1/4/2018</h1>
+                    <div class="two-col">
+
+                        <div>
+                            <h2>Review</h2>
+                            <ul>
+                                <li>Creating a project</li>
+                                <li>Wireframes</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2>New</h2>
+                            <ul>
+                                <li>Creating a component</li>
+                                <li>Creating an Interface</li>
+                                <li>Live Coding</li>
+                           </ul>
+                       </div>
+                    </div>
+                    <div><a href="https://github.com/WorthyD/taco-truck">Source</a></div>
+                </section>
+                <section>
+    <h1>Let's start building that app.</h1>
+    <h2>Open your terminal</h2>
+</section>
+<section>
+    <h2>CD into a non-git directory to start your work.</h2>
+</section>
+<section>
+    <h1>Create your app</h1>
+    <h5>
+        <code>ng new [name] --routing --style=scss --dry-run</code>
+    </h5>
+    <h3>Replace [name] with what you want to name your app.</h3>
+    <ul>
+        <li class="fragment">Examples:</li>
+        <li class="fragment">
+            <code>ng new taco-truck --routing --style=scss --dry-run</code>
+        </li>
+        <li class="fragment">
+            <code>ng new blockbuster-reopening --routing --style=scss --dry-run</code>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Verify your app is properly scaffolded in the dry run.</h1>
+    <ul>
+        <li>Do you see</li>
+        <li>
+            <code>/src/app.component.scss</code>
+        </li>
+        <li>
+            <code>/src/app-routing-module.ts</code>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>Run the code without the
+        <code>--dry-run</code>
+    </h2>
+    <h3>You can press up on your arrow pad and just delete it.</h3>
+</section>
+<section>
+    <h2>Lets talk about something else while that runs</h2>
+</section>
+                <section>
+    <h1>Wireframing</h1>
+    <p>
+        Wireframing is the process of visually laying out a website in preparation for design or development.
+    </p>
+</section>
+<section>
+    <h1>Benefits</h1>
+    <ul>
+        <li class="fragment">Plan your layout before you build</li>
+        <li class="fragment">Can build a clickable experience</li>
+    </ul>
+</section>
+<section>
+    <h1>Basic Examples</h1>
+    <img src="../images/wire/1.png" alt="">
+</section>
+<section>
+    <h1>Clickable Example</h1>
+    <h2><a href="https://wireframepro.mockflow.com/view/whatsapp" target="_blank">WhatsApp</a></h2>
+</section>
+<section>
+    <h1>Tools</h1>
+    <ul>
+        <li><a href="https://balsamiq.com/" target="_blank">Balsamiq</a></li>
+        <li><a href="https://wireframe.cc/" target="_blank">WireFrame.cc</a></li>
+        <li><a href="https://mockflow.com/" target="_blank">MockFlow</a></li>
+    </ul>
+</section>
+    
+                <section>
+    <h1>Run your app</h1>
+    <h2><code>
+        ng serve --open
+    </code></h2>
+    <h3>This will start your server and open the web browser.</h3>
+</section>
+<section>
+    <h2>Change some HTML in app.component.html and save.</h2>
+    <h3 class="fragment">Verify the page updates</h3>
+
+</section>
+                <section>
+                    <h2>Questions?</h2>
+                </section>
+                <section>
+    <h1>Generating Your First Component</h1>
+    <!--
+        Generate Component
+        Create a code behind
+        Create an interface
+        Loop through some items
+    -->
+</section>
+<section>
+    <h1>Steps</h1>
+    <ul>
+        <li class="fragment">Open a terminal window</li>
+        <li class="fragment">CD into your project directory</li>
+        <li class="fragment">
+            <code>ng generate component taco-menu</code>
+        </li>
+        <li class="fragment">or</li>
+        <li class="fragment">
+            <code>ng g c taco-menu</code>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>All new components will have "something works" as it's default html</h2>
+    <h3>Insert the new component into the app.component.html file.</h3>
+    <pre><code class="xml">
+    <app-taco-menu></app-taco-menu>
+    </code></pre>
+</section>
+<section>
+    <h1>Interface generation</h1>
+    <h2>Think about the properties you want in your main object.</h2>
+</section>
+<section>
+    <h1>Example</h1>
+    <div class="two-col">
+        <div>
+            <h3>Menu Item - Simple</h3>
+            <ul>
+                <li>Name : string</li>
+                <li>Description : string</li>
+                <li>Category : string</li>
+                <li>Price : number</li>
+                <li>IsFeatured: boolean</li>
+
+            </ul>
+        </div>
+        <div class="fragment">
+            <h3>Menu Item - Complex</h3>
+            <ul>
+                <li>Name : string</li>
+                <li>Description : string</li>
+                <li>Category : string</li>
+                <li>Price: number</li>
+                <li>IsFeatured: boolean</li>
+                <li>Allergens : Array of strings</li>
+                <li>Calories: number</li>
+                <li>
+                    Tags: Array of Tag
+                    <ul>
+                        <li>Tag Id</li>
+                        <li>Tag Name</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<section>
+    <!-- generate interface -->
+    <h1>Generate that interface!</h1>
+    <h3>
+        <code>ng g i shared/interfaces/menu-item</code>
+    </h3>
+</section>
+<section>
+    <h1>Build Interface</h1>
+    <pre><code class="ts">
+export interface MenuItem {
+    name: string;
+    description: string;
+    category: string;
+    price: number;
+    isFeatured: boolean;
+}
+    </code></pre>
+</section>
+<section>
+    <h2>Go to your component, import the module and create a variable for it. </h2>
+    <pre><code class="js">
+    import { MenuItem } from '../shared/interfaces/menu-item';
+    </code></pre>
+</section>
+<section>
+    <h2>Menu Item</h2>
+    <pre><code class="ts">
+export class TacoMenuComponent implements OnInit {
+
+    menuItem: MenuItem = {
+        name: 'Taco',
+        description: 'Just a taco',
+        category: 'Tacos',
+        price: 1.5,
+        isFeatured: false
+    };
+    
+    constructor() { }
+    ngOnInit() { }
+    
+}
+</code></pre>
+</section>
+<section>
+    <h1>Display the menu item</h1>
+    <pre><code class="xml">
+<h3>Menu Item</h3>
+<div class="menu-item">
+    <h3>{{menuItem.name}}</h3>
+    <p>{{menuItem.description}}</p>
+</div>
+    </code></pre>
+</section>
+<section>
+    <h1>Create a list of Items</h1>
+    <h2>We will loop through them</h2>
+    <pre><code class="ts">
+    menuItems: Array<MenuItem> = [];
+    </code></pre>
+    <!-- build list of items -->
+</section>
+<section>
+    <h1>Add Items to the array</h1>
+    <p>
+        I'm going to just add our menuItem multiple times.
+    </p>
+    <pre><code class="ts">
+ngOnInit() {
+    this.menuItems.push(this.menuItem);
+    this.menuItems.push(this.menuItem);
+    this.menuItems.push(this.menuItem);
+}
+
+       </code></pre>
+</section>
+<section>
+    <h1>Loop and display them with an *ngFor</h1>
+    <!-- Display Items via loop -->
+    <pre><code class="xml">
+<div *ngFor="let item of menuItems">
+    <h3>{{item.name}}</h3>
+    <p>{{item.description}}</p>
+</div>
+    </code></pre>
+</section>
+<section>
+    <h1>Time Pending</h1>
+    <h2>Add Bootstrap</h2>
+    <h2>Add Images to menu</h2>
+</section>
+          </div>
+
+        </div>
+
+
+        <script src="../vendor/reveal/reveal.js"></script>
+
+<script src="../vendor/reveal/lib/js/head.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js" integrity="sha256-3SFEu3qBPVRitcXI7ITnBKtwkYmoqF7ap4xI5dEexaY="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js" integrity="sha256-/27cA5aA9DgzXPb747VxVTzwPG/X5tihoKySMSq3bwk="
+    crossorigin="anonymous"></script>
+
+<script>
+    Reveal.initialize({
+        history: true,
+        slideNumber: true,
+        //transition: Reveal.getQueryHash().transition || 'default',
+        transition: 'slide',
+        backgroundTransition: 'zoom',
+        dependencies: [{
+                src: '../vendor/reveal/plugin/highlight/highlight.js',
+                //src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
+                async: false,
+                callback: function () {
+
+        hljs.initHighlightingOnLoad(); 
+                }
+            },
+             {
+                 src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/languages/scss.min.js',
+                 async: false,
+                 callback: function () {}
+             },
+            // {
+            //     src: '../vendor/reveal/plugin/codefocus/reveal-code-focus.js',
+            //     async: true,
+            //     callback: function () {
+            //         RevealCodeFocus();
+            //     }
+            // }, 
+                {
+                src: '../vendor/reveal/plugin/notes/notes.js',
+                async: false
+            }
+        ]
+    });
+    //   dependencies: [
+    //         { src: '../scripts/plugin/highlight/highlight.pack.js', async: false, callback: function () { hljs.initHighlightingOnLoad(); } },
+    //         { src: '../scripts/plugin/notes/notes.js', async: false }
+    //     ]
+
+  
+</script>>
+    </body>
+
+</html>
