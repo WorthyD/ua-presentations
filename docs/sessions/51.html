@@ -50,6 +50,8 @@
                         <div>
                             <h2>New</h2>
                             <ul>
+                                <li>Services</li>
+                                <li>Routing</li>
                           </ul>
                        </div>
                     </div>
@@ -255,13 +257,15 @@ ngOnInit() {
 </section>
 <section>
     <h2>Writing out your routes.</h2>
+    <p>
+        These are done inside the app-routing.module.ts
+    </p>
     <pre><code class="ts">
 const routes: Routes = [
     { path: '', redirectTo: '/menu', pathMatch: 'full' },
     { path: 'menu', component: TacoMenuComponent },
     { path: 'detail/:id', component: MenuDetailComponent }
 ];
-          
     </code></pre>
 </section>
 <section>
@@ -273,18 +277,37 @@ const routes: Routes = [
 <section>
     <h2>Linking in JS</h2>
     <pre><code class="ts">
+constructor(private menuService: MenuItemsService, private router: Router) { }
+   </code></pre>
+    <pre><code class="ts">
     const link = ['/detail', menuItem.id];
     this.router.navigate(link);
-         
     </code></pre>
 </section>
-
-
-
-<!--
-    create service
-    Create routing
--->
+<section>
+    <h1>Leveraging Route Parameters</h1>
+    <p>
+        We can use route parameters to create unique looking pages.  Remember seeing the route for 
+    </p>
+    <pre><code class="ts">
+        { path: 'detail/:id', component: MenuDetailComponent }
+    </code></pre>
+    <p>
+        The <code>:id</code> represents a dynamic routing parameter.
+    </p>
+</section>
+<section>
+    <h1>Retrieving a routing parameter</h1>
+    <pre><code class="xml">
+ngOnInit() {
+    this.route.params.forEach((params: Params) => {
+        if (params['id'] !== undefined) {
+            const id = +params['id'];
+        }
+    });
+}
+    </code></pre>
+</section>
           </div>
 
         </div>
