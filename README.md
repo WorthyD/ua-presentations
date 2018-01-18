@@ -20,7 +20,7 @@ Run `gulp` to build the project with no web server.  The build gets sent to the 
 ### Build Process
 - NPM
 - Gulp
-- (gulp-file-include)https://www.npmjs.com/package/gulp-file-include - This Gulp plugin acts as the main page templating engine for this site.
+- [gulp-file-include](https://www.npmjs.com/package/gulp-file-include) - This Gulp plugin acts as the main page templating engine for this site.
 
 ## Folder Structure
 
