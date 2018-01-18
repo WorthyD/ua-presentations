@@ -35,5 +35,5 @@ Run `gulp` to build the project with no web server.  The build gets sent to the 
         ├── sass
         └── templates           
             ├── resources       # collections of slides on all the specific topics
-            ├── sessions        # Indivdual decks for each class session made up of resource slides
+            ├── sessions        # Individual decks for each class session made up of resource slides
             └── index.html      # Full listing of all available decks.
