@@ -37,8 +37,3 @@ Run `gulp` to build the project with no web server.  The build gets sent to the 
             ├── resources       # collections of slides on all the specific topics
             ├── sessions        # Indivdual decks for each class session made up of resource slides
             └── index.html      # Full listing of all available decks.
-    
-    
-    ├── benchmarks          # Load and stress tests
-    │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
-    │   └── unit 
