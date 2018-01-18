@@ -1,3 +1,27 @@
 <section>
   <!-- https://github.com/angular-schule/angular-cli-ghpages-->  
+  <h1>Publishing your Angular CLI app to GitHub pages can be a little challenging.</h1>
+  <p>We can use a node package called Angular CLI GHPages</p>
+</section>
+<section>
+  <h1>Let's install it!</h1>
+  <pre><code class="bash">
+npm i -g angular-cli-ghpages  
+  </code></pre>
+</section>
+<section>
+  <h1>Step 1 - The build command</h1>
+<pre class="fragment"><code class="bash">
+  ng build --prod --base-href "https://worthyd.github.io/taco-truck/"
+</code></pre>
+<ul>
+  <li class="fragment"><code>--prod</code> - Compiles the project without the debugging code.</li>
+  <li class="fragment"><code>--base-href</code> - sets the root of your website</li>
+</ul>   
+</section>
+<section>
+  <h1>Step 2 - The Publish</h1>
+  <pre><code class="bash">
+    angular-cli-ghpages
+  </code></pre>
 </section>
