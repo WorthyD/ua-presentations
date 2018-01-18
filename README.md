@@ -4,14 +4,14 @@
 - SCSS
 
 ## Installation
-Run `npm install` to install all dependancies
+Run `npm install` to install all dependencies
 
 ## Running slide shows
 Run `gulp dev` to spin up a web server and view your work in progress
 
 Run `gulp` to build the project with no web server.  The build gets sent to the `/docs` folder.
 
-## Dependancies
+## Dependencies
 
 ### Slides
 - [RevealJS](https://github.com/hakimel/reveal.js/) - Main slide framework
